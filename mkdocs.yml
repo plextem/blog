@@ -1,0 +1,82 @@
+# Project Information
+site_name: blog
+site_description: 随便搭建的博客，写一些平时的做题总结等
+site_author: plextem
+site_url: 
+strict: true
+
+# Repository
+repo_name: 'plextem/blog'
+repo_url: 'https://github.com/plextem/blog'
+edit_uri: 'blob/master/docs/'
+
+# Copyright
+copyright: 'Copyright &copy; 2018 - 2018 cysurgenin'
+
+# Contents
+nav:
+  - 首页: index.md
+  - 总结:
+    - 网络流24题总结: 
+      - 1.飞行员配对方案问题: articles/NetWork24/1.md
+      - 2.太空飞行计划问题: articles/NetWork24/2.md
+      - 3.最小路径覆盖问题: articles/NetWork24/3.md
+      - 4.魔术球问题: articles/NetWork24/4.md
+  
+theme:
+ 
+  name: 'material'
+  static_templates:
+    - 404.html
+  language: 'zh'
+  palette:
+    primary: 'blue'
+    accent: 'red'
+  feature:
+    tabs: true
+  font:
+    text: 'Fira Sans'
+    code: 'Fira Mono'
+
+# Customization
+extra:
+  search:
+    language: 'zh'
+  copyright: 'CC BY-SA 4.0'
+  pagetime: 'on'
+
+extra_javascript:
+  - '_static/js/extra.js?v=2'
+  - 'https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'
+
+extra_css:
+  - '_static/css/extra.css?v=2'
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+      linenums: true
+  - def_list
+  - footnotes
+  - meta
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+remote_branch: gh-pages
