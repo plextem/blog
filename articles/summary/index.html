@@ -1,0 +1,1525 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="随便搭建的博客，写一些平时的做题总结等">
+      
+      
+      
+        <meta name="author" content="plextem">
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="zh">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.3, mkdocs-material-3.0.3">
+    
+    
+      
+        <title>网络流24题小结 - blog</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#2196f3">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,400i,700|Fira+Mono">
+        <style>body,input{font-family:"Fira Sans","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Fira Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+      <link rel="stylesheet" href="../../_static/css/extra.css?v=2">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="blue" data-md-color-accent="red">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="../../#24" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="blog" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                blog
+              </span>
+              <span class="md-header-nav__topic">
+                网络流24题小结
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/plextem/blog/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      plextem/blog
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+<nav class="md-tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." title="首页" class="md-tabs__link md-tabs__link--active">
+        首页
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../NetWork24/1/" title="总结" class="md-tabs__link">
+          总结
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="blog" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    blog
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/plextem/blog/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      plextem/blog
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="首页" class="md-nav__link">
+      首页
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      总结
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        总结
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+    
+    <label class="md-nav__link" for="nav-2-1">
+      网络流24题总结
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        网络流24题总结
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../NetWork24/1/" title="1.飞行员配对方案问题" class="md-nav__link">
+      1.飞行员配对方案问题
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../NetWork24/2/" title="2.太空飞行计划问题" class="md-nav__link">
+      2.太空飞行计划问题
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../NetWork24/3/" title="3.最小路径覆盖问题" class="md-nav__link">
+      3.最小路径覆盖问题
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../NetWork24/4/" title="4.魔术球问题" class="md-nav__link">
+      4.魔术球问题
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tips" title="tips" class="md-nav__link">
+    tips
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11" title="1.1.飞行员配对方案问题" class="md-nav__link">
+    1.1.飞行员配对方案问题
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" title="题目" class="md-nav__link">
+    题目
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="题解" class="md-nav__link">
+    题解
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22" title="2.2.太空飞行计划问题" class="md-nav__link">
+    2.2.太空飞行计划问题
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="题目" class="md-nav__link">
+    题目
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="题解" class="md-nav__link">
+    题解
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33" title="3.3.最小路径覆盖问题" class="md-nav__link">
+    3.3.最小路径覆盖问题
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="题目" class="md-nav__link">
+    题目
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="题解" class="md-nav__link">
+    题解
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44" title="4.4.魔术球问题" class="md-nav__link">
+    4.4.魔术球问题
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="题目" class="md-nav__link">
+    题目
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" title="题解" class="md-nav__link">
+    题解
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#55" title="5.5.圆桌问题" class="md-nav__link">
+    5.5.圆桌问题
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" title="题目" class="md-nav__link">
+    题目
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" title="题解" class="md-nav__link">
+    题解
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#66" title="6.6.最长不下降子序列问题" class="md-nav__link">
+    6.6.最长不下降子序列问题
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" title="题目" class="md-nav__link">
+    题目
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" title="题解" class="md-nav__link">
+    题解
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" title="第一问" class="md-nav__link">
+    第一问
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" title="第二问" class="md-nav__link">
+    第二问
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" title="第三问" class="md-nav__link">
+    第三问
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#77" title="7.7.试题库问题" class="md-nav__link">
+    7.7.试题库问题
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" title="题目" class="md-nav__link">
+    题目
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" title="题解" class="md-nav__link">
+    题解
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#99" title="9.9.方格取数问题" class="md-nav__link">
+    9.9.方格取数问题
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" title="题目" class="md-nav__link">
+    题目
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" title="题解" class="md-nav__link">
+    题解
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" title="正确性" class="md-nav__link">
+    正确性
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1010" title="10.10.餐巾计划问题" class="md-nav__link">
+    10.10.餐巾计划问题
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_21" title="题目" class="md-nav__link">
+    题目
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" title="题解" class="md-nav__link">
+    题解
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1111" title="11.11.航空路线问题" class="md-nav__link">
+    11.11.航空路线问题
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_23" title="题目" class="md-nav__link">
+    题目
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" title="题解" class="md-nav__link">
+    题解
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1212" title="12.12.软件补丁问题" class="md-nav__link">
+    12.12.软件补丁问题
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_25" title="题目" class="md-nav__link">
+    题目
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" title="题解" class="md-nav__link">
+    题解
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1313" title="13.13.星际转移问题" class="md-nav__link">
+    13.13.星际转移问题
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_27" title="题目" class="md-nav__link">
+    题目
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" title="题解" class="md-nav__link">
+    题解
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1414" title="14.14.孤岛营救问题" class="md-nav__link">
+    14.14.孤岛营救问题
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_29" title="题目" class="md-nav__link">
+    题目
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" title="题解" class="md-nav__link">
+    题解
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1515" title="15.15.汽车加油问题" class="md-nav__link">
+    15.15.汽车加油问题
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_31" title="题目" class="md-nav__link">
+    题目
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" title="题解" class="md-nav__link">
+    题解
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1616" title="16.16.数字梯形问题" class="md-nav__link">
+    16.16.数字梯形问题
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_33" title="题目" class="md-nav__link">
+    题目
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_34" title="题解" class="md-nav__link">
+    题解
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1717" title="17.17.运输问题" class="md-nav__link">
+    17.17.运输问题
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_35" title="题目" class="md-nav__link">
+    题目
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_36" title="题解" class="md-nav__link">
+    题解
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1818" title="18.18.分配问题" class="md-nav__link">
+    18.18.分配问题
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_37" title="题目" class="md-nav__link">
+    题目
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_38" title="题解" class="md-nav__link">
+    题解
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1919" title="19.19.负载平衡问题" class="md-nav__link">
+    19.19.负载平衡问题
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_39" title="题目" class="md-nav__link">
+    题目
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_40" title="题解" class="md-nav__link">
+    题解
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2020" title="20.20.深海机器人问题" class="md-nav__link">
+    20.20.深海机器人问题
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_41" title="题目" class="md-nav__link">
+    题目
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_42" title="题解" class="md-nav__link">
+    题解
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2121k" title="21.21.最长k可重区间集问题" class="md-nav__link">
+    21.21.最长k可重区间集问题
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_43" title="题目" class="md-nav__link">
+    题目
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_44" title="题解" class="md-nav__link">
+    题解
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2222k" title="22.22.最长k可重线段集问题" class="md-nav__link">
+    22.22.最长k可重线段集问题
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_45" title="题目" class="md-nav__link">
+    题目
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_46" title="题解" class="md-nav__link">
+    题解
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2323" title="23.23.火星探险问题" class="md-nav__link">
+    23.23.火星探险问题
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_47" title="题目" class="md-nav__link">
+    题目
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_48" title="题解" class="md-nav__link">
+    题解
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2424" title="24.24.骑士共存问题" class="md-nav__link">
+    24.24.骑士共存问题
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_49" title="题目" class="md-nav__link">
+    题目
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_50" title="题解" class="md-nav__link">
+    题解
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_51" title="所有题目网址点我" class="md-nav__link">
+    所有题目网址点我
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/plextem/blog/blob/master/docs/articles/summary.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="24">网络流24题小结<a class="headerlink" href="#24" title="Permanent link">&para;</a></h1>
+<p>标签： 网络流 算法 总结</p>
+<p>作者： 黄嘉盛</p>
+<hr />
+<h2 id="tips">tips<a class="headerlink" href="#tips" title="Permanent link">&para;</a></h2>
+<p>程序和题目集网址都在文末。</p>
+<h2 id="11"><a href="https://www.luogu.org/problemnew/show/P2756"><span><span class="MathJax_Preview">1.</span><script type="math/tex">1.</script></span>飞行员配对方案问题</a><a class="headerlink" href="#11" title="Permanent link">&para;</a></h2>
+<h3 id="_1">题目<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p>英国皇家空军从沦陷国征募了大量外籍飞行员。由皇家空军派出的每一架飞机都需要配备在航行技能和语言上能互相配合的2 名飞行员，其中1 名是英国飞行员，另1名是外籍飞行员。在众多的飞行员中，每一名外籍飞行员都可以与其他若干名英国飞行员很好地配合。如何选择配对飞行的飞行员才能使一次派出最多的飞机。对于给定的外籍飞行员与英国飞行员的配合情况，试设计一个算法找出最佳飞行员配对方案，使皇家空军一次能派出最多的飞机。</p>
+<p>对于给定的外籍飞行员与英国飞行员的配合情况，编程找出一个最佳飞行员配对方案，使皇家空军一次能派出最多的飞机。</p>
+<p>无解输出'No Solution!'</p>
+<h3 id="_2">题解<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p><del>本题没有无解情况</del>
+非常水的网络流入门题。
+肯定是二分图（将飞行员按国籍分为两边）
+直接建图，外籍放左边，英国放右边，S向左边所有点连边流量1，T向右边所有点连边流量1.
+左边向右边按照题中给出关系连边流量INF.
+最后答案为最大流.
+两个飞行员之间可配对当且仅当连边的反边有流量.</p>
+<h2 id="22"><a href="https://www.luogu.org/problemnew/show/P2762"><span><span class="MathJax_Preview">2.</span><script type="math/tex">2.</script></span>太空飞行计划问题</a><a class="headerlink" href="#22" title="Permanent link">&para;</a></h2>
+<h3 id="_3">题目<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p><span><span class="MathJax_Preview">W</span><script type="math/tex">W</script></span> 教授正在为国家航天中心计划一系列的太空飞行。每次太空飞行可进行一系列商业性实验而获取利润。现已确定了一个可供选择的实验集合 <span><span class="MathJax_Preview">E={E_1，E_2，…，E_m}</span><script type="math/tex">E={E_1，E_2，…，E_m}</script></span> ，和进行这些实验需要使用的全部仪器的集合 <span><span class="MathJax_Preview">I={I_1，I_2，…I_n}</span><script type="math/tex">I={I_1，I_2，…I_n}</script></span>。实验 <span><span class="MathJax_Preview">E_j</span><script type="math/tex">E_j</script></span> 需要用到的仪器是 <span><span class="MathJax_Preview">I</span><script type="math/tex">I</script></span> 的子集 <span><span class="MathJax_Preview">R_j \subset I</span><script type="math/tex">R_j \subset I</script></span>。配置仪器 <span><span class="MathJax_Preview">I_k</span><script type="math/tex">I_k</script></span> 的费用为 <span><span class="MathJax_Preview">c_k</span><script type="math/tex">c_k</script></span> 美元。实验  <span><span class="MathJax_Preview">E_j</span><script type="math/tex">E_j</script></span> 的赞助商已同意为该实验结果支付 <span><span class="MathJax_Preview">p_j</span><script type="math/tex">p_j</script></span> 美元。<span><span class="MathJax_Preview">W</span><script type="math/tex">W</script></span> 教授的任务是找出一个有效算法，确定在一次太空飞行中要进行哪些实验并因此而配置哪些仪器才能使太空飞行的净收益最大。这里净收益是指进行实验所获得的全部收入与配置仪器的全部费用的差额。</p>
+<p>对于给定的实验和仪器配置情况，编程找出净收益最大的试验计划。</p>
+<h3 id="_4">题解<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>感觉这题其实还挺神的。
+模型为最大权闭合子图，可以使用最小割解决。
+将实验放到左边 <span><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> 集合，器材放到右边 <span><span class="MathJax_Preview">Y</span><script type="math/tex">Y</script></span> 集合。
+<span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 向 <span><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> 集合中的点连边容量为 <span><span class="MathJax_Preview">p_i</span><script type="math/tex">p_i</script></span> 即收入， <span><span class="MathJax_Preview">Y</span><script type="math/tex">Y</script></span> 集合中的点向<span><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span>连边容量为 <span><span class="MathJax_Preview">c_i</span><script type="math/tex">c_i</script></span> 即费用，设 <span><span class="MathJax_Preview">Total=\sum_{i=1}^{n} p_i</span><script type="math/tex">Total=\sum_{i=1}^{n} p_i</script></span> , <span><span class="MathJax_Preview">Cut</span><script type="math/tex">Cut</script></span> 为求出的最小割(即最大流)，那么答案为 <span><span class="MathJax_Preview">Total-Cut</span><script type="math/tex">Total-Cut</script></span>,对应的解是最小割中的点，即增广完之后仍然可以从 <span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 点到达的点。
+接下来证明一下正确性，设集合 <span><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 为所有实验，集合 <span><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span> 为所有仪器，定义一个割划分出的 <span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 集合为一个解。
+那么割集的容量之和就是(未被选的 <span><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 集合中的顶点的权值 <span><span class="MathJax_Preview">+</span><script type="math/tex">+</script></span> 被选的 <span><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span> 集合中的顶点的权值)，记为 <span><span class="MathJax_Preview">Cut</span><script type="math/tex">Cut</script></span>。
+<span><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 集合中所有顶点的权值之和记为 <span><span class="MathJax_Preview">Total</span><script type="math/tex">Total</script></span>，那么 <span><span class="MathJax_Preview">Total - Cut</span><script type="math/tex">Total - Cut</script></span> 就是(被选的<span><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>集合中的顶点的权值 <span><span class="MathJax_Preview">-</span><script type="math/tex">-</script></span> 被选的<span><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span>集合中的顶点的权值)，即为我们的目标函数，记为 <span><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>。
+要想最大化目标函数 <span><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>，就要尽可能使 <span><span class="MathJax_Preview">Cut</span><script type="math/tex">Cut</script></span> 小，<span><span class="MathJax_Preview">Total</span><script type="math/tex">Total</script></span> 是固定值，所以目标函数A取得最大值的时候，<span><span class="MathJax_Preview">Cut</span><script type="math/tex">Cut</script></span>最小，即为最小割。</p>
+<h2 id="33"><a href="https://www.luogu.org/problemnew/show/P2764"><span><span class="MathJax_Preview">3.</span><script type="math/tex">3.</script></span>最小路径覆盖问题</a><a class="headerlink" href="#33" title="Permanent link">&para;</a></h2>
+<h3 id="_5">题目<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>给定有向图 <span><span class="MathJax_Preview">G=(V,E)</span><script type="math/tex">G=(V,E)</script></span> 。设 <span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> 是 <span><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 的一个简单路（顶点不相交）的集合。如果 <span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span> 中每个顶点恰好在 <span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> 的一条路上，则称 <span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span>是 <span><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 的一个路径覆盖。<span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> 中路径可以从<span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span> 的任何一个顶点开始，长度也是任意的，特别地，可以为0。<span><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 的最小路径覆盖是 <span><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 的所含路径条数最少的路径覆盖。设计一个有效算法求一个有向无环图 <span><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 的最小路径覆盖。提示：设 <span><span class="MathJax_Preview">V={1，2，.... ，n}</span><script type="math/tex">V={1，2，.... ，n}</script></span>，构造网络 <span><span class="MathJax_Preview">G1=(V1,E1)</span><script type="math/tex">G1=(V1,E1)</script></span> 如下：
+    <img alt="" src="https://cdn.luogu.org/upload/pic/1993.png" /></p>
+<h3 id="_6">题解<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>直接按照提示中的去做，将每个点 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 拆成 <span><span class="MathJax_Preview">x[i]</span><script type="math/tex">x[i]</script></span> 放左边, <span><span class="MathJax_Preview">y[i]</span><script type="math/tex">y[i]</script></span> 放右边。
+<span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 先向左边集合连边，右边向 <span><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span> 连边，若原图中存在一条边 <span><span class="MathJax_Preview">(u,v)</span><script type="math/tex">(u,v)</script></span>,则建一条边 <span><span class="MathJax_Preview">(x[u], y[v])</span><script type="math/tex">(x[u], y[v])</script></span>， 所有边流量为 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>，然后跑最大流出来二分图最大匹配数，点数减最大匹配数就是最少路径条数，如何输出也很简单，直接按照匹配边走就行。
+正确性显然，可以自己想一下。</p>
+<h2 id="44"><a href="https://www.luogu.org/problemnew/show/P2765"><span><span class="MathJax_Preview">4.</span><script type="math/tex">4.</script></span>魔术球问题</a><a class="headerlink" href="#44" title="Permanent link">&para;</a></h2>
+<h3 id="_7">题目<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>假设有n根柱子，现要按下述规则在这 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>根柱子中依次放入编号为 <span><span class="MathJax_Preview">1，2，3，...</span><script type="math/tex">1，2，3，...</script></span> 的球。</p>
+<ul>
+<li>
+<p>每次只能在某根柱子的最上面放球。</p>
+</li>
+<li>
+<p>在同一根柱子中，任何 <span><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span>个相邻球的编号之和为完全平方数。</p>
+</li>
+</ul>
+<p>试设计一个算法，计算出在 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 根柱子上最多能放多少个球。例如，在 <span><span class="MathJax_Preview">4</span><script type="math/tex">4</script></span> 根柱子上最多可放 <span><span class="MathJax_Preview">11</span><script type="math/tex">11</script></span> 个球。</p>
+<p>编程任务：</p>
+<p>对于给定的 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> ，计算在 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 根柱子上最多能放多少个球。</p>
+<h3 id="_8">题解<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>这题需要用到上一题的解法。
+首先考虑如果我们已经确定了球的个数，如何确定最少需要多少个柱子才能将他们全部放下，这个可以看成一个最小路径覆盖问题，我们对于每一个编号为 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 的球，找到所有编号为 <span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span> , <span><span class="MathJax_Preview">(j &lt; i)</span><script type="math/tex">(j < i)</script></span> 的球时两个球编号和为完全平方数，此时在图中由 <span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span> 向 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 连一条有向边。
+显然当所有边连完后这个图一定为有向无环图，那么一个柱子上面放的所有球从下到上肯定是图中的一条路径，所以可以看成最小路径覆盖。
+那么可以考虑枚举球的个数（或者你可能想二分），然后求最小路径覆盖数，覆盖数是随着球的个数增加而单调不递减的。
+但是我们不能使用二分而应该使用枚举来做，因为如果二分的话每次二分都需要重新建图一遍，但是枚举每次加一个球只需要将连向它的边加进去然后继续在残量网络上跑就行了，复杂度会优于二分。
+那么应该如何求出答案。
+当我们的最小覆盖数(设为 <span><span class="MathJax_Preview">f</span><script type="math/tex">f</script></span>)第一次大于 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 时，那么最多可以放的小球数为 <span><span class="MathJax_Preview">f-1</span><script type="math/tex">f-1</script></span>，然后按照路径打印答案即可。</p>
+<h2 id="55"><a href="https://www.luogu.org/problemnew/show/P3254"><span><span class="MathJax_Preview">5.</span><script type="math/tex">5.</script></span>圆桌问题</a><a class="headerlink" href="#55" title="Permanent link">&para;</a></h2>
+<h3 id="_9">题目<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p>假设有来自 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 个不同单位的代表参加一次国际会议。每个单位的代表数分别为 <span><span class="MathJax_Preview">r_i (i =1,2,……,m)</span><script type="math/tex">r_i (i =1,2,……,m)</script></span> 。</p>
+<p>会议餐厅共有 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 张餐桌，每张餐桌可容纳 <span><span class="MathJax_Preview">c_i (i =1,2,……,n)</span><script type="math/tex">c_i (i =1,2,……,n)</script></span> 个代表就餐。</p>
+<p>为了使代表们充分交流，希望从同一个单位来的代表不在同一个餐桌就餐。试设计一个算法，给出满足要求的代表就餐方案。</p>
+<p>对于给定的代表数和餐桌数以及餐桌容量，编程给出满足要求的代表就餐方案。</p>
+<h3 id="_10">题解<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p>将代表放在左边，餐桌放在右边。
+考虑建模。
+每个单位最多有 <span><span class="MathJax_Preview">r_i</span><script type="math/tex">r_i</script></span> 个人可以就餐，那么从 <span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 到点 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 的流量最多为 <span><span class="MathJax_Preview">r_i</span><script type="math/tex">r_i</script></span>.
+同样的道理右边集合中点 <span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span> 到 <span><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span> 流量为 <span><span class="MathJax_Preview">c_i</span><script type="math/tex">c_i</script></span>.
+由于一个餐桌中一个单位最多只能由一个代表，那么左边集合与右边集合中流量最多为 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>.
+那么我们跑最大流，然后如果流量 <span><span class="MathJax_Preview">&lt;n</span><script type="math/tex"><n</script></span>，那么肯定不满足方案数，输出 <span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>,不然的话有解，每个单位输出流量跑满的边所指向的右边集合中的点就行了。</p>
+<h2 id="66"><a href="https://www.luogu.org/problemnew/show/P2766"><span><span class="MathJax_Preview">6.</span><script type="math/tex">6.</script></span>最长不下降子序列问题</a><a class="headerlink" href="#66" title="Permanent link">&para;</a></h2>
+<h3 id="_11">题目<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<p>给定正整数序列x1,...,xn 。
+（1）计算其最长不下降子序列的长度s。
+（2）计算从给定的序列中最多可取出多少个长度为s的不下降子序列。
+（3）如果允许在取出的序列中多次使用x1和xn，则从给定序列中最多可取出多少个长度为s的不下降子序列。
+设计有效算法完成（1）（2）（3）提出的计算任务。</p>
+<h3 id="_12">题解<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<h4 id="_13">第一问<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
+<p>可以直接用 <span><span class="MathJax_Preview">O(n^2)</span><script type="math/tex">O(n^2)</script></span> 的 <span><span class="MathJax_Preview">DP</span><script type="math/tex">DP</script></span> 来做。
+设 <span><span class="MathJax_Preview">f[i]</span><script type="math/tex">f[i]</script></span> 表示以 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 位置为结尾的最长不下降子序列。
+然后转移很简单。
+第一问的答案为 <span><span class="MathJax_Preview">max{f[i]}</span><script type="math/tex">max{f[i]}</script></span>，设为 <span><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span>。</p>
+<h4 id="_14">第二问<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
+<p>使用网络流解决，使用一种分层图的思想进行状态转移。
+将每一个点 <span><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span> 分成左右的两个点 <span><span class="MathJax_Preview">u1, u2</span><script type="math/tex">u1, u2</script></span>，然后由 <span><span class="MathJax_Preview">u1</span><script type="math/tex">u1</script></span>向 <span><span class="MathJax_Preview">u2</span><script type="math/tex">u2</script></span> 连一条容量为 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>的边，这是为了保证每一个点最多只能使用一次，对于所有满足 <span><span class="MathJax_Preview">f[i] = 1</span><script type="math/tex">f[i] = 1</script></span> 的位置 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>, 由 <span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 点向 <span><span class="MathJax_Preview">i1</span><script type="math/tex">i1</script></span> 连边，对于所有满足 <span><span class="MathJax_Preview">f[i] =  K</span><script type="math/tex">f[i] =  K</script></span> 的位置 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>，由 <span><span class="MathJax_Preview">i2</span><script type="math/tex">i2</script></span> 向 <span><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span> 连一条容量为 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 的边，此时到了进行模拟转移的时候，对于一个位置 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>，找到所有位置 <span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span>，满足 <span><span class="MathJax_Preview">j &lt; i</span><script type="math/tex">j < i</script></span> 而且 <span><span class="MathJax_Preview">a[j] &lt;= a[i]</span><script type="math/tex">a[j] <= a[i]</script></span> 而且 <span><span class="MathJax_Preview">f[i] = f[j] + 1</span><script type="math/tex">f[i] = f[j] + 1</script></span> ，其实就是 <span><span class="MathJax_Preview">dp</span><script type="math/tex">dp</script></span> 中状态转移的条件。
+然后由 <span><span class="MathJax_Preview">j2</span><script type="math/tex">j2</script></span> 向 <span><span class="MathJax_Preview">i1</span><script type="math/tex">i1</script></span> 连一条容量为 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 的边。
+跑出来最大流就是答案。</p>
+<h4 id="_15">第三问<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
+<p>由于 <span><span class="MathJax_Preview">x_1, x_n</span><script type="math/tex">x_1, x_n</script></span> 可以使用多次，那么将 <span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span>与 <span><span class="MathJax_Preview">1_1</span><script type="math/tex">1_1</script></span>之间的边容量改为 <span><span class="MathJax_Preview">inf</span><script type="math/tex">inf</script></span>, <span><span class="MathJax_Preview">1_1</span><script type="math/tex">1_1</script></span>与 <span><span class="MathJax_Preview">1_2</span><script type="math/tex">1_2</script></span> 之间的边容量也改为 <span><span class="MathJax_Preview">inf</span><script type="math/tex">inf</script></span>，如果 <span><span class="MathJax_Preview">f[N]=K</span><script type="math/tex">f[N]=K</script></span> 的话，就将 <span><span class="MathJax_Preview">N_1</span><script type="math/tex">N_1</script></span>和 <span><span class="MathJax_Preview">N_2</span><script type="math/tex">N_2</script></span>之间的边容量改为 <span><span class="MathJax_Preview">inf</span><script type="math/tex">inf</script></span>， <span><span class="MathJax_Preview">N_2</span><script type="math/tex">N_2</script></span> 和 <span><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span> 之间的边的容量改为 <span><span class="MathJax_Preview">inf</span><script type="math/tex">inf</script></span>, 此时跑出的最大流为第三问答案。</p>
+<h2 id="77"><a href="https://www.luogu.org/problemnew/show/P2763"><span><span class="MathJax_Preview">7.</span><script type="math/tex">7.</script></span>试题库问题</a><a class="headerlink" href="#77" title="Permanent link">&para;</a></h2>
+<h3 id="_16">题目<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<p>假设一个试题库中有 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 道试题。每道试题都标明了所属类别。同一道题可能有多个类别属性。现要从题库中抽取 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 道题组成试卷。并要求试卷包含指定类型的试题。试设计一个满足要求的组卷算法。
+对于给定的组卷要求，计算满足要求的组卷方案。</p>
+<h3 id="_17">题解<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
+<p>题目放 <span><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> 集合，类型放 <span><span class="MathJax_Preview">Y</span><script type="math/tex">Y</script></span> 集合。
+<span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 向所有 <span><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> 集合中的点连边容量为 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>， <span><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> 集合中的点分别向 <span><span class="MathJax_Preview">Y</span><script type="math/tex">Y</script></span> 集合中对应的类型的点连边容量为 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>， <span><span class="MathJax_Preview">Y</span><script type="math/tex">Y</script></span> 集合中的点 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 向 <span><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span> 连边容量为 <span><span class="MathJax_Preview">a[i]</span><script type="math/tex">a[i]</script></span>。
+跑出最大流若其不等于所有 <span><span class="MathJax_Preview">a[i]</span><script type="math/tex">a[i]</script></span> 之和(即 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>),则无解。
+不然的话就是有解的，直接根据流量判断就行了。</p>
+<h2 id="99"><a href="https://www.luogu.org/problemnew/show/P2774"><span><span class="MathJax_Preview">9.</span><script type="math/tex">9.</script></span>方格取数问题</a><a class="headerlink" href="#99" title="Permanent link">&para;</a></h2>
+<h3 id="_18">题目<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
+<p>在一个有 <span><span class="MathJax_Preview">m\times n</span><script type="math/tex">m\times n</script></span> 个方格的棋盘中，每个方格中有一个正整数。现要从方格中取数，使任意 <span><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span> 个数所在方格没有公共边，且取出的数的总和最大。试设计一个满足要求的取数算法。对于给定的方格棋盘，按照取数要求编程找出总和最大的数。</p>
+<h3 id="_19">题解<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
+<p>这个可能方格图问题的某种解决套路吧，就是按照坐标黑白染色，建出二分图。
+首先按照坐标之和为奇或偶进行黑白染色，将同种类型的放到一个集合中，然后会形成两个集合 <span><span class="MathJax_Preview">X, Y</span><script type="math/tex">X, Y</script></span>，由 <span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 点向 <span><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> 集合中的点连容量为原图中权值的边， <span><span class="MathJax_Preview">Y</span><script type="math/tex">Y</script></span> 集合向 <span><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span> 类似的连边，由于不能同时选有相邻边的点，那么 <span><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> 集合中的点向 <span><span class="MathJax_Preview">Y</span><script type="math/tex">Y</script></span> 集合中的与其有相邻边的点连边为 <span><span class="MathJax_Preview">inf</span><script type="math/tex">inf</script></span>，根据建图方法肯定会是有相邻边的两点不在同一集合中。
+此时跑出最大流，用所有格子的权值和减去最大流就是结果。</p>
+<h4 id="_20">正确性<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h4>
+<p>因为这样跑出来的最大流就是二分图的最小割，又由于中间的连边容量为无限大，所以肯定不会被割到，那么对一个格子（设它在二分图中属于 <span><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> 集合），要么将他与 <span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 之间的边割掉（这就相当于在原图中没有取这个格子），要么将其连向 <span><span class="MathJax_Preview">Y</span><script type="math/tex">Y</script></span> 中的所有点之间的连边割掉（这就相当于在原图中取了这个格子但是美取相邻的），由于是最小割，而且过程完全满足题中规定的条件，所以最小割就是不取的格子最小权值和。</p>
+<h2 id="1010"><a href="https://www.luogu.org/problemnew/show/P1251"><span><span class="MathJax_Preview">10.</span><script type="math/tex">10.</script></span>餐巾计划问题</a><a class="headerlink" href="#1010" title="Permanent link">&para;</a></h2>
+<h3 id="_21">题目<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
+<p>一个餐厅在相继的 <span><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span> 天里,每天需用的餐巾数不尽相同。假设第 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 天需要 <span><span class="MathJax_Preview">r_i</span><script type="math/tex">r_i</script></span> 块餐巾($ i=1,2,...,N$)。餐厅可以购买新的餐巾,每块餐巾的费用为 <span><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 分 ;或者把旧餐巾送到快洗部,洗一块需 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 天,其费用为 <span><span class="MathJax_Preview">f</span><script type="math/tex">f</script></span> 分;或者送到慢洗部,洗一块需 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 天( <span><span class="MathJax_Preview">n&gt;m</span><script type="math/tex">n>m</script></span> ),其费用为 s 分( <span><span class="MathJax_Preview">s&lt;f</span><script type="math/tex">s<f</script></span> )。</p>
+<p>每天结束时,餐厅必须决定将多少块脏的餐巾送到快洗部,多少块餐巾送到慢洗部,以及多少块保存起来延期送洗。但是每天洗好的餐巾和购买的新餐巾数之和,要满足当天的需求量。</p>
+<p>试设计一个算法为餐厅合理地安排好 <span><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span> 天中餐巾使用计划,使总的花费最小。编程找出一个最佳餐巾使用计划。</p>
+<h3 id="_22">题解<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h3>
+<p>这题看到有位博主的<a href="https://blog.sengxian.com/solutions/networkflow-24-all">总结</a>写的不错，就直接贴上来了。
+这个问题的主要约束条件是每天的餐巾够用，而餐巾的来源可能是最新购买，也可能是前几天送洗，今天刚刚洗好的餐巾。
+每天用完的餐巾可以选择送到快洗部或慢洗部，或者留到下一天再处理。
+在每一天的餐巾需求为 <span><span class="MathJax_Preview">r_i</span><script type="math/tex">r_i</script></span> 的情况下，如果满足，必定余下 <span><span class="MathJax_Preview">r_i</span><script type="math/tex">r_i</script></span> 个餐巾可以任意处置，所以我们新增流而不是将已经用的流流回。
+把每天分为二分图两个集合中的顶点 <span><span class="MathJax_Preview">X_i</span><script type="math/tex">X_i</script></span>，<span><span class="MathJax_Preview">Y_i</span><script type="math/tex">Y_i</script></span>，建立附加源 <span><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span> 汇 <span><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>。</p>
+<p>从 <span><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span> 向每个 <span><span class="MathJax_Preview">X_i</span><script type="math/tex">X_i</script></span> 连一条容量为 <span><span class="MathJax_Preview">r_i</span><script type="math/tex">r_i</script></span>，费用为 <span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> 的有向边。表示每天用完的餐巾
+从每个 <span><span class="MathJax_Preview">Y_i</span><script type="math/tex">Y_i</script></span> 向 <span><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> 连一条容量为 <span><span class="MathJax_Preview">r_i</span><script type="math/tex">r_i</script></span>，费用为 <span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> 的有向边。表示每天必须满足的需求
+从 <span><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span> 向每个 <span><span class="MathJax_Preview">Y_i</span><script type="math/tex">Y_i</script></span> 连一条容量为 <span><span class="MathJax_Preview">\infty</span><script type="math/tex">\infty</script></span>，费用为 <span><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 的有向边。表示购买餐巾。
+从每个 <span><span class="MathJax_Preview">X_i</span><script type="math/tex">X_i</script></span> 向 <span><span class="MathJax_Preview">X_i+1(i+1\le N)</span><script type="math/tex">X_i+1(i+1\le N)</script></span> 连一条容量为 <span><span class="MathJax_Preview">\infty</span><script type="math/tex">\infty</script></span>，费用为 <span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> 的有向边。表示餐巾，是可以放着不洗存到下一天的。
+从每个 <span><span class="MathJax_Preview">X_i</span><script type="math/tex">X_i</script></span> 向 <span><span class="MathJax_Preview">Y_i+m(i+m\le N)</span><script type="math/tex">Y_i+m(i+m\le N)</script></span> 连一条容量为 <span><span class="MathJax_Preview">\infty</span><script type="math/tex">\infty</script></span>，费用为 <span><span class="MathJax_Preview">f</span><script type="math/tex">f</script></span> 的有向边。表示快洗。
+从每个 <span><span class="MathJax_Preview">X_i</span><script type="math/tex">X_i</script></span> 向 <span><span class="MathJax_Preview">Y_i+n(i+n\le N)</span><script type="math/tex">Y_i+n(i+n\le N)</script></span> 连一条容量为 <span><span class="MathJax_Preview">\infty</span><script type="math/tex">\infty</script></span>，费用为 <span><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span> 的有向边。表示慢洗。
+此图最小费用最大流即为答案。</p>
+<p><strong>总结</strong>：本题反映了分析一类问题的方法，分析问题的约束条件，分析问题的所有可能决策，从而有的放矢的建图。边，有时候意味着一种决策，我们利用网络流，来获得最优决策。新增流的手法也是很重要。</p>
+<h2 id="1111"><a href="https://www.luogu.org/problemnew/show/P2770"><span><span class="MathJax_Preview">11.</span><script type="math/tex">11.</script></span>航空路线问题</a><a class="headerlink" href="#1111" title="Permanent link">&para;</a></h2>
+<h3 id="_23">题目<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h3>
+<p>给定一张航空图，图中顶点代表城市，边代表 <span><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span> 城市间的直通航线。现要求找出一条满足下述限制条件的且途经城市最多的旅行路线。
+<span><span class="MathJax_Preview">(1)</span><script type="math/tex">(1)</script></span> 从最西端城市出发，单向从西向东途经若干城市到达最东端城市，然后再单向从东向西飞回起点(可途经若干城市)。
+<span><span class="MathJax_Preview">(2)</span><script type="math/tex">(2)</script></span>除起点城市外，任何城市只能访问 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 次。
+对于给定的航空图，试设计一个算法找出一条满足要求的最佳航空旅行路线。</p>
+<h3 id="_24">题解<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h3>
+<p>最长不相交路径模型。
+可以将题目要求（即从点 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 到点 <span><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span>， 然后回来，而不经过重复点的路径）转换一下，变成两条从点 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 到点 <span><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span> 的没有重复点的路径。</p>
+<p>由于每个点只能使用一次，那么我们会非常 <del>熟练</del> 自然的想到可以拆点，由于只能用一次，那么对于每一个点 <span><span class="MathJax_Preview">u​</span><script type="math/tex">u​</script></span> ，将其拆成两个点 <span><span class="MathJax_Preview">u_1, u_2​</span><script type="math/tex">u_1, u_2​</script></span>， <span><span class="MathJax_Preview">u_1​</span><script type="math/tex">u_1​</script></span> 放到 <span><span class="MathJax_Preview">X​</span><script type="math/tex">X​</script></span> 集合中， <span><span class="MathJax_Preview">u_2​</span><script type="math/tex">u_2​</script></span>  放到 <span><span class="MathJax_Preview">Y​</span><script type="math/tex">Y​</script></span> 集合中，然后由 <span><span class="MathJax_Preview">u_1​</span><script type="math/tex">u_1​</script></span> 向 <span><span class="MathJax_Preview">u_2​</span><script type="math/tex">u_2​</script></span> 连边  <span><span class="MathJax_Preview">(1, 1)​</span><script type="math/tex">(1, 1)​</script></span>   （特别的， <span><span class="MathJax_Preview">1​</span><script type="math/tex">1​</script></span> 和 <span><span class="MathJax_Preview">N​</span><script type="math/tex">N​</script></span> 的容量为 <span><span class="MathJax_Preview">2​</span><script type="math/tex">2​</script></span> ），对于原图中的边 <span><span class="MathJax_Preview">(u, v)​</span><script type="math/tex">(u, v)​</script></span> ，在建图时由 <span><span class="MathJax_Preview">u_2​</span><script type="math/tex">u_2​</script></span> 向 <span><span class="MathJax_Preview">v_1​</span><script type="math/tex">v_1​</script></span> 连边 <span><span class="MathJax_Preview">(1, 0)​</span><script type="math/tex">(1, 0)​</script></span> ，然后跑一遍最大费用最大流，如果点 <span><span class="MathJax_Preview">1_1​</span><script type="math/tex">1_1​</script></span> 向 <span><span class="MathJax_Preview">1_2​</span><script type="math/tex">1_2​</script></span> 的连边不是满流就无解，注意可能要特判一下 <span><span class="MathJax_Preview">1-&gt;N-&gt;1​</span><script type="math/tex">1->N->1​</script></span> 的这种图。</p>
+<h2 id="1212"><a href="https://www.luogu.org/problemnew/show/P2761"><span><span class="MathJax_Preview">12.</span><script type="math/tex">12.</script></span>软件补丁问题</a><a class="headerlink" href="#1212" title="Permanent link">&para;</a></h2>
+<h3 id="_25">题目<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h3>
+<p>T 公司发现其研制的一个软件中有 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个错误，随即为该软件发放了一批共 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 个补丁程序。每一个补丁程序都有其特定的适用环境，某个补丁只有在软件中包含某些错误而同时又不包含另一些错误时才可以使用。一个补丁在排除某些错误的同时，往往会加入另一些错误。</p>
+<p>换句话说，对于每一个补丁 i，都有 2 个与之相应的错误集合 <span><span class="MathJax_Preview">B1[i]</span><script type="math/tex">B1[i]</script></span>和 <span><span class="MathJax_Preview">B2[i]</span><script type="math/tex">B2[i]</script></span>，使得仅当软件包含 <span><span class="MathJax_Preview">B1[i]</span><script type="math/tex">B1[i]</script></span> 中的所有错误，而不包含 <span><span class="MathJax_Preview">B2[i ]</span><script type="math/tex">B2[i ]</script></span>中的任何错误时，才可以使用补丁 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>。补丁 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 将修复软件中的某些错误 <span><span class="MathJax_Preview">F1[i]</span><script type="math/tex">F1[i]</script></span>，而同时加入另一些错误 <span><span class="MathJax_Preview">F2[i]</span><script type="math/tex">F2[i]</script></span>。另外，每个补丁都耗费一定的时间。</p>
+<p>试设计一个算法，利用 T 公司提供的 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 个补丁程序将原软件修复成一个没有错误的软件，并使修复后的软件耗时最少。对于给定的 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个错误和 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 个补丁程序，找到总耗时最少的软件修复方案。</p>
+<h3 id="_26">题解<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h3>
+<p><strong>这题感觉不用网络流啊。</strong>
+直接用状压就行了。
+都不用怎么讲。
+按照题目把这些集合用二进制状压，1表示满足，0表示不满足。
+然后用状态暴力spfa转移。</p>
+<h2 id="1313"><a href="https://www.luogu.org/problemnew/show/P2754"><span><span class="MathJax_Preview">13.</span><script type="math/tex">13.</script></span>星际转移问题</a><a class="headerlink" href="#1313" title="Permanent link">&para;</a></h2>
+<h3 id="_27">题目<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h3>
+<p>由于人类对自然资源的消耗，人们意识到大约在 <span><span class="MathJax_Preview">2300</span><script type="math/tex">2300</script></span> 年之后，地球就不能再居住了。于是在月球上建立了新的绿地，以便在需要时移民。令人意想不到的是，<span><span class="MathJax_Preview">2177</span><script type="math/tex">2177</script></span> 年冬由于未知的原因，地球环境发生了连锁崩溃，人类必须在最短的时间内迁往月球。</p>
+<p>现有 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个太空站位于地球与月球之间，且有 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 艘公共交通太空船在其间来回穿梭。每个太空站可容纳无限多的人，而每艘太空船 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 只可容纳 <span><span class="MathJax_Preview">H[i]</span><script type="math/tex">H[i]</script></span>个人。每艘太空船将周期性地停靠一系列的太空站，例如：<span><span class="MathJax_Preview">(1，3，4)</span><script type="math/tex">(1，3，4)</script></span> 表示该太空船将周期性地停靠太空站 <span><span class="MathJax_Preview">134134134…</span><script type="math/tex">134134134…</script></span>。每一艘太空船从一个太空站驶往任一太空站耗时均为 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>。人们只能在太空船停靠太空站(或月球、地球)时上、下船。</p>
+<p>初始时所有人全在地球上，太空船全在初始站。试设计一个算法，找出让所有人尽快地全部转移到月球上的运输方案。</p>
+<p>对于给定的太空船的信息，找到让所有人尽快地全部转移到月球上的运输方案。</p>
+<p>无解时输出 <span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span></p>
+<h3 id="_28">题解<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h3>
+<p>我觉得这题的解法挺神奇的<sub><sub>，其实说白了就是个套路</sub></sub>。</p>
+<p>首先如果地球到月球没有路径就是无解的，直接先特判掉。</p>
+<p>然后发现似乎无法直接求出最快的天数，由于<sub><sub>猜到</sub></sub>天数比较少，所以可以考虑与之前的魔术球问题类似的方法求得答案，就是一个个枚举答案（不二分的原因在<code>魔术球问题</code>中已经有所提及）。</p>
+<p>对每一个点 <span><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span> 的每一天 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 拆成点 <span><span class="MathJax_Preview">u_i</span><script type="math/tex">u_i</script></span> ，为了表示方便，将月球编号为 <span><span class="MathJax_Preview">N + 1</span><script type="math/tex">N + 1</script></span>。</p>
+<p>假设当前枚举到了第 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 天，考虑如何对这一天继续加边。</p>
+<ul>
+<li>由<span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 向 <span><span class="MathJax_Preview">0_n</span><script type="math/tex">0_n</script></span> 连容量为 <span><span class="MathJax_Preview">inf</span><script type="math/tex">inf</script></span> 的边, 表示地球每天可以有无数的人移民。</li>
+<li>由 <span><span class="MathJax_Preview">(N+1)_n</span><script type="math/tex">(N+1)_n</script></span>向 <span><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span> 连容量为 <span><span class="MathJax_Preview">inf</span><script type="math/tex">inf</script></span> 的边，表示月球每天可以接受无数的人。</li>
+<li>对所有空间站 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> ，连边 <span><span class="MathJax_Preview">(i_{n-1}, i_n)</span><script type="math/tex">(i_{n-1}, i_n)</script></span>，容量为 <span><span class="MathJax_Preview">inf</span><script type="math/tex">inf</script></span>，表示空间站可以让前一天的所有人今天继续留在这里。</li>
+<li>对所有飞船 <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>，设其前一天在的空间站为 <span><span class="MathJax_Preview">stat_1</span><script type="math/tex">stat_1</script></span>, 这一天在 <span><span class="MathJax_Preview">stat_2</span><script type="math/tex">stat_2</script></span>，那么连边 <span><span class="MathJax_Preview">(stat_{1_{n-1}}, stat_{2_n)}</span><script type="math/tex">(stat_{1_{n-1}}, stat_{2_n)}</script></span>，容量为<span><span class="MathJax_Preview">H[x]</span><script type="math/tex">H[x]</script></span> ，表示飞船在这天可以将<span><span class="MathJax_Preview">stat_1</span><script type="math/tex">stat_1</script></span>中的人载最多<span><span class="MathJax_Preview">H[x]</span><script type="math/tex">H[x]</script></span>到<span><span class="MathJax_Preview">stat_2</span><script type="math/tex">stat_2</script></span>。</li>
+</ul>
+<p>第一次使最大流不少于地球移民人数的那天为答案。</p>
+<h2 id="1414"><a href="https://www.luogu.org/problemnew/show/P4011"><span><span class="MathJax_Preview">14.</span><script type="math/tex">14.</script></span>孤岛营救问题</a><a class="headerlink" href="#1414" title="Permanent link">&para;</a></h2>
+<h3 id="_29">题目<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h3>
+<p><span><span class="MathJax_Preview">1944</span><script type="math/tex">1944</script></span> 年，特种兵麦克接到国防部的命令，要求立即赶赴太平洋上的一个孤岛，营救被敌军俘虏的大兵瑞恩。瑞恩被关押在一个迷宫里，迷宫地形复杂，但幸好麦克得到了迷宫的地形图。迷宫的外形是一个长方形，其南北方向被划分为 <span><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span> 行，东西方向被划分为 <span><span class="MathJax_Preview">M</span><script type="math/tex">M</script></span> 列，于是整个迷宫被划分为 <span><span class="MathJax_Preview">N\times M</span><script type="math/tex">N\times M</script></span> 个单元。每一个单元的位置可用一个有序数对(单元的行号，单元的列号)来表示。南北或东西方向相邻的 <span><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span> 个单元之间可能互通，也可能有一扇锁着的门，或者是一堵不可逾越的墙。迷宫中有一些单元存放着钥匙，并且所有的门被分成 <span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> 类，打开同一类的门的钥匙相同，不同类门的钥匙不同。</p>
+<p>大兵瑞恩被关押在迷宫的东南角，即 <span><span class="MathJax_Preview">(N,M)</span><script type="math/tex">(N,M)</script></span> 单元里，并已经昏迷。迷宫只有一个入口，在西北角。也就是说，麦克可以直接进入 <span><span class="MathJax_Preview">(1,1)</span><script type="math/tex">(1,1)</script></span> 单元。另外，麦克从一个单元移动到另一个相邻单元的时间为 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> ，拿取所在单元的钥匙的时间以及用钥匙开门的时间可忽略不计。</p>
+<p>试设计一个算法，帮助麦克以最快的方式到达瑞恩所在单元，营救大兵瑞恩。</p>
+<h3 id="_30">题解<a class="headerlink" href="#_30" title="Permanent link">&para;</a></h3>
+<p>就是状压然后暴力 <span><span class="MathJax_Preview">bfs</span><script type="math/tex">bfs</script></span> ，非常水，唯一需要注意的是每个点可能有多个钥匙。</p>
+<h2 id="1515"><a href="https://www.luogu.org/problemnew/show/P4009"><span><span class="MathJax_Preview">15.</span><script type="math/tex">15.</script></span>汽车加油问题</a><a class="headerlink" href="#1515" title="Permanent link">&para;</a></h2>
+<h3 id="_31">题目<a class="headerlink" href="#_31" title="Permanent link">&para;</a></h3>
+<p>给定一个 <span><span class="MathJax_Preview">N \times N</span><script type="math/tex">N \times N</script></span> 的方形网格，设其左上角为起点◎，坐标 <span><span class="MathJax_Preview">(1,1)</span><script type="math/tex">(1,1)</script></span> ， <span><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> 轴向右为正， <span><span class="MathJax_Preview">Y</span><script type="math/tex">Y</script></span> 轴向下为正，每个方格边长为 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> ，如图所示。</p>
+<p><img alt="img" src="https://cdn.luogu.org/upload/pic/12156.png" /></p>
+<p>一辆汽车从起点◎出发驶向右下角终点▲，其坐标为 <span><span class="MathJax_Preview">(N,N)</span><script type="math/tex">(N,N)</script></span>。</p>
+<p>在若干个网格交叉点处，设置了油库，可供汽车在行驶途中加油。汽车在行驶过程中应遵守如下规则:</p>
+<ol>
+<li>汽车只能沿网格边行驶，装满油后能行驶 <span><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span> 条网格边。出发时汽车已装满油，在起点与终点处不设油库。</li>
+<li>汽车经过一条网格边时，若其 <span><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> 坐标或 <span><span class="MathJax_Preview">Y</span><script type="math/tex">Y</script></span> 坐标减小，则应付费用 <span><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span> ，否则免付费用。</li>
+<li>汽车在行驶过程中遇油库则应加满油并付加油费用 <span><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 。</li>
+<li>在需要时可在网格点处增设油库，并付增设油库费用 <span><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span> (不含加油费用 <span><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> )。</li>
+<li><span><span class="MathJax_Preview">N,K,A,B,C</span><script type="math/tex">N,K,A,B,C</script></span>均为正整数， 且满足约束: <span><span class="MathJax_Preview">2\leq N\leq 100,2 \leq K \leq 10</span><script type="math/tex">2\leq N\leq 100,2 \leq K \leq 10</script></span>。</li>
+</ol>
+<p>设计一个算法，求出汽车从起点出发到达终点所付的最小费用。</p>
+<h3 id="_32">题解<a class="headerlink" href="#_32" title="Permanent link">&para;</a></h3>
+<p>其实非常水，其实不需要用到网络流。</p>
+<p>由于一个点的移动也可以看成同时存在的油箱内油的变化，所以可以按照油箱内的油量来分层。</p>
+<p>到达点 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> ,剩余油量为<span><span class="MathJax_Preview">l</span><script type="math/tex">l</script></span>时，将这个状态表示为一个点 <span><span class="MathJax_Preview">&lt;i,l&gt;</span><script type="math/tex"><i,l></script></span> ,它处在的层肯定就是第<span><span class="MathJax_Preview">l</span><script type="math/tex">l</script></span> 层，然后加边的方法就贴一下 BYVoid的吧。</p>
+<ol>
+<li>如果油箱不满<span><span class="MathJax_Preview">(l&lt;K)</span><script type="math/tex">(l<K)</script></span> ，点<span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>为油库点，从 <span><span class="MathJax_Preview">&lt;i,l&gt;</span><script type="math/tex"><i,l></script></span> 到 <span><span class="MathJax_Preview">&lt;i,K&gt;</span><script type="math/tex"><i,K></script></span> 建立一条权值为<span><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>的有向边。</li>
+<li>如果油箱不满<span><span class="MathJax_Preview">(l&lt;K)</span><script type="math/tex">(l<K)</script></span> ，点<span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>不为油库点，从 <span><span class="MathJax_Preview">&lt;i,l&gt;</span><script type="math/tex"><i,l></script></span> 到 <span><span class="MathJax_Preview">&lt;i,K&gt;</span><script type="math/tex"><i,K></script></span> 建立一条权值为A+C的有向边。 </li>
+<li>如果油箱不为空， <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 不为油库点，每层 <span><span class="MathJax_Preview">l</span><script type="math/tex">l</script></span> 从<span><span class="MathJax_Preview">&lt;i,l&gt;</span><script type="math/tex"><i,l></script></span>到<span><span class="MathJax_Preview">&lt;j,l-1&gt;</span><script type="math/tex"><j,l-1></script></span>建立一条权值为0的有向边，其中j为i的右边或下边相邻的一个顶点；从 <span><span class="MathJax_Preview">&lt;i,l&gt;</span><script type="math/tex"><i,l></script></span> 到 <span><span class="MathJax_Preview">&lt;j,l-1&gt;</span><script type="math/tex"><j,l-1></script></span> 建立一条权值为B的有向边，其中j为i的左边或上边相邻的一个顶点。</li>
+<li>如果油箱不为空，<span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 为油库点，从 <span><span class="MathJax_Preview">&lt;i,K&gt;</span><script type="math/tex"><i,K></script></span> 到 <span><span class="MathJax_Preview">&lt;j,K-1&gt;</span><script type="math/tex"><j,K-1></script></span> 建立一条权值为0的有向边，其中j为i的右边或下边相邻的一个顶点；从 <span><span class="MathJax_Preview">&lt;i,K&gt;</span><script type="math/tex"><i,K></script></span> 到 <span><span class="MathJax_Preview">&lt;j,K-1&gt;</span><script type="math/tex"><j,K-1></script></span> 建立一条权值为B的有向边，其中j为i的左边或上边相邻的一个顶点。</li>
+</ol>
+<p>求最短路之后答案就是 <span><span class="MathJax_Preview">min\{dis[&lt;N,N,k&gt;]|0\leq k \leq K\}</span><script type="math/tex">min\{dis[<N,N,k>]|0\leq k \leq K\}</script></span></p>
+<h2 id="1616"><a href="https://www.luogu.org/problemnew/show/P4013"><span><span class="MathJax_Preview">16.</span><script type="math/tex">16.</script></span>数字梯形问题</a><a class="headerlink" href="#1616" title="Permanent link">&para;</a></h2>
+<h3 id="_33">题目<a class="headerlink" href="#_33" title="Permanent link">&para;</a></h3>
+<p>给定一个由 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 行数字组成的数字梯形如下图所示。</p>
+<p><img alt="img" src="https://cdn.luogu.org/upload/pic/12216.png" /></p>
+<p>梯形的第一行有 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 个数字。从梯形的顶部的 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 个数字开始，在每个数字处可以沿左下或右下方向移动，形成一条从梯形的顶至底的路径。</p>
+<p>分别遵守以下规则：</p>
+<ol>
+<li>从梯形的顶至底的 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 条路径互不相交；</li>
+<li>从梯形的顶至底的 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 条路径仅在数字结点处相交；</li>
+<li>从梯形的顶至底的 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 条路径允许在数字结点相交或边相交。</li>
+</ol>
+<h3 id="_34">题解<a class="headerlink" href="#_34" title="Permanent link">&para;</a></h3>
+<p>题目很水，不用多说。</p>
+<p>考虑对于那种不能相交的东西（比如节点，路径），考虑如何建图中表示出来，不能相交，说明只能走一次，那么就<sub><sub>按照一贯套路，</sub></sub>将他们拆成两个点，连边流量为<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>,可以相交的就连边无限大。</p>
+<p>接下来是三种情况分别如何连边（都是有向的）：</p>
+<ol>
+<li>把一个点<span><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span>拆成两个点<span><span class="MathJax_Preview">u_1,u_2</span><script type="math/tex">u_1,u_2</script></span>, <span><span class="MathJax_Preview">u_1</span><script type="math/tex">u_1</script></span>向<span><span class="MathJax_Preview">u_2</span><script type="math/tex">u_2</script></span>连边<span><span class="MathJax_Preview">(1,a[u])</span><script type="math/tex">(1,a[u])</script></span>,即流量<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>,费用（或者说是贡献）<span><span class="MathJax_Preview">a[u]</span><script type="math/tex">a[u]</script></span>,若两个点之间由连边（由上向下面的两个点），就由<span><span class="MathJax_Preview">u_2</span><script type="math/tex">u_2</script></span>向<span><span class="MathJax_Preview">v_1</span><script type="math/tex">v_1</script></span>连边<span><span class="MathJax_Preview">(1,0)</span><script type="math/tex">(1,0)</script></span>,<span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span>向最上面一层<span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>个点连边<span><span class="MathJax_Preview">(1,0)</span><script type="math/tex">(1,0)</script></span>,最下面一层点向<span><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span>连边<span><span class="MathJax_Preview">(1,0)</span><script type="math/tex">(1,0)</script></span>。</li>
+<li>只需要改部分边的容量，<span><span class="MathJax_Preview">u_1</span><script type="math/tex">u_1</script></span>与<span><span class="MathJax_Preview">u_2</span><script type="math/tex">u_2</script></span>之间的边容量改为<span><span class="MathJax_Preview">inf</span><script type="math/tex">inf</script></span>,因为点可以多次经过，最下面一层的点<span><span class="MathJax_Preview">v_2</span><script type="math/tex">v_2</script></span>与<span><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span>的连边改为<span><span class="MathJax_Preview">inf</span><script type="math/tex">inf</script></span></li>
+</ol>
+<p>，原因一样。</p>
+<ol>
+<li>所有边容量都改为<span><span class="MathJax_Preview">inf</span><script type="math/tex">inf</script></span>,但是<span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span>到最上面一层点<span><span class="MathJax_Preview">u_1</span><script type="math/tex">u_1</script></span>容量为<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>，因为无论怎样最上面每个点最多且必须用一次。</li>
+</ol>
+<p>跑最大费用最大流后最大费用就是结果。</p>
+<h2 id="1717"><a href="https://www.luogu.org/problemnew/show/P4015"><span><span class="MathJax_Preview">17.</span><script type="math/tex">17.</script></span>运输问题</a><a class="headerlink" href="#1717" title="Permanent link">&para;</a></h2>
+<h3 id="_35">题目<a class="headerlink" href="#_35" title="Permanent link">&para;</a></h3>
+<p>W 公司有 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 个仓库和 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个零售商店。第 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 个仓库有 <span><span class="MathJax_Preview">a_i</span><script type="math/tex">a_i</script></span> 单位的货物,第 <span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span>个零售商店需要 <span><span class="MathJax_Preview">b_j</span><script type="math/tex">b_j</script></span> 个单位的货物。
+货物供需平衡，即 <span><span class="MathJax_Preview">\sum\limits_{i=1}^{m}a_i=\sum\limits_{j=1}^{n}b_j</span><script type="math/tex">\sum\limits_{i=1}^{m}a_i=\sum\limits_{j=1}^{n}b_j</script></span>。
+从第 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 个仓库运送每单位货物到第 <span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span> 个零售商店的费用为 <span><span class="MathJax_Preview">c_{ij}</span><script type="math/tex">c_{ij}</script></span>。
+试设计一个将仓库中所有货物运送到零售商店的运输方案，使总运输费用最少。
+两行分别输出最小运输费用和最大运输费用。</p>
+<h3 id="_36">题解<a class="headerlink" href="#_36" title="Permanent link">&para;</a></h3>
+<p>其实和上面那个问题差不多，仓库放左边，商店放右边，<span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 向左边连 <span><span class="MathJax_Preview">(a[i], 0)</span><script type="math/tex">(a[i], 0)</script></span>的边(前面为流量，后面为费用，后同)，右边集合向 <span><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span> 连 <span><span class="MathJax_Preview">(b[j], 0)</span><script type="math/tex">(b[j], 0)</script></span>的边。
+第i个仓库向第j个商店连边 <span><span class="MathJax_Preview">(INF, c_{ij})</span><script type="math/tex">(INF, c_{ij})</script></span>。
+跑完一遍费用流后还要把费用取相反数来跑一遍，以求出最大花费。</p>
+<h2 id="1818"><a href="https://www.luogu.org/problemnew/show/P4014"><span><span class="MathJax_Preview">18.</span><script type="math/tex">18.</script></span>分配问题</a><a class="headerlink" href="#1818" title="Permanent link">&para;</a></h2>
+<h3 id="_37">题目<a class="headerlink" href="#_37" title="Permanent link">&para;</a></h3>
+<p>有 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 件工作要分配给 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个人做。第 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 个人做第 <span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span> 件工作产生的效益为 <span><span class="MathJax_Preview">c_{ij}</span><script type="math/tex">c_{ij}</script></span>。试设计一个将 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 件工作分配给 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个人做的分配方案，使产生的总效益最大。
+一个人只能修一个工件。
+两行分别输出最小总效益和最大总效益。</p>
+<h3 id="_38">题解<a class="headerlink" href="#_38" title="Permanent link">&para;</a></h3>
+<p>最小费用最大流，人放左边，商品放右边，<span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 向人连 <span><span class="MathJax_Preview">(1, 0)</span><script type="math/tex">(1, 0)</script></span>的边，商品向 <span><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span> 连 <span><span class="MathJax_Preview">(1, 0)</span><script type="math/tex">(1, 0)</script></span> 的边，人向商品连 <span><span class="MathJax_Preview">(1,c[i][j])</span><script type="math/tex">(1,c[i][j])</script></span> 的边，因为每个人只能修一个工件，所以流量最大为 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>。
+然后跑费用流。
+好像可以用二分图最佳完美匹配的 <span><span class="MathJax_Preview">KM</span><script type="math/tex">KM</script></span> 算法做，到时候学一下去。</p>
+<h2 id="1919"><a href="https://www.luogu.org/problemnew/show/P4016"><span><span class="MathJax_Preview">19.</span><script type="math/tex">19.</script></span>负载平衡问题</a><a class="headerlink" href="#1919" title="Permanent link">&para;</a></h2>
+<h3 id="_39">题目<a class="headerlink" href="#_39" title="Permanent link">&para;</a></h3>
+<p>G 公司有 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个沿铁路运输线环形排列的仓库，每个仓库存储的货物数量不等。如何用最少搬运量可以使 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个仓库的库存数量相同。搬运货物时，只能在相邻的仓库之间搬运。</p>
+<h3 id="_40">题解<a class="headerlink" href="#_40" title="Permanent link">&para;</a></h3>
+<p>考虑费用流。
+首先可以确定每个仓库货物量最后应该是多少。
+肯定是平均数。
+然后考虑建模。
+建立 <span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span>, <span><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span>,然后将仓库按照货量与平均值的关系，大于平均值的放右边，小于平均值的放左边。
+由 <span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 向左边的集合连边，流量 <span><span class="MathJax_Preview">a[i]-sum</span><script type="math/tex">a[i]-sum</script></span>, 费用为零，表示最多可从 <span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 点获得这么多流量，或者说实际上是可以向外最多移动这么多自己原有的货物。
+由右边的集合向 <span><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span> 连边，流量为 <span><span class="MathJax_Preview">sum-a[i]</span><script type="math/tex">sum-a[i]</script></span>，费用为零，意义和上面的差不多。
+考虑左右边集合之间的连边，由题目意思，只能相邻之间的仓库之间运输，所以相邻的点之间连边，流量为 <span><span class="MathJax_Preview">INF</span><script type="math/tex">INF</script></span>，费用为1。
+然后跑费用流输出最小费用就行。</p>
+<h2 id="2020"><a href="https://www.luogu.org/problemnew/show/P4012"><span><span class="MathJax_Preview">20.</span><script type="math/tex">20.</script></span>深海机器人问题</a><a class="headerlink" href="#2020" title="Permanent link">&para;</a></h2>
+<h3 id="_41">题目<a class="headerlink" href="#_41" title="Permanent link">&para;</a></h3>
+<p>深海资源考察探险队的潜艇将到达深海的海底进行科学考察。</p>
+<p>潜艇内有多个深海机器人。潜艇到达深海海底后，深海机器人将离开潜艇向预定目标移动。</p>
+<p>深海机器人在移动中还必须沿途采集海底生物标本。沿途生物标本由最先遇到它的深海机器人完成采集。</p>
+<p>每条预定路径上的生物标本的价值是已知的，而且生物标本只能被采集一次。</p>
+<p>本题限定深海机器人只能从其出发位置沿着向北或向东的方向移动，而且多个深海机器人可以在同一时间占据同一位置。</p>
+<p>用一个<span><span class="MathJax_Preview">P\times Q</span><script type="math/tex">P\times Q</script></span>网格表示深海机器人的可移动位置。西南角的坐标为<span><span class="MathJax_Preview">(0,0)</span><script type="math/tex">(0,0)</script></span>，东北角的坐标为<span><span class="MathJax_Preview">(Q,P)</span><script type="math/tex">(Q,P)</script></span>。</p>
+<p><img alt="img" src="https://cdn.luogu.org/upload/pic/12215.png" /></p>
+<p>给定每个深海机器人的出发位置和目标位置，以及每条网格边上生物标本的价值。</p>
+<p>计算深海机器人的最优移动方案， 使深海机器人到达目的地后，采集到的生物标本的总价值最高。</p>
+<h3 id="_42">题解<a class="headerlink" href="#_42" title="Permanent link">&para;</a></h3>
+<p>其实挺水，但是我发现两个问题。</p>
+<ul>
+<li>边的编号要从<span><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span>开始，不然反边加不了，我总是忘。</li>
+<li>最大费用最大流最好还是边权取相反数然后最小费用最大流再反过来靠谱一点，我直接写在松弛操作中不对。</li>
+</ul>
+<p>就简单的讲一下一个点<span><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span>到另一个点<span><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span>（假设<span><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span>在<span><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span>的西方或南方）之间有<span><span class="MathJax_Preview">val</span><script type="math/tex">val</script></span>权值，应该如何连边。</p>
+<ol>
+<li>首先新建一个点<span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>,连边由<span><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span>向<span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>连一条<span><span class="MathJax_Preview">(1,val)</span><script type="math/tex">(1,val)</script></span>，由<span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>向<span><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span>连一条<span><span class="MathJax_Preview">(1,0)</span><script type="math/tex">(1,0)</script></span>。</li>
+<li>再新建一个点<span><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span>,连边由<span><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span>向<span><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span>连一条<span><span class="MathJax_Preview">(inf,0)</span><script type="math/tex">(inf,0)</script></span>，由<span><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span>向<span><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span>连一条<span><span class="MathJax_Preview">(inf,0)</span><script type="math/tex">(inf,0)</script></span>。</li>
+</ol>
+<p>为什么这么建就不用多说了。</p>
+<p>最大费用即为结果。</p>
+<h2 id="2121k"><a href="https://www.luogu.org/problemnew/show/P3358"><span><span class="MathJax_Preview">21.</span><script type="math/tex">21.</script></span>最长k可重区间集问题</a><a class="headerlink" href="#2121k" title="Permanent link">&para;</a></h2>
+<h3 id="_43">题目<a class="headerlink" href="#_43" title="Permanent link">&para;</a></h3>
+<p>给定实直线<span><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span>上<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>个开区间组成的集合<span><span class="MathJax_Preview">I</span><script type="math/tex">I</script></span>，和一个正整数<span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>，试设计一个算法，从开区
+间集合<span><span class="MathJax_Preview">I</span><script type="math/tex">I</script></span>中选取出开区间集合<span><span class="MathJax_Preview">S\subset I</span><script type="math/tex">S\subset I</script></span>，使得在实直线<span><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span>的任何一点<span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>，<span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span>中包含点<span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>的开区间
+个数不超过<span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>,且<span><span class="MathJax_Preview">\sum_{z\in S}|z|</span><script type="math/tex">\sum_{z\in S}|z|</script></span>达到最大。这样的集合<span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span>称为开区间集合<span><span class="MathJax_Preview">I</span><script type="math/tex">I</script></span>的最长<span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>可重区间集。<span><span class="MathJax_Preview">\sum_{z\in S}|z|</span><script type="math/tex">\sum_{z\in S}|z|</script></span>称为最长<span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>可重区间集的长度。</p>
+<h3 id="_44">题解<a class="headerlink" href="#_44" title="Permanent link">&para;</a></h3>
+<p>问题可以看做是求K条权之和最大的不想交路径，每条路径为一些不相交的区间序列。</p>
+<p>那么就与之前的数字梯形问题差不多了。</p>
+<p>连边直接贴一下BYVoid的吧。<del>我懒得写了</del></p>
+<p>按左端点排序所有区间，把每个区间拆分看做两个顶点<span><span class="MathJax_Preview">i.a, i.b</span><script type="math/tex">i.a, i.b</script></span>，建立附加源<span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span>汇<span><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span>，以及附加顶点<span><span class="MathJax_Preview">S'</span><script type="math/tex">S'</script></span>。</p>
+<p>1、连接<span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span>到<span><span class="MathJax_Preview">S'</span><script type="math/tex">S'</script></span>一条容量为<span><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span>，费用为<span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>的有向边。
+2、从<span><span class="MathJax_Preview">S'</span><script type="math/tex">S'</script></span>到每个<span><span class="MathJax_Preview">i.a</span><script type="math/tex">i.a</script></span>连接一条容量为<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>，费用为<span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>的有向边。
+3、从每个<span><span class="MathJax_Preview">i.b</span><script type="math/tex">i.b</script></span>到<span><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span>连接一条容量为<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>，费用为<span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>的有向边。
+4、从每个顶点<span><span class="MathJax_Preview">i.a</span><script type="math/tex">i.a</script></span>到<span><span class="MathJax_Preview">i.b</span><script type="math/tex">i.b</script></span>连接一条容量为<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>，费用为区间长度的有向边。
+5、对于每个区间<span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>，与它右边的不相交的所有区间<span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span>各连一条容量为<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>，费用为<span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>的有向边。</p>
+<p>求最大费用最大流，最大费用流值就是最长<span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>可重区间集的长度。</p>
+<p><strong>还有一种复杂度更低(<span><span class="MathJax_Preview">O(N)</span><script type="math/tex">O(N)</script></span>)的方法</strong> 。</p>
+<p>离散化所有区间的端点，把每个端点看做一个顶点，建立附加源<span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span>汇<span><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span>。</p>
+<p>1、从<span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span>到顶点<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>（最左边顶点）连接一条容量为<span><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span>，费用为<span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>的有向边。
+2、从顶点<span><span class="MathJax_Preview">2N​</span><script type="math/tex">2N​</script></span>（最右边顶点）到<span><span class="MathJax_Preview">T​</span><script type="math/tex">T​</script></span>连接一条容量为<span><span class="MathJax_Preview">K​</span><script type="math/tex">K​</script></span>，费用为<span><span class="MathJax_Preview">0​</span><script type="math/tex">0​</script></span>的有向边。
+3、从顶点<span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>到顶点<span><span class="MathJax_Preview">i+1(i+1\leq 2N)</span><script type="math/tex">i+1(i+1\leq 2N)</script></span>，连接一条容量为无穷大，费用为<span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>的有向边。
+4、对于每个区间<span><span class="MathJax_Preview">[a,b]</span><script type="math/tex">[a,b]</script></span>，从<span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>对应的顶点<span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>到<span><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span>对应的顶点<span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span>连接一条容量为<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>，费用为区间长度的有向边。</p>
+<p>求最大费用最大流，最大费用流值就是最长<span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>可重区间集的长度。</p>
+<h2 id="2222k"><a href="https://www.luogu.org/problemnew/show/P3357"><span><span class="MathJax_Preview">22.</span><script type="math/tex">22.</script></span>最长k可重线段集问题</a><a class="headerlink" href="#2222k" title="Permanent link">&para;</a></h2>
+<h3 id="_45">题目<a class="headerlink" href="#_45" title="Permanent link">&para;</a></h3>
+<p>给定平面<span><span class="MathJax_Preview">x-O-y</span><script type="math/tex">x-O-y</script></span>上<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>个开线段组成的集合<span><span class="MathJax_Preview">I</span><script type="math/tex">I</script></span>，和一个正整数<span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>。试设计一个算法，从开线段集合<span><span class="MathJax_Preview">I</span><script type="math/tex">I</script></span>中选取出开线段集合<span><span class="MathJax_Preview">S\subseteq I</span><script type="math/tex">S\subseteq I</script></span>,使得在<span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>轴上的任何一点<span><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>，<span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span>中与直线<span><span class="MathJax_Preview">x=p</span><script type="math/tex">x=p</script></span>相交的开线段个数不超过<span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>，且<span><span class="MathJax_Preview">\sum_{z\in S} |z|</span><script type="math/tex">\sum_{z\in S} |z|</script></span>达到最大。这样的集合<span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span>称为开线段集合<span><span class="MathJax_Preview">I</span><script type="math/tex">I</script></span>的最长<span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>可重线段集。<span><span class="MathJax_Preview">\sum_{z\in S} |z|</span><script type="math/tex">\sum_{z\in S} |z|</script></span>称为最长<span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>可重线段集的长度。</p>
+<p>对于任何开线段<span><span class="MathJax_Preview">z</span><script type="math/tex">z</script></span>，设其断点坐标为<span><span class="MathJax_Preview">(x_0,y_0)</span><script type="math/tex">(x_0,y_0)</script></span>和<span><span class="MathJax_Preview">(x_1,y_1)</span><script type="math/tex">(x_1,y_1)</script></span>,则开线段<span><span class="MathJax_Preview">z</span><script type="math/tex">z</script></span>的长度<span><span class="MathJax_Preview">|z|</span><script type="math/tex">|z|</script></span>定义为：</p>
+<div>
+<div class="MathJax_Preview">|z|=\lfloor\sqrt{(x_1-x_0)^2+(y_1-y_0)^2}\rfloor</div>
+<script type="math/tex; mode=display">|z|=\lfloor\sqrt{(x_1-x_0)^2+(y_1-y_0)^2}\rfloor</script>
+</div>
+<p>对于给定的开线段集合<span><span class="MathJax_Preview">I</span><script type="math/tex">I</script></span>和正整数<span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>，计算开线段集合<span><span class="MathJax_Preview">I</span><script type="math/tex">I</script></span>的最长<span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>可重线段集的长度。</p>
+<h3 id="_46">题解<a class="headerlink" href="#_46" title="Permanent link">&para;</a></h3>
+<p>其实和<span><span class="MathJax_Preview">21</span><script type="math/tex">21</script></span>题差不多。</p>
+<h2 id="2323"><a href="https://www.luogu.org/problemnew/show/P3356"><span><span class="MathJax_Preview">23.</span><script type="math/tex">23.</script></span>火星探险问题</a><a class="headerlink" href="#2323" title="Permanent link">&para;</a></h2>
+<h3 id="_47">题目<a class="headerlink" href="#_47" title="Permanent link">&para;</a></h3>
+<p>火星探险队的登陆舱将在火星表面着陆，登陆舱内有多部障碍物探测车。登陆舱着陆后，探测车将离开登陆舱向先期到达的传送器方向移动。探测车在移动中还必须采集岩石标本。每一块岩石标本由最先遇到它的探测车完成采集。每块岩石标本只能被采集一次。岩石标本被采集后，其他探测车可以从原来岩石标本所在处通过。探测车不能通过有障碍的地面。本题限定探测车只能从登陆处沿着向南或向东的方向朝传送器移动，而且多个探测车可以在同一时间占据同一位置。如果某个探测车在到达传送器以前不能继续前进，则该车所采集的岩石标本将全部损失。</p>
+<p>用一个<span><span class="MathJax_Preview">P\times Q</span><script type="math/tex">P\times Q</script></span>网格表示登陆舱与传送器之间的位置。登陆舱的位置在<span><span class="MathJax_Preview">(X1,Y1)</span><script type="math/tex">(X1,Y1)</script></span>处，传送器
+的位置在<span><span class="MathJax_Preview">(X_P ,Y_Q)</span><script type="math/tex">(X_P ,Y_Q)</script></span>处。</p>
+<p>X 1,Y 1 X 2 , Y 1 X 3 , Y 1 ... X P-1, Y 1 X P , Y 1</p>
+<p>X 1,Y 2 X 2 , Y 2 X 3 , Y 2 ... X P-1, Y 2 X P , Y 2</p>
+<p>X 1, Y 3 X 2 , Y 3 X 3 ,Y 3 ... X P-1, Y 3 X P , Y 3</p>
+<p>... ...</p>
+<p>X 1 ,Y Q-1 X 2 , Y Q-1 X 3 , Y Q-1 ... X P-1, Y Q-1 X P , Y Q-1</p>
+<p>X 1,Y Q X 2 , Y Q X 3 , Y Q ... X P-1, Y Q X P ,Y Q</p>
+<p>给定每个位置的状态，计算探测车的最优移动方案，使到达传送器的探测车的数量最多，
+而且探测车采集到的岩石标本的数量最多。</p>
+<h3 id="_48">题解<a class="headerlink" href="#_48" title="Permanent link">&para;</a></h3>
+<p>和深海机器人十分相像，就不具体说方法了。</p>
+<p>输出方法就是：</p>
+<p>对于每个点向右边和下面搜索可以取的点，即该点和那个点之间的连边的反边有流量，然后就走过去，<span><span class="MathJax_Preview">dfs</span><script type="math/tex">dfs</script></span>的开始点都是<span><span class="MathJax_Preview">(1,1)</span><script type="math/tex">(1,1)</script></span>，只要<span><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span>遍就行，注意走过一条边后要把反边流量<span><span class="MathJax_Preview">-1</span><script type="math/tex">-1</script></span>.</p>
+<h2 id="2424"><a href="https://www.luogu.org/problemnew/show/P3355"><span><span class="MathJax_Preview">24.</span><script type="math/tex">24.</script></span>骑士共存问题</a><a class="headerlink" href="#2424" title="Permanent link">&para;</a></h2>
+<h3 id="_49">题目<a class="headerlink" href="#_49" title="Permanent link">&para;</a></h3>
+<p>在一个 n*n个方格的国际象棋棋盘上，马（骑士）可以攻击的棋盘方格如图所示。棋盘上某些方格设置了障碍，骑士不得进入</p>
+<p><img alt="img" src="https://cdn.luogu.org/upload/pic/2669.png" /></p>
+<p>对于给定的 n*n 个方格的国际象棋棋盘和障碍标志，计算棋盘上最多可以放置多少个骑士，使得它们彼此互不攻击。</p>
+<h3 id="_50">题解<a class="headerlink" href="#_50" title="Permanent link">&para;</a></h3>
+<p><del>我才不会说我之前一直都没用当前弧优化这次被卡才用起来的。</del></p>
+<p><sub><sub>按照套路，</sub></sub>将图黑白染色，将白点放到<span><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span>集合，黑点放到<span><span class="MathJax_Preview">Y</span><script type="math/tex">Y</script></span>集合，我们知道可以相互攻击的两个点一定在不同的两个集合中，然后<sub><sub>按照套路</sub></sub>将问题转化成最小割解决。</p>
+<p>连边方式：</p>
+<ol>
+<li><span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span>向<span><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span>集合中的没障碍的点连边容量为<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>。</li>
+<li><span><span class="MathJax_Preview">Y</span><script type="math/tex">Y</script></span>集合中的没障碍的点向<span><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span>连边容量为<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>。</li>
+<li>对于可以互相攻击到的两个点从一个点（假设他在<span><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span>集合中）向另一个点（肯定在<span><span class="MathJax_Preview">Y</span><script type="math/tex">Y</script></span>集合中）连边容量为<span><span class="MathJax_Preview">inf</span><script type="math/tex">inf</script></span>。</li>
+</ol>
+<p>所有点数减去有障碍的点数然后减去最大流就是结果。</p>
+<p>正确性可以参考一下之前的然后稍作思考就知道了。</p>
+<h2 id="_51"><a href="https://www.luogu.org/problemnew/lists?name=&amp;orderitem=pid&amp;tag=332&amp;content=0&amp;type=">所有题目网址点我</a><a class="headerlink" href="#_51" title="Permanent link">&para;</a></h2>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2018 - 2018 cysurgenin
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.583bbe55.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.3",url:{base:"../.."}})</script>
+      
+        <script src="../../_static/js/extra.js?v=2"></script>
+      
+        <script src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>
