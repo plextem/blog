@@ -41,7 +41,10 @@ nav:
       - 21.最长k可重区间集问题: articles/NetWork24/21.md   
       - 22.最长k可重线段集问题: articles/NetWork24/22.md   
       - 23.火星探险问题: articles/NetWork24/23.md       
-      - 24.骑士共存问题: articles/NetWork24/24.md       
+      - 24.骑士共存问题: articles/NetWork24/24.md
+  - 做题记录:
+    - BZOJ:
+      - 1565 植物大战僵尸: prac/bzoj/bz1565.md       
   
 theme:
  
@@ -68,6 +71,7 @@ extra:
 extra_javascript:
   - '_static/js/extra.js?v=2'
   - 'https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'
+  # - //cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 
 extra_css:
   - '_static/css/extra.css?v=2'
@@ -81,6 +85,7 @@ markdown_extensions:
   - def_list
   - footnotes
   - meta
+  - mdx_math
   - toc:
       permalink: true
   - pymdownx.arithmatex
