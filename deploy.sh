@@ -1,4 +1,4 @@
-mkdocs build
+mkdocs build --clean
 echo "site/" >> .gitignore
 git add .
 git commit -m 'blog'
