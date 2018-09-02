@@ -16,7 +16,7 @@ copyright: 'Copyright &copy; 2018 - 2018 plextem'
 # Contents
 nav:
   - 首页: index.md
-  - 总结:
+  - 专题总结:
     - 网络流24题总结: 
       - 1.飞行员配对方案问题: articles/NetWork24/1.md
       - 2.太空飞行计划问题: articles/NetWork24/2.md
@@ -44,7 +44,8 @@ nav:
       - 24.骑士共存问题: articles/NetWork24/24.md
   - 做题记录:
     - BZOJ:
-      - 1565 植物大战僵尸: prac/bzoj/bz1565.md       
+      - 1565 植物大战僵尸: prac/bzoj/bz1565.md
+  - 友链: links.md
   
 theme:
   name: 'material'
