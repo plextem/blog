@@ -47,7 +47,6 @@ nav:
       - 1565 植物大战僵尸: prac/bzoj/bz1565.md       
   
 theme:
- 
   name: 'material'
   static_templates:
     - 404.html
@@ -57,6 +56,7 @@ theme:
     accent: 'red'
   feature:
     tabs: true
+  search_index_only: true
   font:
     text: 'Fira Sans'
     code: 'Fira Mono'
