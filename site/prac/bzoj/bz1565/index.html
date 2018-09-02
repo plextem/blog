@@ -115,7 +115,7 @@
       <div class="md-flex__cell md-flex__cell--shrink">
         <a href="../../.." title="blog" class="md-header-nav__button md-logo">
           
-            <i class="md-icon"></i>
+            <i class="md-icon">all_inclusive</i>
           
         </a>
       </div>
@@ -271,7 +271,7 @@
   <label class="md-nav__title md-nav__title--site" for="__drawer">
     <a href="../../.." title="blog" class="md-nav__button md-logo">
       
-        <i class="md-icon"></i>
+        <i class="md-icon">all_inclusive</i>
       
     </a>
     blog
@@ -817,8 +817,8 @@
 <p>我觉得这题是个不错的网络流题目，应用到了对最大权闭合图的理解。</p>
 <p>引用一位dalao对闭合图的解释：</p>
 <blockquote>
-<p>闭合图：定义一个有向图 <span><span class="MathJax_Preview">G = (V , E)</span><script type="math/tex">G = (V , E)</script></span> 的闭合图，是该有向图的一个点集,且该点集的所有出边都还指向该点集。即闭合图内的任意点的任意后继也一定在闭合图中。更形式化地说，闭合图是这样的一个点集 <span><span class="MathJax_Preview">V ' \in V</span><script type="math/tex">V ' \in V</script></span> ,满足对于 <span><span class="MathJax_Preview">\forall u\in V'</span><script type="math/tex">\forall u\in V'</script></span> 引出的 ，必有 <span><span class="MathJax_Preview">v \in V '</span><script type="math/tex">v \in V '</script></span> 成立。按照上面的定义,闭合图是允许超过一个连通块的。</p>
-<p>在许多实际应用中，给出的有向图常常是一个有向无环图( <span><span class="MathJax_Preview">DAG</span><script type="math/tex">DAG</script></span> ),闭合图的性质恰好反映了事件间的必要条件的关系：一个事件的发生,它所需要的所有前提也都要发生。一个常见的例子就是制定大学的选课计划,其中一些课程需要以另一些课程为基础，这就是给出了有向无环图。若给所有课程打分,最大权闭合图对应了获益最大或效率最高的选课计划,解决了这个问题,就可以容易地选出一个最合理的选课计划。</p>
+<p>闭合图：定义一个有向图 <span><span class="MathJax_Preview">G = (V , E)</span><script type="math/tex">G = (V , E)</script></span> 的闭合图，是该有向图的一个点集,且该点集的所有出边都还指向该点     集。即闭合图内的任意点的任意后继也一定在闭合图中。更形式化地说，闭合图是这样的一个点集 <span><span class="MathJax_Preview">V ' \in V</span><script type="math/tex">V ' \in V</script></span> ,满足对于 <span><span class="MathJax_Preview">\forall u\in V'</span><script type="math/tex">\forall u\in V'</script></span> 引出的 ，必有 <span><span class="MathJax_Preview">v \in V '</span><script type="math/tex">v \in V '</script></span> 成立。按照上面的定义,闭合图是允许超过一个连通块的。
+在许多实际应用中，给出的有向图常常是一个有向无环图( <span><span class="MathJax_Preview">DAG</span><script type="math/tex">DAG</script></span> ),闭合图的性质恰好反映了事件间的必要条件的关系：一个事件的发生,它所需要的所有前提也都要发生。一个常见的例子就是制定大学的选课计划,其中一些课程需要以另一些课程为基础，这就是给出了有向无环图。若给所有课程打分,最大权闭合图对应了获益最大或效率最高的选课计划,解决了这个问题,就可以容易地选出一个最合理的选课计划。</p>
 </blockquote>
 <p>假设选择的植物集合为 <span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span>，那么我们的目标（需要最大化的值）就是</p>
 <p>

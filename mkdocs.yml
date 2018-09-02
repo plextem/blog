@@ -48,9 +48,12 @@ nav:
   
 theme:
   name: 'material'
+  theme_dir: 'custom_theme'
   static_templates:
     - 404.html
   language: 'zh'
+  logo:
+    icon: 'all_inclusive'
   palette:
     primary: 'blue'
     accent: 'red'

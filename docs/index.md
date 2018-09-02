@@ -7,7 +7,8 @@ title: plextem's blog
 
 我只是一个 **蒟蒻**,啥都不会，所以这里什么也没有。
 
-## 更改博客在本地的颜色主题
+## Material color palette 颜色主题
+
 ### Primary colors 主色
 
 > 默认 `blue`
