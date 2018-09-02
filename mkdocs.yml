@@ -22,6 +22,26 @@ nav:
       - 2.太空飞行计划问题: articles/NetWork24/2.md
       - 3.最小路径覆盖问题: articles/NetWork24/3.md
       - 4.魔术球问题: articles/NetWork24/4.md
+      - 5.圆桌问题: articles/NetWork24/5.md           
+      - 6.最长不下降子序列问题: articles/NetWork24/6.md     
+      - 7.试题库问题: articles/NetWork24/7.md          
+      - 8.机器人路径规划问题: articles/NetWork24/8.md    
+      - 9.方格取数问题: articles/NetWork24/9.md         
+      - 10.餐巾计划问题: articles/NetWork24/10.md       
+      - 11.航空路线问题: articles/NetWork24/11.md       
+      - 12.软件补丁问题: articles/NetWork24/12.md       
+      - 13.星际转移问题: articles/NetWork24/13.md       
+      - 14.孤岛营救问题: articles/NetWork24/14.md       
+      - 15.汽车加油问题: articles/NetWork24/15.md       
+      - 16.数字梯形问题: articles/NetWork24/16.md       
+      - 17.运输问题: articles/NetWork24/17.md         
+      - 18.分配问题: articles/NetWork24/18.md         
+      - 19.负载平衡问题: articles/NetWork24/19.md       
+      - 20.深海机器人问题: articles/NetWork24/20.md      
+      - 21.最长k可重区间集问题: articles/NetWork24/21.md   
+      - 22.最长k可重线段集问题: articles/NetWork24/22.md   
+      - 23.火星探险问题: articles/NetWork24/23.md       
+      - 24.骑士共存问题: articles/NetWork24/24.md       
   
 theme:
  
