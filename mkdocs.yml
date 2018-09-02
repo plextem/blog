@@ -45,6 +45,7 @@ nav:
   - 做题记录:
     - BZOJ:
       - 1565 植物大战僵尸: prac/bzoj/bz1565.md
+      - 3668 起床困难综合症: prac/bzoj/bz3668.md
   - 友链: links.md
   
 theme:
