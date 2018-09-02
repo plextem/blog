@@ -1,0 +1,1506 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="随便搭建的博客，写一些平时的做题总结等">
+      
+      
+      
+        <meta name="author" content="plextem">
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="zh">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.3, mkdocs-material-3.0.3">
+    
+    
+      
+        <title>Xzy - blog</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#2196f3">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,400i,700|Fira+Mono">
+        <style>body,input{font-family:"Fira Sans","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Fira Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+      <link rel="stylesheet" href="../../_static/css/extra.css?v=2">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="blue" data-md-color-accent="red">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="../../#1" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="blog" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">all_inclusive</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                blog
+              </span>
+              <span class="md-header-nav__topic">
+                Xzy
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/plextem/blog/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      plextem/blog
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+<nav class="md-tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." title="首页" class="md-tabs__link md-tabs__link--active">
+        首页
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../articles/NetWork24/1/" title="专题总结" class="md-tabs__link">
+          专题总结
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../prac/bzoj/bz1565/" title="做题记录" class="md-tabs__link">
+          做题记录
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+        
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="blog" class="md-nav__button md-logo">
+      
+        <i class="md-icon">all_inclusive</i>
+      
+    </a>
+    blog
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/plextem/blog/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      plextem/blog
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="首页" class="md-nav__link">
+      首页
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      专题总结
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        专题总结
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+    
+    <label class="md-nav__link" for="nav-2-1">
+      网络流24题总结
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        网络流24题总结
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../articles/NetWork24/1/" title="1.飞行员配对方案问题" class="md-nav__link">
+      1.飞行员配对方案问题
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../articles/NetWork24/2/" title="2.太空飞行计划问题" class="md-nav__link">
+      2.太空飞行计划问题
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../articles/NetWork24/3/" title="3.最小路径覆盖问题" class="md-nav__link">
+      3.最小路径覆盖问题
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../articles/NetWork24/4/" title="4.魔术球问题" class="md-nav__link">
+      4.魔术球问题
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../articles/NetWork24/5/" title="5.圆桌问题" class="md-nav__link">
+      5.圆桌问题
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../articles/NetWork24/6/" title="6.最长不下降子序列问题" class="md-nav__link">
+      6.最长不下降子序列问题
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../articles/NetWork24/7/" title="7.试题库问题" class="md-nav__link">
+      7.试题库问题
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../articles/NetWork24/8/" title="8.机器人路径规划问题" class="md-nav__link">
+      8.机器人路径规划问题
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../articles/NetWork24/9/" title="9.方格取数问题" class="md-nav__link">
+      9.方格取数问题
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../articles/NetWork24/10/" title="10.餐巾计划问题" class="md-nav__link">
+      10.餐巾计划问题
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../articles/NetWork24/11/" title="11.航空路线问题" class="md-nav__link">
+      11.航空路线问题
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../articles/NetWork24/12/" title="12.软件补丁问题" class="md-nav__link">
+      12.软件补丁问题
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../articles/NetWork24/13/" title="13.星际转移问题" class="md-nav__link">
+      13.星际转移问题
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../articles/NetWork24/14/" title="14.孤岛营救问题" class="md-nav__link">
+      14.孤岛营救问题
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../articles/NetWork24/15/" title="15.汽车加油问题" class="md-nav__link">
+      15.汽车加油问题
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../articles/NetWork24/16/" title="16.数字梯形问题" class="md-nav__link">
+      16.数字梯形问题
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../articles/NetWork24/17/" title="17.运输问题" class="md-nav__link">
+      17.运输问题
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../articles/NetWork24/18/" title="18.分配问题" class="md-nav__link">
+      18.分配问题
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../articles/NetWork24/19/" title="19.负载平衡问题" class="md-nav__link">
+      19.负载平衡问题
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../articles/NetWork24/20/" title="20.深海机器人问题" class="md-nav__link">
+      20.深海机器人问题
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../articles/NetWork24/21/" title="21.最长k可重区间集问题" class="md-nav__link">
+      21.最长k可重区间集问题
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../articles/NetWork24/22/" title="22.最长k可重线段集问题" class="md-nav__link">
+      22.最长k可重线段集问题
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../articles/NetWork24/23/" title="23.火星探险问题" class="md-nav__link">
+      23.火星探险问题
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../articles/NetWork24/24/" title="24.骑士共存问题" class="md-nav__link">
+      24.骑士共存问题
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      做题记录
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        做题记录
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+    
+    <label class="md-nav__link" for="nav-3-1">
+      BZOJ
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        BZOJ
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../prac/bzoj/bz1565/" title="1565 植物大战僵尸" class="md-nav__link">
+      1565 植物大战僵尸
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../links/" title="友链" class="md-nav__link">
+      友链
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/plextem/blog/blob/master/docs/datum/xzy.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <p><strong>以下全部摘自<a href="https://k-xzy.xyz">xzy</a>的博客</strong></p>
+<h1 id="1">1. 长沙市一中信息学各专题学习链接<a class="headerlink" href="#1" title="Permanent link">&para;</a></h1>
+<p><strong>数学类：</strong></p>
+<table>
+<thead>
+<tr>
+<th>组合数求模</th>
+<th><a href="https://blog.csdn.net/skywalkert/article/details/52553048">https://blog.csdn.net/skywalkert/article/details/52553048</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>洲阁筛</td>
+<td><a href="https://blog.csdn.net/semiwaker/article/details/73822107">https://blog.csdn.net/semiwaker/article/details/73822107</a></td>
+</tr>
+<tr>
+<td>寻找模质数意义下的剩余</td>
+<td><a href="https://blog.csdn.net/skywalkert/article/details/52591343">https://blog.csdn.net/skywalkert/article/details/52591343</a></td>
+</tr>
+<tr>
+<td>线性筛与积性函数贾志鹏</td>
+<td><a href="https://wenku.baidu.com/view/2d706761aa00b52acec7ca63.html">https://wenku.baidu.com/view/2d706761aa00b52acec7ca63.html</a></td>
+</tr>
+<tr>
+<td>线性基学习笔记</td>
+<td><a href="https://blog.sengxian.com/algorithms/linear-basis">https://blog.sengxian.com/algorithms/linear-basis</a></td>
+</tr>
+<tr>
+<td>线性基</td>
+<td><a href="https://blog.sengxian.com/algorithms/linear-basis">https://blog.sengxian.com/algorithms/linear-basis</a></td>
+</tr>
+<tr>
+<td>线性基</td>
+<td><a href="https://blog.csdn.net/qaq__qaq/article/details/53812883">https://blog.csdn.net/qaq__qaq/article/details/53812883</a></td>
+</tr>
+<tr>
+<td>线性基</td>
+<td><a href="https://blog.sengxian.com/algorithms/linear-basis">https://blog.sengxian.com/algorithms/linear-basis</a></td>
+</tr>
+<tr>
+<td>线性基</td>
+<td><a href="https://blog.sengxian.com/algorithms/linear-basis">https://blog.sengxian.com/algorithms/linear-basis</a></td>
+</tr>
+<tr>
+<td>凸包</td>
+<td><a href="https://www.cnblogs.com/nyist-TC-LYQ/p/7208054.html">https://www.cnblogs.com/nyist-TC-LYQ/p/7208054.html</a></td>
+</tr>
+<tr>
+<td>凸包</td>
+<td><a href="https://blog.csdn.net/bone_ace/article/details/46239187">https://blog.csdn.net/bone_ace/article/details/46239187</a></td>
+</tr>
+<tr>
+<td>数论题</td>
+<td><a href="http://www.cnblogs.com/vongang/archive/2013/03/10/2952978.html">http://www.cnblogs.com/vongang/archive/2013/03/10/2952978.html</a></td>
+</tr>
+<tr>
+<td>数论</td>
+<td><a href="http://www.cppblog.com/menjitianya/archive/2015/12/02/212395.html">http://www.cppblog.com/menjitianya/archive/2015/12/02/212395.html</a></td>
+</tr>
+<tr>
+<td>生成函数</td>
+<td><a href="https://www.k-xzy.xyz/yz%e7%9b%b8%e5%85%b3/yz%e4%b8%93%e9%a2%98%e5%ad%a6%e4%b9%a0%e9%93%be%e6%8e%a5#3997744">http://www.cnblogs.com/RabbitHu/p/9178645.html#3997744</a></td>
+</tr>
+<tr>
+<td>扫描线</td>
+<td><a href="https://www.k-xzy.xyz/archives/2542">https://www.k-xzy.xyz/archives/2542</a></td>
+</tr>
+<tr>
+<td>群论入门</td>
+<td><a href="http://blog.csdn.net/xym_CSDN/article/details/53456447)">http://blog.csdn.net/xym_CSDN/article/details/53456447)</a></td>
+</tr>
+<tr>
+<td>逆元</td>
+<td><a href="https://www.k-xzy.xyz/archives/1982">https://www.k-xzy.xyz/archives/1982</a></td>
+</tr>
+<tr>
+<td>母函数</td>
+<td><a href="https://blog.csdn.net/xuzengqiang/article/details/7464337">https://blog.csdn.net/xuzengqiang/article/details/7464337</a></td>
+</tr>
+<tr>
+<td>莫比乌斯函数</td>
+<td><a href="https://www.k-xzy.xyz/archives/4625">https://www.k-xzy.xyz/archives/4625</a></td>
+</tr>
+<tr>
+<td>莫比乌斯反演＋杜教筛</td>
+<td><a href="https://www.k-xzy.xyz/yz%e7%9b%b8%e5%85%b3/yz%e4%b8%93%e9%a2%98%e5%ad%a6%e4%b9%a0%e9%93%be%e6%8e%a5#t11">https://blog.csdn.net/qq_30974369/article/details/79087445#t11</a></td>
+</tr>
+<tr>
+<td>莫比乌斯反演</td>
+<td><a href="https://www.cnblogs.com/abclzr/p/6242020.html">https://www.cnblogs.com/abclzr/p/6242020.html</a></td>
+</tr>
+<tr>
+<td>莫比乌斯反演</td>
+<td><a href="https://blog.csdn.net/as_a_kid/article/details/79249788">https://blog.csdn.net/as_a_kid/article/details/79249788</a></td>
+</tr>
+<tr>
+<td>莫比乌斯反演</td>
+<td><a href="https://www.cnblogs.com/peng-ym/p/8647856.html">https://www.cnblogs.com/peng-ym/p/8647856.html</a></td>
+</tr>
+<tr>
+<td>莫比乌斯反演</td>
+<td><a href="http://www.cnblogs.com/cjyyb/p/7953803.html">http://www.cnblogs.com/cjyyb/p/7953803.html</a></td>
+</tr>
+<tr>
+<td>矩阵乘法</td>
+<td><a href="http://www.matrix67.com/blog/archives/276">http://www.matrix67.com/blog/archives/276</a></td>
+</tr>
+<tr>
+<td>积性函数的前缀和</td>
+<td><a href="https://blog.csdn.net/skywalkert/article/details/50500009">https://blog.csdn.net/skywalkert/article/details/50500009</a></td>
+</tr>
+<tr>
+<td>积性函数</td>
+<td><a href="https://blog.csdn.net/skywalkert/article/details/50500009">https://blog.csdn.net/skywalkert/article/details/50500009</a></td>
+</tr>
+<tr>
+<td>高斯消元</td>
+<td><a href="https://www.k-xzy.xyz/archives/1398">https://www.k-xzy.xyz/archives/1398</a></td>
+</tr>
+<tr>
+<td>概率期望题</td>
+<td><a href="http://www.cnblogs.com/kuangbin/archive/2012/10/02/2710606.html">http://www.cnblogs.com/kuangbin/archive/2012/10/02/2710606.html</a></td>
+</tr>
+<tr>
+<td>多项式_picks（打开好慢）</td>
+<td><a href="http://picks.logdown.com/posts/209226-newtons-method-of-polynomial">http://picks.logdown.com/posts/209226-newtons-method-of-polynomial</a></td>
+</tr>
+<tr>
+<td>杜教筛及积性函数</td>
+<td><a href="https://blog.csdn.net/skywalkert/article/details/50500009">https://blog.csdn.net/skywalkert/article/details/50500009</a></td>
+</tr>
+<tr>
+<td>杜教筛</td>
+<td><a href="http://jiruyi910387714.is-programmer.com/posts/195270.html">http://jiruyi910387714.is-programmer.com/posts/195270.html</a></td>
+</tr>
+<tr>
+<td>杜教筛</td>
+<td><a href="http://www.cnblogs.com/y-clever/p/6514901.html">http://www.cnblogs.com/y-clever/p/6514901.html</a></td>
+</tr>
+<tr>
+<td>杜教筛</td>
+<td><a href="https://blog.csdn.net/skywalkert/article/details/50500009">https://blog.csdn.net/skywalkert/article/details/50500009</a></td>
+</tr>
+<tr>
+<td>递推式得通项公式</td>
+<td><a href="https://blog.csdn.net/qq_40515553/article/details/80418944">https://blog.csdn.net/qq_40515553/article/details/80418944</a></td>
+</tr>
+<tr>
+<td>博弈论经典模板</td>
+<td><a href="https://blog.csdn.net/kyleyoung_ymj/article/details/51494139">https://blog.csdn.net/kyleyoung_ymj/article/details/51494139</a></td>
+</tr>
+<tr>
+<td>博弈论</td>
+<td><a href="https://www.k-xzy.xyz/archives/5564">https://www.k-xzy.xyz/archives/5564</a></td>
+</tr>
+<tr>
+<td>半平面交对偶转凸包</td>
+<td><a href="http://trinkle.blog.uoj.ac/blog/235">http://trinkle.blog.uoj.ac/blog/235</a></td>
+</tr>
+<tr>
+<td>SG函数和SG定理</td>
+<td><a href="https://www.cnblogs.com/ECJTUACM-873284962/p/6921829.html">https://www.cnblogs.com/ECJTUACM-873284962/p/6921829.html</a></td>
+</tr>
+<tr>
+<td>NTT</td>
+<td><a href="https://blog.csdn.net/as_a_kid/article/details/80503140">https://blog.csdn.net/as_a_kid/article/details/80503140</a></td>
+</tr>
+<tr>
+<td>Min_25筛学习</td>
+<td><a href="https://blog.csdn.net/koishi_514/article/details/79485534">https://blog.csdn.net/koishi_514/article/details/79485534</a></td>
+</tr>
+<tr>
+<td>Min_25筛</td>
+<td><a href="http://www.cnblogs.com/zzqsblog/p/8302815.html">http://www.cnblogs.com/zzqsblog/p/8302815.html</a></td>
+</tr>
+<tr>
+<td>Min_25</td>
+<td><a href="http://www.cnblogs.com/zzqsblog/p/8302815.html">http://www.cnblogs.com/zzqsblog/p/8302815.html</a></td>
+</tr>
+<tr>
+<td>Matrix-Tree</td>
+<td><a href="http://www.cnblogs.com/cjyyb/p/8899229.html">http://www.cnblogs.com/cjyyb/p/8899229.html</a></td>
+</tr>
+<tr>
+<td>FWT</td>
+<td><a href="https://blog.csdn.net/liangzhaoyang1/article/details/52819835">https://blog.csdn.net/liangzhaoyang1/article/details/52819835</a></td>
+</tr>
+<tr>
+<td>FFT题集</td>
+<td><a href="https://www.cnblogs.com/littlepear/p/8698672.html">https://www.cnblogs.com/littlepear/p/8698672.html</a></td>
+</tr>
+<tr>
+<td>FFT入门-虚数的意义</td>
+<td><a href="http://www.ruanyifeng.com/blog/2012/09/imaginary_number.html)">http://www.ruanyifeng.com/blog/2012/09/imaginary_number.html)</a></td>
+</tr>
+<tr>
+<td>FFT入门-menci的详解</td>
+<td><a href="https://oi.men.ci/fft-notes/">https://oi.men.ci/fft-notes/</a></td>
+</tr>
+<tr>
+<td>FFT（Picks’s FFT）</td>
+<td><a href="http://picks.logdown.com/posts/247168-fast-fourier-transform-modulo-prime">http://picks.logdown.com/posts/247168-fast-fourier-transform-modulo-prime</a></td>
+</tr>
+<tr>
+<td>FFT</td>
+<td><a href="https://www.cnblogs.com/rvalue/p/7351400.html">https://www.cnblogs.com/rvalue/p/7351400.html</a></td>
+</tr>
+<tr>
+<td>FFT</td>
+<td><a href="https://oi.men.ci/?-notes/">https://oi.men.ci/?-notes/</a></td>
+</tr>
+<tr>
+<td>FFT</td>
+<td><a href="http://blog.miskcoo.com/2015/04/polynomial-multiplication-and-fast-fourier-transform">http://blog.miskcoo.com/2015/04/polynomial-multiplication-and-fast-fourier-transform</a></td>
+</tr>
+<tr>
+<td>FFT</td>
+<td><a href="http://www.gatevin.moe/acm/fft%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">http://www.gatevin.moe/acm/fft%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</a></td>
+</tr>
+<tr>
+<td>FFT</td>
+<td><a href="http://www.gatevin.moe/acm/fft%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">http://www.gatevin.moe/acm/fft%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</a></td>
+</tr>
+<tr>
+<td>bsgs&amp;exbsgs</td>
+<td><a href="http://blog.csdn.net/zzkksunboy/article/details/73162229">http://blog.csdn.net/zzkksunboy/article/details/73162229</a></td>
+</tr>
+<tr>
+<td>Bsgs</td>
+<td><a href="http://www.cnblogs.com/yuiffy/p/3877381.html">http://www.cnblogs.com/yuiffy/p/3877381.html</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>数据结构</strong></p>
+<table>
+<thead>
+<tr>
+<th>K-D Tree</th>
+<th><a href="http://trinkle.is-programmer.com/2015/7/22/kdtree.112655.html">http://trinkle.is-programmer.com/2015/7/22/kdtree.112655.html</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>kd-tree</td>
+<td><a href="https://leileiluoluo.com/posts/kdtree-algorithm-and-implementation.html">https://leileiluoluo.com/posts/kdtree-algorithm-and-implementation.html</a></td>
+</tr>
+<tr>
+<td>LCT</td>
+<td><a href="http://www.cnblogs.com/flashhu/p/8324551.html">http://www.cnblogs.com/flashhu/p/8324551.html</a></td>
+</tr>
+<tr>
+<td>LCT</td>
+<td><a href="http://www.aiuxian.com/article/p-2284697.html">http://www.aiuxian.com/article/p-2284697.html</a></td>
+</tr>
+<tr>
+<td>LCT</td>
+<td><a href="http://www.cnblogs.com/Robert-Yuan/p/5122784.html">http://www.cnblogs.com/Robert-Yuan/p/5122784.html</a></td>
+</tr>
+<tr>
+<td>LCT</td>
+<td><a href="https://blog.csdn.net/jeremygjy/article/details/51078087">https://blog.csdn.net/jeremygjy/article/details/51078087</a></td>
+</tr>
+<tr>
+<td>LCT</td>
+<td><a href="https://www.cnblogs.com/flashhu/p/8324551.html">https://www.cnblogs.com/flashhu/p/8324551.html</a></td>
+</tr>
+<tr>
+<td>LCT题单</td>
+<td><a href="https://www.cnblogs.com/xzyxzy/p/8410780.html">https://www.cnblogs.com/xzyxzy/p/8410780.html</a></td>
+</tr>
+<tr>
+<td>Splay</td>
+<td><a href="https://www.k-xzy.xyz/archives/1704">https://www.k-xzy.xyz/archives/1704</a></td>
+</tr>
+<tr>
+<td>Splay</td>
+<td><a href="https://www.k-xzy.xyz/archives/3251">https://www.k-xzy.xyz/archives/3251</a></td>
+</tr>
+<tr>
+<td>splay</td>
+<td><a href="https://oi.men.ci/splay-notes-1/">https://oi.men.ci/splay-notes-1/</a></td>
+</tr>
+<tr>
+<td>splay</td>
+<td><a href="http://blog.leanote.com/post/annoyrain@outlook.com/Splay">http://blog.leanote.com/post/annoyrain@outlook.com/Splay</a></td>
+</tr>
+<tr>
+<td>stl: pb_ds</td>
+<td><a href="https://www.k-xzy.xyz/archives/1070">https://www.k-xzy.xyz/archives/1070</a></td>
+</tr>
+<tr>
+<td>stl可持久化数组rope</td>
+<td><a href="https://www.k-xzy.xyz/archives/2481">https://www.k-xzy.xyz/archives/2481</a></td>
+</tr>
+<tr>
+<td>stl可持久化数组rope</td>
+<td><a href="http://www.cnblogs.com/vivym/p/3927949.html">http://www.cnblogs.com/vivym/p/3927949.html</a></td>
+</tr>
+<tr>
+<td>倍增lca</td>
+<td><a href="https://www.k-xzy.xyz/archives/401">https://www.k-xzy.xyz/archives/401</a></td>
+</tr>
+<tr>
+<td>点分治</td>
+<td><a href="https://blog.csdn.net/xyz32768/article/details/79833557">https://blog.csdn.net/xyz32768/article/details/79833557</a></td>
+</tr>
+<tr>
+<td>动态树</td>
+<td><a href="https://www.k-xzy.xyz/archives/1786">https://www.k-xzy.xyz/archives/1786</a></td>
+</tr>
+<tr>
+<td>动态树</td>
+<td><a href="http://www.cnblogs.com/Robert-Yuan/p/5122784.html">http://www.cnblogs.com/Robert-Yuan/p/5122784.html</a></td>
+</tr>
+<tr>
+<td>动态树</td>
+<td><a href="http://memphis.is-programmer.com/2015/8/7/linkcutmemphis.99293.html">http://memphis.is-programmer.com/2015/8/7/linkcutmemphis.99293.html</a></td>
+</tr>
+<tr>
+<td>分块</td>
+<td><a href="http://hzwer.com/8053.html">http://hzwer.com/8053.html</a></td>
+</tr>
+<tr>
+<td>分块</td>
+<td><a href="https://www.cnblogs.com/1-1-1-1/p/8761775.html">https://www.cnblogs.com/1-1-1-1/p/8761775.html</a></td>
+</tr>
+<tr>
+<td>块状链表</td>
+<td><a href="https://www.k-xzy.xyz/archives/1194">https://www.k-xzy.xyz/archives/1194</a></td>
+</tr>
+<tr>
+<td>树链剖分</td>
+<td><a href="https://www.k-xzy.xyz/archives/1637">https://www.k-xzy.xyz/archives/1637</a></td>
+</tr>
+<tr>
+<td>树链剖分</td>
+<td><a href="http://www.cnblogs.com/Sdchr/p/6357576.html">http://www.cnblogs.com/Sdchr/p/6357576.html</a></td>
+</tr>
+<tr>
+<td>树链剖分</td>
+<td><a href="https://www.cnblogs.com/George1994/p/7821357.html">https://www.cnblogs.com/George1994/p/7821357.html</a></td>
+</tr>
+<tr>
+<td>树链剖分</td>
+<td><a href="https://www.k-xzy.xyz/archives/1637">https://www.k-xzy.xyz/archives/1637</a></td>
+</tr>
+<tr>
+<td>树状数组</td>
+<td><a href="https://blog.csdn.net/int64ago/article/details/7429868">https://blog.csdn.net/int64ago/article/details/7429868</a></td>
+</tr>
+<tr>
+<td>树状数组区间第k大</td>
+<td><a href="http://blog.csdn.net/z309241990/article/details/9623885">http://blog.csdn.net/z309241990/article/details/9623885</a></td>
+</tr>
+<tr>
+<td>替罪羊树</td>
+<td><a href="https://www.cnblogs.com/Hero-of-someone/p/7260332.html">https://www.cnblogs.com/Hero-of-someone/p/7260332.html</a></td>
+</tr>
+<tr>
+<td>线段树</td>
+<td><a href="https://www.k-xzy.xyz/archives/155">https://www.k-xzy.xyz/archives/155</a></td>
+</tr>
+<tr>
+<td>线段树</td>
+<td><a href="https://www.k-xzy.xyz/archives/155">https://www.k-xzy.xyz/archives/155</a></td>
+</tr>
+<tr>
+<td>线段树</td>
+<td><a href="https://www.cnblogs.com/TheRoadToTheGold/p/6254255.html">https://www.cnblogs.com/TheRoadToTheGold/p/6254255.html</a></td>
+</tr>
+<tr>
+<td>线段树</td>
+<td><a href="https://www.cnblogs.com/AC-King/p/7789013.html">https://www.cnblogs.com/AC-King/p/7789013.html</a></td>
+</tr>
+<tr>
+<td>线段树合并</td>
+<td><a href="https://wenku.baidu.com/view/88f4e134e518964bcf847c95.html">https://wenku.baidu.com/view/88f4e134e518964bcf847c95.html</a></td>
+</tr>
+<tr>
+<td>虚树</td>
+<td><a href="https://www.k-xzy.xyz/archives/4476">https://www.k-xzy.xyz/archives/4476</a></td>
+</tr>
+<tr>
+<td>虚树</td>
+<td><a href="https://www.k-xzy.xyz/archives/4476">https://www.k-xzy.xyz/archives/4476</a></td>
+</tr>
+<tr>
+<td>圆方树</td>
+<td><a href="http://www.cnblogs.com/cjyyb/p/9098400.html">http://www.cnblogs.com/cjyyb/p/9098400.html</a></td>
+</tr>
+<tr>
+<td>主席树</td>
+<td><a href="https://www.cnblogs.com/sclbgw7/p/8966316.html">https://www.cnblogs.com/sclbgw7/p/8966316.html</a></td>
+</tr>
+<tr>
+<td>主席树</td>
+<td><a href="https://www.cnblogs.com/sclbgw7/p/9125701.html">https://www.cnblogs.com/sclbgw7/p/9125701.html</a></td>
+</tr>
+<tr>
+<td>左偏树</td>
+<td><a href="https://blog.csdn.net/iaccepted/article/details/6748038">https://blog.csdn.net/iaccepted/article/details/6748038</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>图论</strong></p>
+<table>
+<thead>
+<tr>
+<th>网络流</th>
+<th><a href="https://www.cnblogs.com/SYCstudio/p/7260613.html">https://www.cnblogs.com/SYCstudio/p/7260613.html</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>网络流</td>
+<td><a href="https://www.cnblogs.com/yaoyueduzhen/p/5020722.html">https://www.cnblogs.com/yaoyueduzhen/p/5020722.html</a></td>
+</tr>
+<tr>
+<td>2-SAT</td>
+<td><a href="https://blog.csdn.net/jarjingx/article/details/8521690">https://blog.csdn.net/jarjingx/article/details/8521690</a></td>
+</tr>
+<tr>
+<td>2-SAT题表</td>
+<td><a href="https://blog.csdn.net/yo_bc/article/details/78252967">https://blog.csdn.net/yo_bc/article/details/78252967</a></td>
+</tr>
+<tr>
+<td>tarjan强连通分量</td>
+<td><a href="https://www.cnblogs.com/stxy-ferryman/p/7779347.html">https://www.cnblogs.com/stxy-ferryman/p/7779347.html</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>DP</strong></p>
+<table>
+<thead>
+<tr>
+<th>插头dp</th>
+<th><a href="https://www.k-xzy.xyz/archives/4217">https://www.k-xzy.xyz/archives/4217</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>概率dp</td>
+<td><a href="http://www.cnblogs.com/kuangbin/archive/2012/10/02/2710606.html">http://www.cnblogs.com/kuangbin/archive/2012/10/02/2710606.html</a></td>
+</tr>
+<tr>
+<td>斜率优化</td>
+<td><a href="http://www.cnblogs.com/MashiroSky/p/6009685.html">http://www.cnblogs.com/MashiroSky/p/6009685.html</a></td>
+</tr>
+<tr>
+<td>斜率优化</td>
+<td><a href="https://www.k-xzy.xyz/yz%e7%9b%b8%e5%85%b3/yz%e4%b8%93%e9%a2%98%e5%ad%a6%e4%b9%a0%e9%93%be%e6%8e%a5#3730931">http://www.cnblogs.com/MashiroSky/p/6009685.html#3730931</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>字符串</strong></p>
+<table>
+<thead>
+<tr>
+<th>扩展Kmp</th>
+<th><a href="https://www.k-xzy.xyz/archives/1274">https://www.k-xzy.xyz/archives/1274</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AC自动机</td>
+<td><a href="http://www.cppblog.com/menjitianya/archive/2014/07/10/207604.html">http://www.cppblog.com/menjitianya/archive/2014/07/10/207604.html</a></td>
+</tr>
+<tr>
+<td>AC自动机</td>
+<td><a href="https://www.bilibili.com/video/av4619406/">https://www.bilibili.com/video/av4619406/</a></td>
+</tr>
+<tr>
+<td>AC自动机</td>
+<td><a href="https://blog.csdn.net/creatorx/article/details/71100840">https://blog.csdn.net/creatorx/article/details/71100840</a></td>
+</tr>
+<tr>
+<td>AC自动机</td>
+<td><a href="https://blog.csdn.net/u012662688/article/details/38377967">https://blog.csdn.net/u012662688/article/details/38377967</a></td>
+</tr>
+<tr>
+<td>AC自动机</td>
+<td><a href="https://www.cnblogs.com/jinkun113/p/4682853.html">https://www.cnblogs.com/jinkun113/p/4682853.html</a></td>
+</tr>
+<tr>
+<td>Kmp</td>
+<td><a href="https://www.k-xzy.xyz/archives/1216">https://www.k-xzy.xyz/archives/1216</a></td>
+</tr>
+<tr>
+<td>KMP</td>
+<td><a href="https://www.cnblogs.com/yjiyjige/p/3263858.html">https://www.cnblogs.com/yjiyjige/p/3263858.html</a></td>
+</tr>
+<tr>
+<td>manachar</td>
+<td><a href="https://segmentfault.com/a/1190000003914228">https://segmentfault.com/a/1190000003914228</a></td>
+</tr>
+<tr>
+<td>Trie</td>
+<td><a href="https://www.cnblogs.com/TheRoadToTheGold/p/6290732.html">https://www.cnblogs.com/TheRoadToTheGold/p/6290732.html</a></td>
+</tr>
+<tr>
+<td>后缀数组及回文双星入门题集</td>
+<td><a href="http://lbn187.is-programmer.com/posts/111869.html">http://lbn187.is-programmer.com/posts/111869.html</a></td>
+</tr>
+<tr>
+<td>后缀数组题表1</td>
+<td><a href="https://blog.csdn.net/sdj222555/article/details/12684823">https://blog.csdn.net/sdj222555/article/details/12684823</a></td>
+</tr>
+<tr>
+<td>后缀数组题表2</td>
+<td><a href="https://blog.csdn.net/alxpcun/article/details/51258342">https://blog.csdn.net/alxpcun/article/details/51258342</a></td>
+</tr>
+<tr>
+<td>后缀自动机</td>
+<td><a href="http://hihocoder.com/problemset/problem/1441">http://hihocoder.com/problemset/problem/1441</a></td>
+</tr>
+<tr>
+<td>后缀自动机</td>
+<td><a href="https://www.luogu.org/blog/ShadowassIIXVIIIIV/solution-p3804">https://www.luogu.org/blog/ShadowassIIXVIIIIV/solution-p3804</a></td>
+</tr>
+<tr>
+<td>后缀自动机</td>
+<td><a href="http://hihocoder.com/problemset/problem/1441">http://hihocoder.com/problemset/problem/1441</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>算法</strong></p>
+<table>
+<thead>
+<tr>
+<th>模拟退火</th>
+<th><a href="https://blog.csdn.net/whereisherofrom/article/details/79808589">https://blog.csdn.net/whereisherofrom/article/details/79808589</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>整体二分</td>
+<td><a href="https://www.k-xzy.xyz/archives/3644">https://www.k-xzy.xyz/archives/3644</a></td>
+</tr>
+<tr>
+<td>CDQ分治</td>
+<td><a href="https://www.k-xzy.xyz/archives/3661">https://www.k-xzy.xyz/archives/3661</a></td>
+</tr>
+<tr>
+<td>CDQ分治</td>
+<td><a href="http://www.cnblogs.com/mlystdcall/p/6219421.html">http://www.cnblogs.com/mlystdcall/p/6219421.html</a></td>
+</tr>
+<tr>
+<td>SG函数</td>
+<td><a href="https://blog.csdn.net/luomingjun12315/article/details/45555495">https://blog.csdn.net/luomingjun12315/article/details/45555495</a></td>
+</tr>
+<tr>
+<td>带修莫队</td>
+<td><a href="https://www.k-xzy.xyz/archives/2900">https://www.k-xzy.xyz/archives/2900</a></td>
+</tr>
+<tr>
+<td>点分治及题集</td>
+<td><a href="https://blog.csdn.net/nixinyis/article/details/65445466">https://blog.csdn.net/nixinyis/article/details/65445466</a></td>
+</tr>
+<tr>
+<td>分块</td>
+<td><a href="http://hzwer.com/8053.html">http://hzwer.com/8053.html</a></td>
+</tr>
+<tr>
+<td>莫队</td>
+<td><a href="https://www.k-xzy.xyz/archives/760">https://www.k-xzy.xyz/archives/760</a></td>
+</tr>
+<tr>
+<td>莫队算法</td>
+<td><a href="http://www.cnblogs.com/Paul-Guderian/p/6933799.html">http://www.cnblogs.com/Paul-Guderian/p/6933799.html</a></td>
+</tr>
+<tr>
+<td>仙人掌</td>
+<td><a href="https://www.k-xzy.xyz/archives/3806">https://www.k-xzy.xyz/archives/3806</a></td>
+</tr>
+</tbody>
+</table>
+<h1 id="2-boshi">2. Boshi博客推荐<a class="headerlink" href="#2-boshi" title="Permanent link">&para;</a></h1>
+<p>Boshi的格式不同所以拎出来单独发。。。</p>
+<blockquote>
+<p>下面是笔者认为比较不错的一些博客(蓝色字体为超链接)</p>
+</blockquote>
+<h1 id="_1">数学篇<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="1sengxians-blog">1.<a href="https://blog.sengxian.com/"><em>Sengxian</em>‘s Blog</a><a class="headerlink" href="#1sengxians-blog" title="Permanent link">&para;</a></h2>
+<p>这个博客的作者有着很好的数学功底，表达清晰，并且所讲解的知识点都是 OI中非常常用的，注重学术内容的同时兼顾技巧。</p>
+<h3 id="_2">看点：<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://blog.sengxian.com/algorithms/mobius-inversion-formula">莫比乌斯反演简要笔记</a></li>
+<li><a href="https://blog.sengxian.com/algorithms/linear-basis">线性基学习笔记</a></li>
+<li><a href="https://blog.sengxian.com/algorithms/gauss">高斯消元法</a></li>
+<li><a href="https://blog.sengxian.com/algorithms/mod-world">模运算总结</a></li>
+<li><a href="https://blog.sengxian.com/algorithms/probability-and-expected-value-dynamic-programming">概率与期望DP总结</a></li>
+</ul>
+<h2 id="2skywalkerts-blog">2.<a href="https://blog.csdn.net/skywalkert/article/details/52553048"><em>Skywalkert</em>‘s Blog</a><a class="headerlink" href="#2skywalkerts-blog" title="Permanent link">&para;</a></h2>
+<p>这是一个讲解非常全面且深入，但略有难度的博客。</p>
+<h3 id="_3">看点：<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://blog.csdn.net/skywalkert/article/details/52553048">组合数求模</a></li>
+<li><a href="https://blog.csdn.net/skywalkert/article/details/50500009">浅谈一类积性函数的前缀和(即杜教筛)</a></li>
+</ul>
+<h2 id="3miscoos-blog">3.<a href="http://blog.miskcoo.com/"><em>Miscoo</em>‘s Blog</a><a class="headerlink" href="#3miscoos-blog" title="Permanent link">&para;</a></h2>
+<p>这个博客类似于”matrix67″的博客，偏向数学且涉及面极其广泛。但不同之处在于该博客更加学术一些。作者似乎非常喜欢多项式。</p>
+<ul>
+<li><a href="http://blog.miskcoo.com/2015/12/inversion-magic-binomial-inversion">二项式反演</a></li>
+<li><a href="http://blog.miskcoo.com/2015/07/catalan-number">Catalan数</a></li>
+<li><a href="http://blog.miskcoo.com/2015/06/codeforces-combinatorics-and-probabilities-problem">CodeForces上的一些组合计数问题</a></li>
+<li><a href="http://blog.miskcoo.com/2015/05/discrete-logarithm-problem">BSGS</a></li>
+<li><a href="http://blog.miskcoo.com/2015/05/polynomial-inverse">从多项式乘法到FFT再到NTT</a></li>
+<li><a href="http://blog.miskcoo.com/2015/05/polynomial-inverse">多项式求逆</a></li>
+<li><a href="http://blog.miskcoo.com/2015/05/polynomial-division">多项式除法及求模</a></li>
+<li><a href="http://blog.miskcoo.com/2015/05/polynomial-multipoint-eval-and-interpolation">多项式的多点求值与快速插值</a></li>
+<li><a href="http://blog.miskcoo.com/2015/06/polynomial-with-newton-method">牛顿迭代法在多项式运算中的应用</a></li>
+</ul>
+<h2 id="_4">以及一些零散的推荐：<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>群论基础</p>
+<ul>
+<li><a href="https://blog.csdn.net/xym_CSDN/article/details/53456447">推荐文章1</a></li>
+</ul>
+<p>快速傅里叶变换基础</p>
+<ul>
+<li><a href="https://www.k-xzy.xyz/archives/2957">OI中的FFT(本人)</a></li>
+<li><a href="https://blog.csdn.net/u014783685/article/details/50791535">FFT的实质</a></li>
+</ul>
+<p>FWT</p>
+<ul>
+<li><a href="https://www.k-xzy.xyz/archives/5233">FWT入门</a></li>
+<li><a href="https://www.cnblogs.com/ACMLCZH/p/8022502.html">FWT入门2</a></li>
+</ul>
+<p>计算几何</p>
+<ul>
+<li><a href="http://dev.gameres.com/Program/Abstract/Geometry.htm">计算几何入门</a></li>
+</ul>
+<p>莫比乌斯反演的实质</p>
+<ul>
+<li><a href="https://www.k-xzy.xyz/archives/4671">莫比乌斯反演与狄利克雷卷积</a></li>
+</ul>
+<blockquote>
+<p>上面这些推荐已经涵盖了OI中数学部分的70%，还有剩下的30%难以系统化整理，大家可以自己探索。</p>
+</blockquote>
+<hr />
+<h1 id="_5">数据结构篇<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h1>
+<h2 id="1hzwersblog">1.<a href="http://hzwer.com/"><strong>Hzwer</strong>‘sBlog</a><a class="headerlink" href="#1hzwersblog" title="Permanent link">&para;</a></h2>
+<p>大量的做题记录与题解，数据结构不知道刷什么题好的时候可以来这搜搜。</p>
+<p>具体内容就不放了。可以说凡所应有无所不有。美中不足的是题解有点太简短了点。如果想看深入的分析，推荐下面的博客。</p>
+<h2 id="2k-xzys-blog">2.<a href="https://www.k-xzy.xyz/"><strong>K-xzy</strong>‘s Blog</a><a class="headerlink" href="#2k-xzys-blog" title="Permanent link">&para;</a></h2>
+<p>这是我们一中17级学生合伙维护的博客，里面有大家各自写的文章。由于主要面向校内同学阅读，并不会有网络上各种博客里不断膜人之类没有意义的乱象(评论里也许有一点)，并且内容非常详细，设计面广泛，且所有内容按我们学习的时间线分布，具有代表性。</p>
+<h3 id="_6">看点：<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://www.k-xzy.xyz/archives/155">线段树</a></li>
+<li><a href="https://www.k-xzy.xyz/archives/1704">Splay入门(本人)</a></li>
+<li><a href="https://www.k-xzy.xyz/archives/3251">Splay操作合集</a></li>
+<li><a href="https://www.k-xzy.xyz/archives/1637">树链剖分</a></li>
+</ul>
+<h2 id="_7">以及一些零散的推荐<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://www.cnblogs.com/candy99/p/6271344.html">LCT</a></li>
+<li><a href="https://www.cnblogs.com/Sakits/p/7906318.html">无旋Treap</a></li>
+<li><a href="http://hzwer.com/8053.html">分块</a></li>
+</ul>
+<blockquote>
+<p>当然，还有诸如李超线段树，吉司机线段树，k-d树等特殊数据结构等着你。树链剖分等技巧并没有出现推荐中。</p>
+</blockquote>
+<hr />
+<h1 id="_8">字符串篇<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h1>
+<p>这一部分的来源比较杂乱，故直接开始零散推荐环节。</p>
+<ul>
+<li><a href="https://www.k-xzy.xyz/archives/1216">kmp算法</a></li>
+<li><a href="https://www.k-xzy.xyz/archives/1274">扩展kmp</a></li>
+<li><a href="https://www.k-xzy.xyz/archives/3280">后缀数组</a></li>
+<li><a href="https://www.k-xzy.xyz/archives/3322">后缀自动机</a></li>
+<li><a href="https://wenku.baidu.com/view/90f22eec551810a6f4248606.html">后缀自动机(陈立杰讲稿)</a></li>
+<li><a href="https://segmentfault.com/a/1190000006875558">马拉车算法</a></li>
+</ul>
+<hr />
+<h1 id="_9">算法篇<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h1>
+<p>这一部分的来源依旧比较杂乱，故直接开始零散推荐。</p>
+<ul>
+<li><a href="https://www.cnblogs.com/RabbitHu/p/MoDuiTutorial.html">莫队</a></li>
+<li><a href="https://blog.csdn.net/qq_39553725/article/details/77542223">树的点分治</a></li>
+<li><a href="https://www.k-xzy.xyz/archives/3661">CDQ分治(本人)</a></li>
+<li><a href="https://www.k-xzy.xyz/archives/3644">第一类整体二分</a></li>
+<li><a href="https://www.k-xzy.xyz/archives/4977">第二类整体二分(只有一个题解)</a></li>
+<li><a href="https://www.cnblogs.com/SYCstudio/p/7260613.html">网络流基础</a></li>
+<li><a href="https://www.k-xzy.xyz/archives/6256">网络流进阶</a></li>
+<li><a href="http://blog.miskcoo.com/2016/07/tarjan-algorithm-strongly-connected-components">Tarjan</a></li>
+<li><a href="https://www.k-xzy.xyz/archives/4476">虚树</a></li>
+</ul>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2018 - 2018 plextem
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.583bbe55.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.3",url:{base:"../.."}})</script>
+      
+        <script src="../../_static/js/extra.js?v=2"></script>
+      
+        <script src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>
