@@ -1,6 +1,6 @@
-python -m mkdocs build --clean
+python3 -m mkdocs build --clean
 echo "site/" > .gitignore
 git add .
 git commit -m 'blog'
 git push origin master
-python -m mkdocs gh-deploy
+python3 -m mkdocs gh-deploy
