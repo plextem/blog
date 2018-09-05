@@ -44,6 +44,7 @@ nav:
       - 24.骑士共存问题: articles/NetWork24/24.md
   - 做题记录:
     - BZOJ:
+      - 1053 反素数: prac/bzoj/bz1053.md
       - 1565 植物大战僵尸: prac/bzoj/bz1565.md
       - 3668 起床困难综合症: prac/bzoj/bz3668.md
       - 4800 世界冰球锦标赛: prac/bzoj/bz4800.md
