@@ -50,6 +50,8 @@ nav:
       - 3668 起床困难综合症: prac/bzoj/bz3668.md
       - 4720 换教室: prac/bzoj/bz4720.md
       - 4800 世界冰球锦标赛: prac/bzoj/bz4800.md
+    - luogu:
+      - 2831 愤怒的小鸟: prac/luogu/luogu2831.md
   - 友链: links.md
   
 theme:
