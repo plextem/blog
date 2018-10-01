@@ -464,6 +464,8 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         9.方格取数问题
@@ -477,26 +479,20 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">目录</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#99" title="9.9.方格取数问题" class="md-nav__link">
-    9.9.方格取数问题
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#_1" title="题目" class="md-nav__link">
     题目
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#_2" title="题解" class="md-nav__link">
     题解
   </a>
@@ -508,11 +504,6 @@
   <a href="#_3" title="正确性" class="md-nav__link">
     正确性
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -874,6 +865,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../prac/luogu/luogu1084/" title="1084 疫情控制" class="md-nav__link">
+      1084 疫情控制
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../prac/luogu/luogu1967/" title="1967 货车运输" class="md-nav__link">
+      1967 货车运输
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../prac/luogu/luogu2831/" title="2831 愤怒的小鸟" class="md-nav__link">
       2831 愤怒的小鸟
     </a>
@@ -928,26 +943,20 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">目录</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#99" title="9.9.方格取数问题" class="md-nav__link">
-    9.9.方格取数问题
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#_1" title="题目" class="md-nav__link">
     题目
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#_2" title="题解" class="md-nav__link">
     题解
   </a>
@@ -959,11 +968,6 @@
   <a href="#_3" title="正确性" class="md-nav__link">
     正确性
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -991,16 +995,14 @@
                   <a href="https://github.com/plextem/blog/blob/master/docs/articles/NetWork24/9.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>9.方格取数问题</h1>
-                
-                <h2 id="99"><a href="https://www.luogu.org/problemnew/show/P2774"><span><span class="MathJax_Preview">9.</span><script type="math/tex">9.</script></span>方格取数问题</a><a class="headerlink" href="#99" title="Permanent link">&para;</a></h2>
-<h3 id="_1">题目<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+                <h1 id="99"><a href="https://www.luogu.org/problemnew/show/P2774"><span><span class="MathJax_Preview">9.</span><script type="math/tex">9.</script></span>方格取数问题</a><a class="headerlink" href="#99" title="Permanent link">&para;</a></h1>
+<h2 id="_1">题目<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>在一个有 <span><span class="MathJax_Preview">m\times n</span><script type="math/tex">m\times n</script></span> 个方格的棋盘中，每个方格中有一个正整数。现要从方格中取数，使任意 <span><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span> 个数所在方格没有公共边，且取出的数的总和最大。试设计一个满足要求的取数算法。对于给定的方格棋盘，按照取数要求编程找出总和最大的数。</p>
-<h3 id="_2">题解<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<h2 id="_2">题解<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>这个可能方格图问题的某种解决套路吧，就是按照坐标黑白染色，建出二分图。
 首先按照坐标之和为奇或偶进行黑白染色，将同种类型的放到一个集合中，然后会形成两个集合 <span><span class="MathJax_Preview">X, Y</span><script type="math/tex">X, Y</script></span>，由 <span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 点向 <span><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> 集合中的点连容量为原图中权值的边， <span><span class="MathJax_Preview">Y</span><script type="math/tex">Y</script></span> 集合向 <span><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span> 类似的连边，由于不能同时选有相邻边的点，那么 <span><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> 集合中的点向 <span><span class="MathJax_Preview">Y</span><script type="math/tex">Y</script></span> 集合中的与其有相邻边的点连边为 <span><span class="MathJax_Preview">inf</span><script type="math/tex">inf</script></span>，根据建图方法肯定会是有相邻边的两点不在同一集合中。
 此时跑出最大流，用所有格子的权值和减去最大流就是结果。</p>
-<h4 id="_3">正确性<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<h3 id="_3">正确性<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>因为这样跑出来的最大流就是二分图的最小割，又由于中间的连边容量为无限大，所以肯定不会被割到，那么对一个格子（设它在二分图中属于 <span><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> 集合），要么将他与 <span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 之间的边割掉（这就相当于在原图中没有取这个格子），要么将其连向 <span><span class="MathJax_Preview">Y</span><script type="math/tex">Y</script></span> 中的所有点之间的连边割掉（这就相当于在原图中取了这个格子但是美取相邻的），由于是最小割，而且过程完全满足题中规定的条件，所以最小割就是不取的格子最小权值和。</p>
                 
                   

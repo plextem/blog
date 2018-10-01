@@ -476,6 +476,8 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         10.餐巾计划问题
@@ -489,34 +491,23 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">目录</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1010" title="10.10.餐巾计划问题" class="md-nav__link">
-    10.10.餐巾计划问题
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#_1" title="题目" class="md-nav__link">
     题目
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#_2" title="题解" class="md-nav__link">
     题解
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -861,6 +852,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../prac/luogu/luogu1084/" title="1084 疫情控制" class="md-nav__link">
+      1084 疫情控制
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../prac/luogu/luogu1967/" title="1967 货车运输" class="md-nav__link">
+      1967 货车运输
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../prac/luogu/luogu2831/" title="2831 愤怒的小鸟" class="md-nav__link">
       2831 愤怒的小鸟
     </a>
@@ -915,34 +930,23 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">目录</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1010" title="10.10.餐巾计划问题" class="md-nav__link">
-    10.10.餐巾计划问题
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#_1" title="题目" class="md-nav__link">
     题目
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#_2" title="题解" class="md-nav__link">
     题解
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -965,14 +969,12 @@
                   <a href="https://github.com/plextem/blog/blob/master/docs/articles/NetWork24/10.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>10.餐巾计划问题</h1>
-                
-                <h2 id="1010"><a href="https://www.luogu.org/problemnew/show/P1251"><span><span class="MathJax_Preview">10.</span><script type="math/tex">10.</script></span>餐巾计划问题</a><a class="headerlink" href="#1010" title="Permanent link">&para;</a></h2>
-<h3 id="_1">题目<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+                <h1 id="1010"><a href="https://www.luogu.org/problemnew/show/P1251"><span><span class="MathJax_Preview">10.</span><script type="math/tex">10.</script></span>餐巾计划问题</a><a class="headerlink" href="#1010" title="Permanent link">&para;</a></h1>
+<h2 id="_1">题目<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>一个餐厅在相继的 <span><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span> 天里,每天需用的餐巾数不尽相同。假设第 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 天需要 <span><span class="MathJax_Preview">r_i</span><script type="math/tex">r_i</script></span> 块餐巾($ i=1,2,...,N$)。餐厅可以购买新的餐巾,每块餐巾的费用为 <span><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 分 ;或者把旧餐巾送到快洗部,洗一块需 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 天,其费用为 <span><span class="MathJax_Preview">f</span><script type="math/tex">f</script></span> 分;或者送到慢洗部,洗一块需 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 天( <span><span class="MathJax_Preview">n&gt;m</span><script type="math/tex">n>m</script></span> ),其费用为 s 分( <span><span class="MathJax_Preview">s&lt;f</span><script type="math/tex">s<f</script></span> )。</p>
 <p>每天结束时,餐厅必须决定将多少块脏的餐巾送到快洗部,多少块餐巾送到慢洗部,以及多少块保存起来延期送洗。但是每天洗好的餐巾和购买的新餐巾数之和,要满足当天的需求量。</p>
 <p>试设计一个算法为餐厅合理地安排好 <span><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span> 天中餐巾使用计划,使总的花费最小。编程找出一个最佳餐巾使用计划。</p>
-<h3 id="_2">题解<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<h2 id="_2">题解<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>这题看到有位博主的<a href="https://blog.sengxian.com/solutions/networkflow-24-all">总结</a>写的不错，就直接贴上来了。
 这个问题的主要约束条件是每天的餐巾够用，而餐巾的来源可能是最新购买，也可能是前几天送洗，今天刚刚洗好的餐巾。
 每天用完的餐巾可以选择送到快洗部或慢洗部，或者留到下一天再处理。

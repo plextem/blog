@@ -524,6 +524,8 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         14.孤岛营救问题
@@ -537,34 +539,23 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">目录</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1414" title="14.14.孤岛营救问题" class="md-nav__link">
-    14.14.孤岛营救问题
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#_1" title="题目" class="md-nav__link">
     题目
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#_2" title="题解" class="md-nav__link">
     题解
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -861,6 +852,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../prac/luogu/luogu1084/" title="1084 疫情控制" class="md-nav__link">
+      1084 疫情控制
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../prac/luogu/luogu1967/" title="1967 货车运输" class="md-nav__link">
+      1967 货车运输
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../prac/luogu/luogu2831/" title="2831 愤怒的小鸟" class="md-nav__link">
       2831 愤怒的小鸟
     </a>
@@ -915,34 +930,23 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">目录</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1414" title="14.14.孤岛营救问题" class="md-nav__link">
-    14.14.孤岛营救问题
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#_1" title="题目" class="md-nav__link">
     题目
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#_2" title="题解" class="md-nav__link">
     题解
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -965,14 +969,12 @@
                   <a href="https://github.com/plextem/blog/blob/master/docs/articles/NetWork24/14.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>14.孤岛营救问题</h1>
-                
-                <h2 id="1414"><a href="https://www.luogu.org/problemnew/show/P4011"><span><span class="MathJax_Preview">14.</span><script type="math/tex">14.</script></span>孤岛营救问题</a><a class="headerlink" href="#1414" title="Permanent link">&para;</a></h2>
-<h3 id="_1">题目<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+                <h1 id="1414"><a href="https://www.luogu.org/problemnew/show/P4011"><span><span class="MathJax_Preview">14.</span><script type="math/tex">14.</script></span>孤岛营救问题</a><a class="headerlink" href="#1414" title="Permanent link">&para;</a></h1>
+<h2 id="_1">题目<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p><span><span class="MathJax_Preview">1944</span><script type="math/tex">1944</script></span> 年，特种兵麦克接到国防部的命令，要求立即赶赴太平洋上的一个孤岛，营救被敌军俘虏的大兵瑞恩。瑞恩被关押在一个迷宫里，迷宫地形复杂，但幸好麦克得到了迷宫的地形图。迷宫的外形是一个长方形，其南北方向被划分为 <span><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span> 行，东西方向被划分为 <span><span class="MathJax_Preview">M</span><script type="math/tex">M</script></span> 列，于是整个迷宫被划分为 <span><span class="MathJax_Preview">N\times M</span><script type="math/tex">N\times M</script></span> 个单元。每一个单元的位置可用一个有序数对(单元的行号，单元的列号)来表示。南北或东西方向相邻的 <span><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span> 个单元之间可能互通，也可能有一扇锁着的门，或者是一堵不可逾越的墙。迷宫中有一些单元存放着钥匙，并且所有的门被分成 <span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> 类，打开同一类的门的钥匙相同，不同类门的钥匙不同。</p>
 <p>大兵瑞恩被关押在迷宫的东南角，即 <span><span class="MathJax_Preview">(N,M)</span><script type="math/tex">(N,M)</script></span> 单元里，并已经昏迷。迷宫只有一个入口，在西北角。也就是说，麦克可以直接进入 <span><span class="MathJax_Preview">(1,1)</span><script type="math/tex">(1,1)</script></span> 单元。另外，麦克从一个单元移动到另一个相邻单元的时间为 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> ，拿取所在单元的钥匙的时间以及用钥匙开门的时间可忽略不计。</p>
 <p>试设计一个算法，帮助麦克以最快的方式到达瑞恩所在单元，营救大兵瑞恩。</p>
-<h3 id="_2">题解<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<h2 id="_2">题解<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>就是状压然后暴力 <span><span class="MathJax_Preview">bfs</span><script type="math/tex">bfs</script></span> ，非常水，唯一需要注意的是每个点可能有多个钥匙。</p>
                 
                   

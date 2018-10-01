@@ -380,6 +380,8 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         2.太空飞行计划问题
@@ -393,34 +395,23 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">目录</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#22" title="2.2.太空飞行计划问题" class="md-nav__link">
-    2.2.太空飞行计划问题
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#_1" title="题目" class="md-nav__link">
     题目
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#_2" title="题解" class="md-nav__link">
     题解
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -861,6 +852,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../prac/luogu/luogu1084/" title="1084 疫情控制" class="md-nav__link">
+      1084 疫情控制
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../prac/luogu/luogu1967/" title="1967 货车运输" class="md-nav__link">
+      1967 货车运输
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../prac/luogu/luogu2831/" title="2831 愤怒的小鸟" class="md-nav__link">
       2831 愤怒的小鸟
     </a>
@@ -915,34 +930,23 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">目录</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#22" title="2.2.太空飞行计划问题" class="md-nav__link">
-    2.2.太空飞行计划问题
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#_1" title="题目" class="md-nav__link">
     题目
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#_2" title="题解" class="md-nav__link">
     题解
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -965,13 +969,11 @@
                   <a href="https://github.com/plextem/blog/blob/master/docs/articles/NetWork24/2.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>2.太空飞行计划问题</h1>
-                
-                <h2 id="22"><a href="https://www.luogu.org/problemnew/show/P2762"><span><span class="MathJax_Preview">2.</span><script type="math/tex">2.</script></span>太空飞行计划问题</a><a class="headerlink" href="#22" title="Permanent link">&para;</a></h2>
-<h3 id="_1">题目<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+                <h1 id="22"><a href="https://www.luogu.org/problemnew/show/P2762"><span><span class="MathJax_Preview">2.</span><script type="math/tex">2.</script></span>太空飞行计划问题</a><a class="headerlink" href="#22" title="Permanent link">&para;</a></h1>
+<h2 id="_1">题目<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p><span><span class="MathJax_Preview">W</span><script type="math/tex">W</script></span> 教授正在为国家航天中心计划一系列的太空飞行。每次太空飞行可进行一系列商业性实验而获取利润。现已确定了一个可供选择的实验集合 <span><span class="MathJax_Preview">E={E_1，E_2，…，E_m}</span><script type="math/tex">E={E_1，E_2，…，E_m}</script></span> ，和进行这些实验需要使用的全部仪器的集合 <span><span class="MathJax_Preview">I={I_1，I_2，…I_n}</span><script type="math/tex">I={I_1，I_2，…I_n}</script></span>。实验 <span><span class="MathJax_Preview">E_j</span><script type="math/tex">E_j</script></span> 需要用到的仪器是 <span><span class="MathJax_Preview">I</span><script type="math/tex">I</script></span> 的子集 <span><span class="MathJax_Preview">R_j \subset I</span><script type="math/tex">R_j \subset I</script></span>。配置仪器 <span><span class="MathJax_Preview">I_k</span><script type="math/tex">I_k</script></span> 的费用为 <span><span class="MathJax_Preview">c_k</span><script type="math/tex">c_k</script></span> 美元。实验  <span><span class="MathJax_Preview">E_j</span><script type="math/tex">E_j</script></span> 的赞助商已同意为该实验结果支付 <span><span class="MathJax_Preview">p_j</span><script type="math/tex">p_j</script></span> 美元。<span><span class="MathJax_Preview">W</span><script type="math/tex">W</script></span> 教授的任务是找出一个有效算法，确定在一次太空飞行中要进行哪些实验并因此而配置哪些仪器才能使太空飞行的净收益最大。这里净收益是指进行实验所获得的全部收入与配置仪器的全部费用的差额。</p>
 <p>对于给定的实验和仪器配置情况，编程找出净收益最大的试验计划。</p>
-<h3 id="_2">题解<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<h2 id="_2">题解<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>感觉这题其实还挺神的。
 模型为最大权闭合子图，可以使用最小割解决。
 将实验放到左边 <span><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> 集合，器材放到右边 <span><span class="MathJax_Preview">Y</span><script type="math/tex">Y</script></span> 集合。

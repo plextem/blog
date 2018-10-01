@@ -500,6 +500,8 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         12.软件补丁问题
@@ -513,34 +515,23 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">目录</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1212" title="12.12.软件补丁问题" class="md-nav__link">
-    12.12.软件补丁问题
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#_1" title="题目" class="md-nav__link">
     题目
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#_2" title="题解" class="md-nav__link">
     题解
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -861,6 +852,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../prac/luogu/luogu1084/" title="1084 疫情控制" class="md-nav__link">
+      1084 疫情控制
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../prac/luogu/luogu1967/" title="1967 货车运输" class="md-nav__link">
+      1967 货车运输
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../prac/luogu/luogu2831/" title="2831 愤怒的小鸟" class="md-nav__link">
       2831 愤怒的小鸟
     </a>
@@ -915,34 +930,23 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">目录</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1212" title="12.12.软件补丁问题" class="md-nav__link">
-    12.12.软件补丁问题
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#_1" title="题目" class="md-nav__link">
     题目
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#_2" title="题解" class="md-nav__link">
     题解
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -965,14 +969,12 @@
                   <a href="https://github.com/plextem/blog/blob/master/docs/articles/NetWork24/12.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>12.软件补丁问题</h1>
-                
-                <h2 id="1212"><a href="https://www.luogu.org/problemnew/show/P2761"><span><span class="MathJax_Preview">12.</span><script type="math/tex">12.</script></span>软件补丁问题</a><a class="headerlink" href="#1212" title="Permanent link">&para;</a></h2>
-<h3 id="_1">题目<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+                <h1 id="1212"><a href="https://www.luogu.org/problemnew/show/P2761"><span><span class="MathJax_Preview">12.</span><script type="math/tex">12.</script></span>软件补丁问题</a><a class="headerlink" href="#1212" title="Permanent link">&para;</a></h1>
+<h2 id="_1">题目<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>T 公司发现其研制的一个软件中有 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个错误，随即为该软件发放了一批共 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 个补丁程序。每一个补丁程序都有其特定的适用环境，某个补丁只有在软件中包含某些错误而同时又不包含另一些错误时才可以使用。一个补丁在排除某些错误的同时，往往会加入另一些错误。</p>
 <p>换句话说，对于每一个补丁 i，都有 2 个与之相应的错误集合 <span><span class="MathJax_Preview">B1[i]</span><script type="math/tex">B1[i]</script></span>和 <span><span class="MathJax_Preview">B2[i]</span><script type="math/tex">B2[i]</script></span>，使得仅当软件包含 <span><span class="MathJax_Preview">B1[i]</span><script type="math/tex">B1[i]</script></span> 中的所有错误，而不包含 <span><span class="MathJax_Preview">B2[i ]</span><script type="math/tex">B2[i ]</script></span>中的任何错误时，才可以使用补丁 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>。补丁 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 将修复软件中的某些错误 <span><span class="MathJax_Preview">F1[i]</span><script type="math/tex">F1[i]</script></span>，而同时加入另一些错误 <span><span class="MathJax_Preview">F2[i]</span><script type="math/tex">F2[i]</script></span>。另外，每个补丁都耗费一定的时间。</p>
 <p>试设计一个算法，利用 T 公司提供的 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 个补丁程序将原软件修复成一个没有错误的软件，并使修复后的软件耗时最少。对于给定的 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个错误和 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 个补丁程序，找到总耗时最少的软件修复方案。</p>
-<h3 id="_2">题解<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<h2 id="_2">题解<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p><strong>这题感觉不用网络流啊。</strong>
 直接用状压就行了。
 都不用怎么讲。

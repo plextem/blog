@@ -560,6 +560,8 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         17.运输问题
@@ -573,34 +575,23 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">目录</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1717" title="17.17.运输问题" class="md-nav__link">
-    17.17.运输问题
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#_1" title="题目" class="md-nav__link">
     题目
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#_2" title="题解" class="md-nav__link">
     题解
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -861,6 +852,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../prac/luogu/luogu1084/" title="1084 疫情控制" class="md-nav__link">
+      1084 疫情控制
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../prac/luogu/luogu1967/" title="1967 货车运输" class="md-nav__link">
+      1967 货车运输
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../prac/luogu/luogu2831/" title="2831 愤怒的小鸟" class="md-nav__link">
       2831 愤怒的小鸟
     </a>
@@ -915,34 +930,23 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">目录</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1717" title="17.17.运输问题" class="md-nav__link">
-    17.17.运输问题
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#_1" title="题目" class="md-nav__link">
     题目
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#_2" title="题解" class="md-nav__link">
     题解
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -965,16 +969,14 @@
                   <a href="https://github.com/plextem/blog/blob/master/docs/articles/NetWork24/17.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>17.运输问题</h1>
-                
-                <h2 id="1717"><a href="https://www.luogu.org/problemnew/show/P4015"><span><span class="MathJax_Preview">17.</span><script type="math/tex">17.</script></span>运输问题</a><a class="headerlink" href="#1717" title="Permanent link">&para;</a></h2>
-<h3 id="_1">题目<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+                <h1 id="1717"><a href="https://www.luogu.org/problemnew/show/P4015"><span><span class="MathJax_Preview">17.</span><script type="math/tex">17.</script></span>运输问题</a><a class="headerlink" href="#1717" title="Permanent link">&para;</a></h1>
+<h2 id="_1">题目<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>W 公司有 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 个仓库和 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个零售商店。第 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 个仓库有 <span><span class="MathJax_Preview">a_i</span><script type="math/tex">a_i</script></span> 单位的货物,第 <span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span>个零售商店需要 <span><span class="MathJax_Preview">b_j</span><script type="math/tex">b_j</script></span> 个单位的货物。
 货物供需平衡，即 <span><span class="MathJax_Preview">\sum\limits_{i=1}^{m}a_i=\sum\limits_{j=1}^{n}b_j</span><script type="math/tex">\sum\limits_{i=1}^{m}a_i=\sum\limits_{j=1}^{n}b_j</script></span>。
 从第 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 个仓库运送每单位货物到第 <span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span> 个零售商店的费用为 <span><span class="MathJax_Preview">c_{ij}</span><script type="math/tex">c_{ij}</script></span>。
 试设计一个将仓库中所有货物运送到零售商店的运输方案，使总运输费用最少。
 两行分别输出最小运输费用和最大运输费用。</p>
-<h3 id="_2">题解<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<h2 id="_2">题解<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>其实和上面那个问题差不多，仓库放左边，商店放右边，<span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 向左边连 <span><span class="MathJax_Preview">(a[i], 0)</span><script type="math/tex">(a[i], 0)</script></span>的边(前面为流量，后面为费用，后同)，右边集合向 <span><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span> 连 <span><span class="MathJax_Preview">(b[j], 0)</span><script type="math/tex">(b[j], 0)</script></span>的边。
 第i个仓库向第j个商店连边 <span><span class="MathJax_Preview">(INF, c_{ij})</span><script type="math/tex">(INF, c_{ij})</script></span>。
 跑完一遍费用流后还要把费用取相反数来跑一遍，以求出最大花费。</p>

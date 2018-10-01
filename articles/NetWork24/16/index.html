@@ -548,6 +548,8 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         16.数字梯形问题
@@ -561,34 +563,23 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">目录</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1616" title="16.16.数字梯形问题" class="md-nav__link">
-    16.16.数字梯形问题
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#_1" title="题目" class="md-nav__link">
     题目
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#_2" title="题解" class="md-nav__link">
     题解
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -861,6 +852,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../prac/luogu/luogu1084/" title="1084 疫情控制" class="md-nav__link">
+      1084 疫情控制
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../prac/luogu/luogu1967/" title="1967 货车运输" class="md-nav__link">
+      1967 货车运输
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../prac/luogu/luogu2831/" title="2831 愤怒的小鸟" class="md-nav__link">
       2831 愤怒的小鸟
     </a>
@@ -915,34 +930,23 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">目录</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1616" title="16.16.数字梯形问题" class="md-nav__link">
-    16.16.数字梯形问题
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#_1" title="题目" class="md-nav__link">
     题目
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#_2" title="题解" class="md-nav__link">
     题解
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -965,10 +969,8 @@
                   <a href="https://github.com/plextem/blog/blob/master/docs/articles/NetWork24/16.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>16.数字梯形问题</h1>
-                
-                <h2 id="1616"><a href="https://www.luogu.org/problemnew/show/P4013"><span><span class="MathJax_Preview">16.</span><script type="math/tex">16.</script></span>数字梯形问题</a><a class="headerlink" href="#1616" title="Permanent link">&para;</a></h2>
-<h3 id="_1">题目<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+                <h1 id="1616"><a href="https://www.luogu.org/problemnew/show/P4013"><span><span class="MathJax_Preview">16.</span><script type="math/tex">16.</script></span>数字梯形问题</a><a class="headerlink" href="#1616" title="Permanent link">&para;</a></h1>
+<h2 id="_1">题目<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>给定一个由 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 行数字组成的数字梯形如下图所示。</p>
 <p><img alt="img" src="https://cdn.luogu.org/upload/pic/12216.png" /></p>
 <p>梯形的第一行有 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 个数字。从梯形的顶部的 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 个数字开始，在每个数字处可以沿左下或右下方向移动，形成一条从梯形的顶至底的路径。</p>
@@ -978,7 +980,7 @@
 <li>从梯形的顶至底的 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 条路径仅在数字结点处相交；</li>
 <li>从梯形的顶至底的 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 条路径允许在数字结点相交或边相交。</li>
 </ol>
-<h3 id="_2">题解<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<h2 id="_2">题解<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>题目很水，不用多说。</p>
 <p>考虑对于那种不能相交的东西（比如节点，路径），考虑如何建图中表示出来，不能相交，说明只能走一次，那么就<sub><sub>按照一贯套路，</sub></sub>将他们拆成两个点，连边流量为<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>,可以相交的就连边无限大。</p>
 <p>接下来是三种情况分别如何连边（都是有向的）：</p>

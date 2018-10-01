@@ -572,6 +572,8 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         18.分配问题
@@ -585,34 +587,23 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">目录</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1818" title="18.18.分配问题" class="md-nav__link">
-    18.18.分配问题
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#_1" title="题目" class="md-nav__link">
     题目
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#_2" title="题解" class="md-nav__link">
     题解
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -861,6 +852,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../prac/luogu/luogu1084/" title="1084 疫情控制" class="md-nav__link">
+      1084 疫情控制
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../prac/luogu/luogu1967/" title="1967 货车运输" class="md-nav__link">
+      1967 货车运输
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../prac/luogu/luogu2831/" title="2831 愤怒的小鸟" class="md-nav__link">
       2831 愤怒的小鸟
     </a>
@@ -915,34 +930,23 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">目录</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1818" title="18.18.分配问题" class="md-nav__link">
-    18.18.分配问题
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#_1" title="题目" class="md-nav__link">
     题目
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#_2" title="题解" class="md-nav__link">
     题解
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -965,14 +969,12 @@
                   <a href="https://github.com/plextem/blog/blob/master/docs/articles/NetWork24/18.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>18.分配问题</h1>
-                
-                <h2 id="1818"><a href="https://www.luogu.org/problemnew/show/P4014"><span><span class="MathJax_Preview">18.</span><script type="math/tex">18.</script></span>分配问题</a><a class="headerlink" href="#1818" title="Permanent link">&para;</a></h2>
-<h3 id="_1">题目<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+                <h1 id="1818"><a href="https://www.luogu.org/problemnew/show/P4014"><span><span class="MathJax_Preview">18.</span><script type="math/tex">18.</script></span>分配问题</a><a class="headerlink" href="#1818" title="Permanent link">&para;</a></h1>
+<h2 id="_1">题目<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>有 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 件工作要分配给 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个人做。第 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 个人做第 <span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span> 件工作产生的效益为 <span><span class="MathJax_Preview">c_{ij}</span><script type="math/tex">c_{ij}</script></span>。试设计一个将 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 件工作分配给 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个人做的分配方案，使产生的总效益最大。
 一个人只能修一个工件。
 两行分别输出最小总效益和最大总效益。</p>
-<h3 id="_2">题解<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<h2 id="_2">题解<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>最小费用最大流，人放左边，商品放右边，<span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 向人连 <span><span class="MathJax_Preview">(1, 0)</span><script type="math/tex">(1, 0)</script></span>的边，商品向 <span><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span> 连 <span><span class="MathJax_Preview">(1, 0)</span><script type="math/tex">(1, 0)</script></span> 的边，人向商品连 <span><span class="MathJax_Preview">(1,c[i][j])</span><script type="math/tex">(1,c[i][j])</script></span> 的边，因为每个人只能修一个工件，所以流量最大为 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>。
 然后跑费用流。
 好像可以用二分图最佳完美匹配的 <span><span class="MathJax_Preview">KM</span><script type="math/tex">KM</script></span> 算法做，到时候学一下去。</p>

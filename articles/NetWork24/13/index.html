@@ -512,6 +512,8 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         13.星际转移问题
@@ -525,34 +527,23 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">目录</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1313" title="13.13.星际转移问题" class="md-nav__link">
-    13.13.星际转移问题
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#_1" title="题目" class="md-nav__link">
     题目
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#_2" title="题解" class="md-nav__link">
     题解
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -861,6 +852,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../prac/luogu/luogu1084/" title="1084 疫情控制" class="md-nav__link">
+      1084 疫情控制
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../prac/luogu/luogu1967/" title="1967 货车运输" class="md-nav__link">
+      1967 货车运输
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../prac/luogu/luogu2831/" title="2831 愤怒的小鸟" class="md-nav__link">
       2831 愤怒的小鸟
     </a>
@@ -915,34 +930,23 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">目录</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1313" title="13.13.星际转移问题" class="md-nav__link">
-    13.13.星际转移问题
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#_1" title="题目" class="md-nav__link">
     题目
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#_2" title="题解" class="md-nav__link">
     题解
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -965,16 +969,14 @@
                   <a href="https://github.com/plextem/blog/blob/master/docs/articles/NetWork24/13.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>13.星际转移问题</h1>
-                
-                <h2 id="1313"><a href="https://www.luogu.org/problemnew/show/P2754"><span><span class="MathJax_Preview">13.</span><script type="math/tex">13.</script></span>星际转移问题</a><a class="headerlink" href="#1313" title="Permanent link">&para;</a></h2>
-<h3 id="_1">题目<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+                <h1 id="1313"><a href="https://www.luogu.org/problemnew/show/P2754"><span><span class="MathJax_Preview">13.</span><script type="math/tex">13.</script></span>星际转移问题</a><a class="headerlink" href="#1313" title="Permanent link">&para;</a></h1>
+<h2 id="_1">题目<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>由于人类对自然资源的消耗，人们意识到大约在 <span><span class="MathJax_Preview">2300</span><script type="math/tex">2300</script></span> 年之后，地球就不能再居住了。于是在月球上建立了新的绿地，以便在需要时移民。令人意想不到的是，<span><span class="MathJax_Preview">2177</span><script type="math/tex">2177</script></span> 年冬由于未知的原因，地球环境发生了连锁崩溃，人类必须在最短的时间内迁往月球。</p>
 <p>现有 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个太空站位于地球与月球之间，且有 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 艘公共交通太空船在其间来回穿梭。每个太空站可容纳无限多的人，而每艘太空船 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 只可容纳 <span><span class="MathJax_Preview">H[i]</span><script type="math/tex">H[i]</script></span>个人。每艘太空船将周期性地停靠一系列的太空站，例如：<span><span class="MathJax_Preview">(1，3，4)</span><script type="math/tex">(1，3，4)</script></span> 表示该太空船将周期性地停靠太空站 <span><span class="MathJax_Preview">134134134…</span><script type="math/tex">134134134…</script></span>。每一艘太空船从一个太空站驶往任一太空站耗时均为 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>。人们只能在太空船停靠太空站(或月球、地球)时上、下船。</p>
 <p>初始时所有人全在地球上，太空船全在初始站。试设计一个算法，找出让所有人尽快地全部转移到月球上的运输方案。</p>
 <p>对于给定的太空船的信息，找到让所有人尽快地全部转移到月球上的运输方案。</p>
 <p>无解时输出 <span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span></p>
-<h3 id="_2">题解<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<h2 id="_2">题解<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>我觉得这题的解法挺神奇的<sub><sub>，其实说白了就是个套路</sub></sub>。</p>
 <p>首先如果地球到月球没有路径就是无解的，直接先特判掉。</p>
 <p>然后发现似乎无法直接求出最快的天数，由于<sub><sub>猜到</sub></sub>天数比较少，所以可以考虑与之前的魔术球问题类似的方法求得答案，就是一个个枚举答案（不二分的原因在<code>魔术球问题</code>中已经有所提及）。</p>
