@@ -428,6 +428,8 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         6.最长不下降子序列问题
@@ -441,26 +443,20 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">目录</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#66" title="6.6.最长不下降子序列问题" class="md-nav__link">
-    6.6.最长不下降子序列问题
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#_1" title="题目" class="md-nav__link">
     题目
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#_2" title="题解" class="md-nav__link">
     题解
   </a>
@@ -486,11 +482,6 @@
   <a href="#_5" title="第三问" class="md-nav__link">
     第三问
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -888,6 +879,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../prac/luogu/luogu1084/" title="1084 疫情控制" class="md-nav__link">
+      1084 疫情控制
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../prac/luogu/luogu1967/" title="1967 货车运输" class="md-nav__link">
+      1967 货车运输
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../prac/luogu/luogu2831/" title="2831 愤怒的小鸟" class="md-nav__link">
       2831 愤怒的小鸟
     </a>
@@ -942,26 +957,20 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">目录</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#66" title="6.6.最长不下降子序列问题" class="md-nav__link">
-    6.6.最长不下降子序列问题
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#_1" title="题目" class="md-nav__link">
     题目
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#_2" title="题解" class="md-nav__link">
     题解
   </a>
@@ -994,11 +1003,6 @@
     </nav>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
       
       
@@ -1019,27 +1023,25 @@
                   <a href="https://github.com/plextem/blog/blob/master/docs/articles/NetWork24/6.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>6.最长不下降子序列问题</h1>
-                
-                <h2 id="66"><a href="https://www.luogu.org/problemnew/show/P2766"><span><span class="MathJax_Preview">6.</span><script type="math/tex">6.</script></span>最长不下降子序列问题</a><a class="headerlink" href="#66" title="Permanent link">&para;</a></h2>
-<h3 id="_1">题目<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+                <h1 id="66"><a href="https://www.luogu.org/problemnew/show/P2766"><span><span class="MathJax_Preview">6.</span><script type="math/tex">6.</script></span>最长不下降子序列问题</a><a class="headerlink" href="#66" title="Permanent link">&para;</a></h1>
+<h2 id="_1">题目<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>给定正整数序列x1,...,xn 。
 （1）计算其最长不下降子序列的长度s。
 （2）计算从给定的序列中最多可取出多少个长度为s的不下降子序列。
 （3）如果允许在取出的序列中多次使用x1和xn，则从给定序列中最多可取出多少个长度为s的不下降子序列。
 设计有效算法完成（1）（2）（3）提出的计算任务。</p>
-<h3 id="_2">题解<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<h4 id="_3">第一问<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<h2 id="_2">题解<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="_3">第一问<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>可以直接用 <span><span class="MathJax_Preview">O(n^2)</span><script type="math/tex">O(n^2)</script></span> 的 <span><span class="MathJax_Preview">DP</span><script type="math/tex">DP</script></span> 来做。
 设 <span><span class="MathJax_Preview">f[i]</span><script type="math/tex">f[i]</script></span> 表示以 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 位置为结尾的最长不下降子序列。
 然后转移很简单。
 第一问的答案为 <span><span class="MathJax_Preview">max{f[i]}</span><script type="math/tex">max{f[i]}</script></span>，设为 <span><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span>。</p>
-<h4 id="_4">第二问<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<h3 id="_4">第二问<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>使用网络流解决，使用一种分层图的思想进行状态转移。
 将每一个点 <span><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span> 分成左右的两个点 <span><span class="MathJax_Preview">u1, u2</span><script type="math/tex">u1, u2</script></span>，然后由 <span><span class="MathJax_Preview">u1</span><script type="math/tex">u1</script></span>向 <span><span class="MathJax_Preview">u2</span><script type="math/tex">u2</script></span> 连一条容量为 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>的边，这是为了保证每一个点最多只能使用一次，对于所有满足 <span><span class="MathJax_Preview">f[i] = 1</span><script type="math/tex">f[i] = 1</script></span> 的位置 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>, 由 <span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 点向 <span><span class="MathJax_Preview">i1</span><script type="math/tex">i1</script></span> 连边，对于所有满足 <span><span class="MathJax_Preview">f[i] =  K</span><script type="math/tex">f[i] =  K</script></span> 的位置 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>，由 <span><span class="MathJax_Preview">i2</span><script type="math/tex">i2</script></span> 向 <span><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span> 连一条容量为 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 的边，此时到了进行模拟转移的时候，对于一个位置 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>，找到所有位置 <span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span>，满足 <span><span class="MathJax_Preview">j &lt; i</span><script type="math/tex">j < i</script></span> 而且 <span><span class="MathJax_Preview">a[j] &lt;= a[i]</span><script type="math/tex">a[j] <= a[i]</script></span> 而且 <span><span class="MathJax_Preview">f[i] = f[j] + 1</span><script type="math/tex">f[i] = f[j] + 1</script></span> ，其实就是 <span><span class="MathJax_Preview">dp</span><script type="math/tex">dp</script></span> 中状态转移的条件。
 然后由 <span><span class="MathJax_Preview">j2</span><script type="math/tex">j2</script></span> 向 <span><span class="MathJax_Preview">i1</span><script type="math/tex">i1</script></span> 连一条容量为 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 的边。
 跑出来最大流就是答案。</p>
-<h4 id="_5">第三问<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<h3 id="_5">第三问<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p>由于 <span><span class="MathJax_Preview">x_1, x_n</span><script type="math/tex">x_1, x_n</script></span> 可以使用多次，那么将 <span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span>与 <span><span class="MathJax_Preview">1_1</span><script type="math/tex">1_1</script></span>之间的边容量改为 <span><span class="MathJax_Preview">inf</span><script type="math/tex">inf</script></span>, <span><span class="MathJax_Preview">1_1</span><script type="math/tex">1_1</script></span>与 <span><span class="MathJax_Preview">1_2</span><script type="math/tex">1_2</script></span> 之间的边容量也改为 <span><span class="MathJax_Preview">inf</span><script type="math/tex">inf</script></span>，如果 <span><span class="MathJax_Preview">f[N]=K</span><script type="math/tex">f[N]=K</script></span> 的话，就将 <span><span class="MathJax_Preview">N_1</span><script type="math/tex">N_1</script></span>和 <span><span class="MathJax_Preview">N_2</span><script type="math/tex">N_2</script></span>之间的边容量改为 <span><span class="MathJax_Preview">inf</span><script type="math/tex">inf</script></span>， <span><span class="MathJax_Preview">N_2</span><script type="math/tex">N_2</script></span> 和 <span><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span> 之间的边的容量改为 <span><span class="MathJax_Preview">inf</span><script type="math/tex">inf</script></span>, 此时跑出的最大流为第三问答案。</p>
                 
                   

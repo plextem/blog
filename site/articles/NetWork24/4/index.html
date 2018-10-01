@@ -404,6 +404,8 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         4.魔术球问题
@@ -417,34 +419,23 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">目录</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#44" title="4.4.魔术球问题" class="md-nav__link">
-    4.4.魔术球问题
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#_1" title="题目" class="md-nav__link">
     题目
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#_2" title="题解" class="md-nav__link">
     题解
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -861,6 +852,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../prac/luogu/luogu1084/" title="1084 疫情控制" class="md-nav__link">
+      1084 疫情控制
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../prac/luogu/luogu1967/" title="1967 货车运输" class="md-nav__link">
+      1967 货车运输
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../prac/luogu/luogu2831/" title="2831 愤怒的小鸟" class="md-nav__link">
       2831 愤怒的小鸟
     </a>
@@ -915,34 +930,23 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">目录</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#44" title="4.4.魔术球问题" class="md-nav__link">
-    4.4.魔术球问题
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#_1" title="题目" class="md-nav__link">
     题目
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#_2" title="题解" class="md-nav__link">
     题解
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -965,10 +969,8 @@
                   <a href="https://github.com/plextem/blog/blob/master/docs/articles/NetWork24/4.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>4.魔术球问题</h1>
-                
-                <h2 id="44"><a href="https://www.luogu.org/problemnew/show/P2765"><span><span class="MathJax_Preview">4.</span><script type="math/tex">4.</script></span>魔术球问题</a><a class="headerlink" href="#44" title="Permanent link">&para;</a></h2>
-<h3 id="_1">题目<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+                <h1 id="44"><a href="https://www.luogu.org/problemnew/show/P2765"><span><span class="MathJax_Preview">4.</span><script type="math/tex">4.</script></span>魔术球问题</a><a class="headerlink" href="#44" title="Permanent link">&para;</a></h1>
+<h2 id="_1">题目<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>假设有n根柱子，现要按下述规则在这 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>根柱子中依次放入编号为 <span><span class="MathJax_Preview">1，2，3，...</span><script type="math/tex">1，2，3，...</script></span> 的球。</p>
 <ul>
 <li>
@@ -981,7 +983,7 @@
 <p>试设计一个算法，计算出在 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 根柱子上最多能放多少个球。例如，在 <span><span class="MathJax_Preview">4</span><script type="math/tex">4</script></span> 根柱子上最多可放 <span><span class="MathJax_Preview">11</span><script type="math/tex">11</script></span> 个球。</p>
 <p>编程任务：</p>
 <p>对于给定的 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> ，计算在 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 根柱子上最多能放多少个球。</p>
-<h3 id="_2">题解<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<h2 id="_2">题解<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>这题需要用到上一题的解法。
 首先考虑如果我们已经确定了球的个数，如何确定最少需要多少个柱子才能将他们全部放下，这个可以看成一个最小路径覆盖问题，我们对于每一个编号为 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 的球，找到所有编号为 <span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span> , <span><span class="MathJax_Preview">(j &lt; i)</span><script type="math/tex">(j < i)</script></span> 的球时两个球编号和为完全平方数，此时在图中由 <span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span> 向 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 连一条有向边。
 显然当所有边连完后这个图一定为有向无环图，那么一个柱子上面放的所有球从下到上肯定是图中的一条路径，所以可以看成最小路径覆盖。

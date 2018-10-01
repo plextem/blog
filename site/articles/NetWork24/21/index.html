@@ -608,6 +608,8 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         21.最长k可重区间集问题
@@ -621,34 +623,23 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">目录</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#2121k" title="21.21.最长k可重区间集问题" class="md-nav__link">
-    21.21.最长k可重区间集问题
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#_1" title="题目" class="md-nav__link">
     题目
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#_2" title="题解" class="md-nav__link">
     题解
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -861,6 +852,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../prac/luogu/luogu1084/" title="1084 疫情控制" class="md-nav__link">
+      1084 疫情控制
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../prac/luogu/luogu1967/" title="1967 货车运输" class="md-nav__link">
+      1967 货车运输
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../prac/luogu/luogu2831/" title="2831 愤怒的小鸟" class="md-nav__link">
       2831 愤怒的小鸟
     </a>
@@ -915,34 +930,23 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">目录</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#2121k" title="21.21.最长k可重区间集问题" class="md-nav__link">
-    21.21.最长k可重区间集问题
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#_1" title="题目" class="md-nav__link">
     题目
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#_2" title="题解" class="md-nav__link">
     题解
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -965,14 +969,12 @@
                   <a href="https://github.com/plextem/blog/blob/master/docs/articles/NetWork24/21.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>21.最长k可重区间集问题</h1>
-                
-                <h2 id="2121k"><a href="https://www.luogu.org/problemnew/show/P3358"><span><span class="MathJax_Preview">21.</span><script type="math/tex">21.</script></span>最长k可重区间集问题</a><a class="headerlink" href="#2121k" title="Permanent link">&para;</a></h2>
-<h3 id="_1">题目<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+                <h1 id="2121k"><a href="https://www.luogu.org/problemnew/show/P3358"><span><span class="MathJax_Preview">21.</span><script type="math/tex">21.</script></span>最长k可重区间集问题</a><a class="headerlink" href="#2121k" title="Permanent link">&para;</a></h1>
+<h2 id="_1">题目<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>给定实直线<span><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span>上<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>个开区间组成的集合<span><span class="MathJax_Preview">I</span><script type="math/tex">I</script></span>，和一个正整数<span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>，试设计一个算法，从开区
 间集合<span><span class="MathJax_Preview">I</span><script type="math/tex">I</script></span>中选取出开区间集合<span><span class="MathJax_Preview">S\subset I</span><script type="math/tex">S\subset I</script></span>，使得在实直线<span><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span>的任何一点<span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>，<span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span>中包含点<span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>的开区间
 个数不超过<span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>,且<span><span class="MathJax_Preview">\sum_{z\in S}|z|</span><script type="math/tex">\sum_{z\in S}|z|</script></span>达到最大。这样的集合<span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span>称为开区间集合<span><span class="MathJax_Preview">I</span><script type="math/tex">I</script></span>的最长<span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>可重区间集。<span><span class="MathJax_Preview">\sum_{z\in S}|z|</span><script type="math/tex">\sum_{z\in S}|z|</script></span>称为最长<span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>可重区间集的长度。</p>
-<h3 id="_2">题解<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<h2 id="_2">题解<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>问题可以看做是求K条权之和最大的不想交路径，每条路径为一些不相交的区间序列。</p>
 <p>那么就与之前的数字梯形问题差不多了。</p>
 <p>连边直接贴一下BYVoid的吧。<del>我懒得写了</del></p>

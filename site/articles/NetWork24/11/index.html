@@ -488,6 +488,8 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         11.航空路线问题
@@ -501,34 +503,23 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">目录</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1111" title="11.11.航空路线问题" class="md-nav__link">
-    11.11.航空路线问题
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#_1" title="题目" class="md-nav__link">
     题目
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#_2" title="题解" class="md-nav__link">
     题解
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -861,6 +852,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../prac/luogu/luogu1084/" title="1084 疫情控制" class="md-nav__link">
+      1084 疫情控制
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../prac/luogu/luogu1967/" title="1967 货车运输" class="md-nav__link">
+      1967 货车运输
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../prac/luogu/luogu2831/" title="2831 愤怒的小鸟" class="md-nav__link">
       2831 愤怒的小鸟
     </a>
@@ -915,34 +930,23 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">目录</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1111" title="11.11.航空路线问题" class="md-nav__link">
-    11.11.航空路线问题
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#_1" title="题目" class="md-nav__link">
     题目
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#_2" title="题解" class="md-nav__link">
     题解
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -965,15 +969,13 @@
                   <a href="https://github.com/plextem/blog/blob/master/docs/articles/NetWork24/11.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>11.航空路线问题</h1>
-                
-                <h2 id="1111"><a href="https://www.luogu.org/problemnew/show/P2770"><span><span class="MathJax_Preview">11.</span><script type="math/tex">11.</script></span>航空路线问题</a><a class="headerlink" href="#1111" title="Permanent link">&para;</a></h2>
-<h3 id="_1">题目<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+                <h1 id="1111"><a href="https://www.luogu.org/problemnew/show/P2770"><span><span class="MathJax_Preview">11.</span><script type="math/tex">11.</script></span>航空路线问题</a><a class="headerlink" href="#1111" title="Permanent link">&para;</a></h1>
+<h2 id="_1">题目<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>给定一张航空图，图中顶点代表城市，边代表 <span><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span> 城市间的直通航线。现要求找出一条满足下述限制条件的且途经城市最多的旅行路线。
 <span><span class="MathJax_Preview">(1)</span><script type="math/tex">(1)</script></span> 从最西端城市出发，单向从西向东途经若干城市到达最东端城市，然后再单向从东向西飞回起点(可途经若干城市)。
 <span><span class="MathJax_Preview">(2)</span><script type="math/tex">(2)</script></span>除起点城市外，任何城市只能访问 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 次。
 对于给定的航空图，试设计一个算法找出一条满足要求的最佳航空旅行路线。</p>
-<h3 id="_2">题解<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<h2 id="_2">题解<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>最长不相交路径模型。
 可以将题目要求（即从点 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 到点 <span><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span>， 然后回来，而不经过重复点的路径）转换一下，变成两条从点 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 到点 <span><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span> 的没有重复点的路径。</p>
 <p>由于每个点只能使用一次，那么我们会非常 <del>熟练</del> 自然的想到可以拆点，由于只能用一次，那么对于每一个点 <span><span class="MathJax_Preview">u​</span><script type="math/tex">u​</script></span> ，将其拆成两个点 <span><span class="MathJax_Preview">u_1, u_2​</span><script type="math/tex">u_1, u_2​</script></span>， <span><span class="MathJax_Preview">u_1​</span><script type="math/tex">u_1​</script></span> 放到 <span><span class="MathJax_Preview">X​</span><script type="math/tex">X​</script></span> 集合中， <span><span class="MathJax_Preview">u_2​</span><script type="math/tex">u_2​</script></span>  放到 <span><span class="MathJax_Preview">Y​</span><script type="math/tex">Y​</script></span> 集合中，然后由 <span><span class="MathJax_Preview">u_1​</span><script type="math/tex">u_1​</script></span> 向 <span><span class="MathJax_Preview">u_2​</span><script type="math/tex">u_2​</script></span> 连边  <span><span class="MathJax_Preview">(1, 1)​</span><script type="math/tex">(1, 1)​</script></span>   （特别的， <span><span class="MathJax_Preview">1​</span><script type="math/tex">1​</script></span> 和 <span><span class="MathJax_Preview">N​</span><script type="math/tex">N​</script></span> 的容量为 <span><span class="MathJax_Preview">2​</span><script type="math/tex">2​</script></span> ），对于原图中的边 <span><span class="MathJax_Preview">(u, v)​</span><script type="math/tex">(u, v)​</script></span> ，在建图时由 <span><span class="MathJax_Preview">u_2​</span><script type="math/tex">u_2​</script></span> 向 <span><span class="MathJax_Preview">v_1​</span><script type="math/tex">v_1​</script></span> 连边 <span><span class="MathJax_Preview">(1, 0)​</span><script type="math/tex">(1, 0)​</script></span> ，然后跑一遍最大费用最大流，如果点 <span><span class="MathJax_Preview">1_1​</span><script type="math/tex">1_1​</script></span> 向 <span><span class="MathJax_Preview">1_2​</span><script type="math/tex">1_2​</script></span> 的连边不是满流就无解，注意可能要特判一下 <span><span class="MathJax_Preview">1-&gt;N-&gt;1​</span><script type="math/tex">1->N->1​</script></span> 的这种图。</p>

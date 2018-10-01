@@ -416,6 +416,8 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         5.圆桌问题
@@ -429,34 +431,23 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">目录</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#55" title="5.5.圆桌问题" class="md-nav__link">
-    5.5.圆桌问题
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#_1" title="题目" class="md-nav__link">
     题目
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#_2" title="题解" class="md-nav__link">
     题解
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -861,6 +852,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../prac/luogu/luogu1084/" title="1084 疫情控制" class="md-nav__link">
+      1084 疫情控制
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../prac/luogu/luogu1967/" title="1967 货车运输" class="md-nav__link">
+      1967 货车运输
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../prac/luogu/luogu2831/" title="2831 愤怒的小鸟" class="md-nav__link">
       2831 愤怒的小鸟
     </a>
@@ -915,34 +930,23 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">目录</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#55" title="5.5.圆桌问题" class="md-nav__link">
-    5.5.圆桌问题
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#_1" title="题目" class="md-nav__link">
     题目
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#_2" title="题解" class="md-nav__link">
     题解
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -965,15 +969,13 @@
                   <a href="https://github.com/plextem/blog/blob/master/docs/articles/NetWork24/5.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>5.圆桌问题</h1>
-                
-                <h2 id="55"><a href="https://www.luogu.org/problemnew/show/P3254"><span><span class="MathJax_Preview">5.</span><script type="math/tex">5.</script></span>圆桌问题</a><a class="headerlink" href="#55" title="Permanent link">&para;</a></h2>
-<h3 id="_1">题目<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+                <h1 id="55"><a href="https://www.luogu.org/problemnew/show/P3254"><span><span class="MathJax_Preview">5.</span><script type="math/tex">5.</script></span>圆桌问题</a><a class="headerlink" href="#55" title="Permanent link">&para;</a></h1>
+<h2 id="_1">题目<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>假设有来自 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 个不同单位的代表参加一次国际会议。每个单位的代表数分别为 <span><span class="MathJax_Preview">r_i (i =1,2,……,m)</span><script type="math/tex">r_i (i =1,2,……,m)</script></span> 。</p>
 <p>会议餐厅共有 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 张餐桌，每张餐桌可容纳 <span><span class="MathJax_Preview">c_i (i =1,2,……,n)</span><script type="math/tex">c_i (i =1,2,……,n)</script></span> 个代表就餐。</p>
 <p>为了使代表们充分交流，希望从同一个单位来的代表不在同一个餐桌就餐。试设计一个算法，给出满足要求的代表就餐方案。</p>
 <p>对于给定的代表数和餐桌数以及餐桌容量，编程给出满足要求的代表就餐方案。</p>
-<h3 id="_2">题解<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<h2 id="_2">题解<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>将代表放在左边，餐桌放在右边。
 考虑建模。
 每个单位最多有 <span><span class="MathJax_Preview">r_i</span><script type="math/tex">r_i</script></span> 个人可以就餐，那么从 <span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 到点 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 的流量最多为 <span><span class="MathJax_Preview">r_i</span><script type="math/tex">r_i</script></span>.

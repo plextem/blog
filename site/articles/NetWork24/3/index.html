@@ -392,6 +392,8 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         3.最小路径覆盖问题
@@ -405,34 +407,23 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">目录</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#33" title="3.3.最小路径覆盖问题" class="md-nav__link">
-    3.3.最小路径覆盖问题
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#_1" title="题目" class="md-nav__link">
     题目
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#_2" title="题解" class="md-nav__link">
     题解
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -861,6 +852,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../prac/luogu/luogu1084/" title="1084 疫情控制" class="md-nav__link">
+      1084 疫情控制
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../prac/luogu/luogu1967/" title="1967 货车运输" class="md-nav__link">
+      1967 货车运输
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../prac/luogu/luogu2831/" title="2831 愤怒的小鸟" class="md-nav__link">
       2831 愤怒的小鸟
     </a>
@@ -915,34 +930,23 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">目录</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#33" title="3.3.最小路径覆盖问题" class="md-nav__link">
-    3.3.最小路径覆盖问题
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#_1" title="题目" class="md-nav__link">
     题目
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#_2" title="题解" class="md-nav__link">
     题解
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -965,13 +969,11 @@
                   <a href="https://github.com/plextem/blog/blob/master/docs/articles/NetWork24/3.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>3.最小路径覆盖问题</h1>
-                
-                <h2 id="33"><a href="https://www.luogu.org/problemnew/show/P2764"><span><span class="MathJax_Preview">3.</span><script type="math/tex">3.</script></span>最小路径覆盖问题</a><a class="headerlink" href="#33" title="Permanent link">&para;</a></h2>
-<h3 id="_1">题目<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+                <h1 id="33"><a href="https://www.luogu.org/problemnew/show/P2764"><span><span class="MathJax_Preview">3.</span><script type="math/tex">3.</script></span>最小路径覆盖问题</a><a class="headerlink" href="#33" title="Permanent link">&para;</a></h1>
+<h2 id="_1">题目<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>给定有向图 <span><span class="MathJax_Preview">G=(V,E)</span><script type="math/tex">G=(V,E)</script></span> 。设 <span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> 是 <span><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 的一个简单路（顶点不相交）的集合。如果 <span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span> 中每个顶点恰好在 <span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> 的一条路上，则称 <span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span>是 <span><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 的一个路径覆盖。<span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> 中路径可以从<span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span> 的任何一个顶点开始，长度也是任意的，特别地，可以为0。<span><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 的最小路径覆盖是 <span><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 的所含路径条数最少的路径覆盖。设计一个有效算法求一个有向无环图 <span><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 的最小路径覆盖。提示：设 <span><span class="MathJax_Preview">V={1，2，.... ，n}</span><script type="math/tex">V={1，2，.... ，n}</script></span>，构造网络 <span><span class="MathJax_Preview">G1=(V1,E1)</span><script type="math/tex">G1=(V1,E1)</script></span> 如下：
     <img alt="" src="https://cdn.luogu.org/upload/pic/1993.png" /></p>
-<h3 id="_2">题解<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<h2 id="_2">题解<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>直接按照提示中的去做，将每个点 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 拆成 <span><span class="MathJax_Preview">x[i]</span><script type="math/tex">x[i]</script></span> 放左边, <span><span class="MathJax_Preview">y[i]</span><script type="math/tex">y[i]</script></span> 放右边。
 <span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 先向左边集合连边，右边向 <span><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span> 连边，若原图中存在一条边 <span><span class="MathJax_Preview">(u,v)</span><script type="math/tex">(u,v)</script></span>,则建一条边 <span><span class="MathJax_Preview">(x[u], y[v])</span><script type="math/tex">(x[u], y[v])</script></span>， 所有边流量为 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>，然后跑最大流出来二分图最大匹配数，点数减最大匹配数就是最少路径条数，如何输出也很简单，直接按照匹配边走就行。
 正确性显然，可以自己想一下。</p>
