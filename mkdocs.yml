@@ -57,6 +57,8 @@ nav:
       - 2680 运输计划: prac/luogu/luogu2680.md    
       - 2831 愤怒的小鸟: prac/luogu/luogu2831.md
       - 3953 逛公园: prac/luogu/luogu3953.md
+    - atcoder:
+      - agc028 Removing Blocks: prac/atcoder/agc028_b.md
   - 友链: links.md
   
 theme:
