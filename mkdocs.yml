@@ -64,7 +64,7 @@ nav:
   
 theme:
   name: 'material'
-  custom_dir: 'custom_theme'
+  # custom_dir: 'custom_theme'
   static_templates:
     - 404.html
   language: 'zh'
@@ -76,9 +76,9 @@ theme:
   feature:
     tabs: true
   search_index_only: true
-  font:
-    text: 'Fira Sans'
-    code: 'Fira Mono'
+  # font:
+    # text: 'Fira Sans'
+    # code: 'Fira Mono'
 
 # Customization
 extra:
