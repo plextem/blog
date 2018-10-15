@@ -89,8 +89,8 @@ extra:
 
 extra_javascript:
   - '_static/js/extra.js?v=2'
-  - 'https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'
-  # - //cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+  # - 'https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'
+  - 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML'
 
 extra_css:
   - '_static/css/extra.css?v=2'
