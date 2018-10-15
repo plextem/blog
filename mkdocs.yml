@@ -17,6 +17,7 @@ copyright: 'Copyright &copy; 2018 - 2018 plextem'
 nav:
   - 首页: index.md
   - 专题总结:
+    - 分数规划: articles/fractional-programming/fp.md
     - 网络流24题总结: 
       - 1.飞行员配对方案问题: articles/NetWork24/1.md
       - 2.太空飞行计划问题: articles/NetWork24/2.md
