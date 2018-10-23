@@ -1,7 +1,7 @@
 # Project Information
 site_name: blog
 site_description: 随便搭建的博客，写一些平时的做题总结等
-site_author: plextem
+site_author: 本地博客
 site_url: 
 strict: true
 
@@ -52,6 +52,7 @@ nav:
       - 3668 起床困难综合症: prac/bzoj/bz3668.md
       - 4720 换教室: prac/bzoj/bz4720.md
       - 4800 世界冰球锦标赛: prac/bzoj/bz4800.md
+      - 4869 相逢是问候: prac/bzoj/bz4869.md
     - luogu:
       - 1084 疫情控制: prac/luogu/luogu1084.md
       - 1967 货车运输: prac/luogu/luogu1967.md
