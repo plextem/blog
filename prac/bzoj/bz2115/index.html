@@ -40,7 +40,7 @@
     
     
       
-        <title>1053 反素数 - blog</title>
+        <title>2115 最大异或和路径 - blog</title>
       
     
     
@@ -104,7 +104,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="../../../#bzoj1053" tabindex="1" class="md-skip">
+      <a href="../../../#bzoj2115" tabindex="1" class="md-skip">
         跳转至
       </a>
     
@@ -130,7 +130,7 @@
                 blog
               </span>
               <span class="md-header-nav__topic">
-                1053 反素数
+                2115 最大异或和路径
               </span>
             
           
@@ -240,7 +240,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="./" title="做题记录" class="md-tabs__link md-tabs__link--active">
+        <a href="../bz1053/" title="做题记录" class="md-tabs__link md-tabs__link--active">
           做题记录
         </a>
       
@@ -703,63 +703,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        1053 反素数
-      </label>
-    
-    <a href="./" title="1053 反素数" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../bz1053/" title="1053 反素数" class="md-nav__link">
       1053 反素数
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">目录</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" title="题面" class="md-nav__link">
-    题面
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" title="题解" class="md-nav__link">
-    题解
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" title="程序" class="md-nav__link">
-    程序
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -803,11 +751,63 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../bz2115/" title="2115 最大异或和路径" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        2115 最大异或和路径
+      </label>
+    
+    <a href="./" title="2115 最大异或和路径" class="md-nav__link md-nav__link--active">
       2115 最大异或和路径
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="题面" class="md-nav__link">
+    题面
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="题解" class="md-nav__link">
+    题解
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="程序" class="md-nav__link">
+    程序
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -1094,17 +1094,34 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/plextem/blog/blob/master/docs/prac/bzoj/bz1053.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/plextem/blog/blob/master/docs/prac/bzoj/bz2115.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="bzoj1053">BZOJ1053 反素数<a class="headerlink" href="#bzoj1053" title="Permanent link">&para;</a></h1>
+                <h1 id="bzoj2115">BZOJ2115 最大异或和路径<a class="headerlink" href="#bzoj2115" title="Permanent link">&para;</a></h1>
 <h2 id="_1">题面<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>对于任何正整数 <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>，其约数的个数记作 <span><span class="MathJax_Preview">g(x)</span><script type="math/tex">g(x)</script></span> 。例如 <span><span class="MathJax_Preview">g(1)=1、g(6)=4</span><script type="math/tex">g(1)=1、g(6)=4</script></span> 。如果某个正整数 <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 满足：<span><span class="MathJax_Preview">g(x)&gt;g(i) (0&lt;i&lt;x)</span><script type="math/tex">g(x)>g(i) (0<i<x)</script></span> ，则称 <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 为反质数。例如，整数 <span><span class="MathJax_Preview">1，2，4，6</span><script type="math/tex">1，2，4，6</script></span> 等都是反质数。现在给定一个数 <span><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span> ，你能求出不超过 <span><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span> 的最大的反质数么？</p>
+<p>给定一个 <span><span class="MathJax_Preview">n(n\le 50000)</span><script type="math/tex">n(n\le 50000)</script></span> 个点 <span><span class="MathJax_Preview">m(m\le 10000)</span><script type="math/tex">m(m\le 10000)</script></span> 条边的无向图，每条边上有一个权值。</p>
+<p>请你求一条从 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 到 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的路径，使得路径上的边的异或和最大。</p>
 <h2 id="_2">题解<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>之前听过这是个打表，结果一直想直接打表出所有反素数，后来发现不幸，还是要用数学方法解决。</p>
-<p>对于一个数 <span><span class="MathJax_Preview">x=\sum\limits_{i=1}^{k} p_i^{a_i}</span><script type="math/tex">x=\sum\limits_{i=1}^{k} p_i^{a_i}</script></span>  ,如果满足对于两个位 <span><span class="MathJax_Preview">i, j</span><script type="math/tex">i, j</script></span> ，有 <span><span class="MathJax_Preview">i &lt; j</span><script type="math/tex">i < j</script></span> 并且 <span><span class="MathJax_Preview">a_i &lt; a_j</span><script type="math/tex">a_i < a_j</script></span> 那么显然将 <span><span class="MathJax_Preview">a_i, a_j</span><script type="math/tex">a_i, a_j</script></span> 对换能够使答案更优，那么可以得到一个结论对于每个可能成为反素数的数的不为 <span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> 的 <span><span class="MathJax_Preview">\{a\}</span><script type="math/tex">\{a\}</script></span> 肯定满足是降序的。</p>
-<p>那么我们就可以按照这个来暴搜，由于前 <span><span class="MathJax_Preview">20</span><script type="math/tex">20</script></span> 个素数的乘积已经大于 <span><span class="MathJax_Preview">2e9</span><script type="math/tex">2e9</script></span> 了，所以只需存下并使用前 <span><span class="MathJax_Preview">20</span><script type="math/tex">20</script></span> 个素数就行了。</p>
-<p>然后稍微加一点剪枝。</p>
+<p>这题思想还是不错的。</p>
+<p>可以将一条路径拆分成一条<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>到<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>的一条路径边权的异或和与一些环的异或和的异或和。</p>
+<p>因为如果从<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>开始走到一个环的起点，将其遍历一遍之后再走回<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>就相当于获得了这个环的异或和的值。</p>
+<p>于是我们先<span><span class="MathJax_Preview">dfs</span><script type="math/tex">dfs</script></span>一遍，然后以环的异或和为向量空间，求出线性基<span><span class="MathJax_Preview">\mathfrak{B}</span><script type="math/tex">\mathfrak{B}</script></span>，然后取初始答案为<span><span class="MathJax_Preview">dfs</span><script type="math/tex">dfs</script></span>后<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>到<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>的路径异或和，然后在<span><span class="MathJax_Preview">\mathfrak{B}</span><script type="math/tex">\mathfrak{B}</script></span>上从高位到低位贪心的取，如果当前位置异或上答案能够使答案变大就取，否则不取。</p>
+<div class="admonition quote">
+<p class="admonition-title"><a href="zblog.sengxian.com/algorithms/linear-basis">Sengxian的证明</a>（我懒得写了）</p>
+<p><strong>证明：</strong>从高到低考虑每个二进制位，设当前的答案为 <span><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span>，考虑到第 <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 位，线性基向量中代表二进制位 <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 的向量为 <span><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span>。那么对于第 <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>位，一共有三种情况，我们分别考虑我们的选择原则是不是正确的。</p>
+<ol>
+<li>
+<p><span><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span> 中第 <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 位是 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>，<span><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span> 中第 <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 位是 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>，实际上不能选。根据我们的选择原则，此时异或起来答案一定会变小，不选。正确。</p>
+</li>
+<li>
+<p><span><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span> 中第 <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 位是 <span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>，<span><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span> 中第 <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 位是 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>，实际上要选。根据我们的选择原则，此时异或起来答案一定会变大，选。正确。</p>
+</li>
+<li>
+<p><span><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span> 中第 <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 位是 <span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>，那么 <span><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span> 必定是零向量，选不选无所谓。正确。</p>
+</li>
+</ol>
+<p>所以在每一种情况中，我们的选择原则都是正确的，所以这个贪心也是正确的。</p>
+</div>
 <h2 id="_3">程序<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
@@ -1134,33 +1151,151 @@
 26
 27
 28
-29</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;cstdio&gt;</span><span class="cp"></span>
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;cstdio&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;algorithm&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;cmath&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;cstring&gt;</span><span class="cp"></span>
-<span class="k">typedef</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">ll</span><span class="p">;</span>
 
-<span class="n">ll</span> <span class="n">N</span><span class="p">,</span> <span class="n">res</span><span class="p">,</span> <span class="n">ans</span><span class="p">;</span>
-<span class="kt">int</span> <span class="n">pri</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">41</span><span class="p">,</span> <span class="mi">43</span><span class="p">,</span> <span class="mi">47</span><span class="p">,</span> <span class="mi">51</span><span class="p">};</span>
+<span class="cp">#define MAX_N 100007</span>
+<span class="cp">#define MAX_M 200007</span>
+<span class="cp">#define reg register</span>
+<span class="k">typedef</span> <span class="kt">unsigned</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">ll</span><span class="p">;</span>
 
-<span class="kt">int</span> <span class="nf">dfs</span> <span class="p">(</span><span class="n">ll</span> <span class="n">m</span><span class="p">,</span> <span class="kt">int</span> <span class="n">idx</span><span class="p">,</span> <span class="kt">int</span> <span class="n">tot</span><span class="p">,</span> <span class="kt">int</span> <span class="n">num</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">ans</span> <span class="o">&lt;</span> <span class="n">tot</span> <span class="o">||</span> <span class="p">(</span><span class="n">ans</span> <span class="o">==</span> <span class="n">tot</span> <span class="o">&amp;&amp;</span> <span class="n">res</span> <span class="o">&gt;</span> <span class="n">m</span><span class="p">))</span>
-        <span class="n">ans</span> <span class="o">=</span> <span class="n">tot</span><span class="p">,</span> <span class="n">res</span> <span class="o">=</span> <span class="n">m</span><span class="p">;</span>
-    <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ntot</span><span class="p">;</span>
-    <span class="n">ll</span> <span class="n">x</span> <span class="o">=</span> <span class="n">m</span><span class="p">;</span>
-    <span class="k">while</span> <span class="p">(</span><span class="n">j</span> <span class="o">&lt;</span> <span class="n">num</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">j</span><span class="o">++</span><span class="p">;</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="n">pri</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">N</span><span class="p">)</span> <span class="k">break</span><span class="p">;</span>
-        <span class="n">x</span> <span class="o">*=</span> <span class="n">pri</span><span class="p">[</span><span class="n">idx</span><span class="p">];</span>
-        <span class="n">dfs</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">idx</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">tot</span> <span class="o">*</span> <span class="p">(</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="n">j</span><span class="p">);</span>
+<span class="kt">int</span> <span class="n">N</span><span class="p">,</span> <span class="n">M</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">head</span><span class="p">[</span><span class="n">MAX_N</span><span class="p">],</span> <span class="n">to</span><span class="p">[</span><span class="n">MAX_M</span><span class="p">],</span> <span class="n">nxt</span><span class="p">[</span><span class="n">MAX_M</span><span class="p">],</span> <span class="n">cap</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">fa</span><span class="p">[</span><span class="n">MAX_N</span><span class="p">];</span>
+<span class="n">ll</span> <span class="n">dis</span><span class="p">[</span><span class="n">MAX_M</span><span class="p">],</span> <span class="n">d</span><span class="p">[</span><span class="n">MAX_N</span><span class="p">],</span> <span class="n">a</span><span class="p">[</span><span class="n">MAX_M</span><span class="p">],</span> <span class="n">b</span><span class="p">[</span><span class="mi">65</span><span class="p">],</span> <span class="n">top</span><span class="p">,</span> <span class="n">res</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">vis</span><span class="p">[</span><span class="n">MAX_N</span><span class="p">],</span> <span class="n">dfn</span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">_T</span><span class="o">&gt;</span> <span class="kr">inline</span> <span class="kt">void</span> <span class="n">read</span> <span class="p">(</span><span class="n">_T</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">reg</span> <span class="n">_T</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">reg</span> <span class="kt">char</span> <span class="n">c</span> <span class="o">=</span> <span class="n">getchar</span><span class="p">();</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">c</span> <span class="o">&lt;</span> <span class="sc">&#39;0&#39;</span> <span class="o">||</span> <span class="sc">&#39;9&#39;</span> <span class="o">&lt;</span> <span class="n">c</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">c</span> <span class="o">==</span> <span class="sc">&#39;-&#39;</span><span class="p">)</span> <span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+        <span class="n">c</span> <span class="o">=</span> <span class="n">getchar</span><span class="p">();</span>
     <span class="p">}</span>
+    <span class="k">while</span> <span class="p">(</span><span class="sc">&#39;0&#39;</span> <span class="o">&lt;=</span> <span class="n">c</span> <span class="o">&amp;&amp;</span> <span class="n">c</span> <span class="o">&lt;=</span> <span class="sc">&#39;9&#39;</span><span class="p">)</span> <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">+</span> <span class="n">c</span> <span class="o">-</span> <span class="sc">&#39;0&#39;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">getchar</span><span class="p">();</span>
+    <span class="n">x</span> <span class="o">*=</span> <span class="n">y</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="kt">int</span> <span class="nf">main</span> <span class="p">()</span> <span class="p">{</span>
-    <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%lld&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">N</span><span class="p">);</span>
-    <span class="n">dfs</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">30</span><span class="p">);</span>
+<span class="kr">inline</span> <span class="kt">void</span> <span class="n">addEdge</span> <span class="p">(</span><span class="kt">int</span> <span class="n">u</span><span class="p">,</span> <span class="kt">int</span> <span class="n">v</span><span class="p">,</span> <span class="n">ll</span> <span class="n">w</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">nxt</span><span class="p">[</span><span class="o">++</span><span class="n">cap</span><span class="p">]</span> <span class="o">=</span> <span class="n">head</span><span class="p">[</span><span class="n">u</span><span class="p">];</span>
+    <span class="n">head</span><span class="p">[</span><span class="n">u</span><span class="p">]</span> <span class="o">=</span> <span class="n">cap</span><span class="p">;</span>
+    <span class="n">to</span><span class="p">[</span><span class="n">cap</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span><span class="p">;</span>
+    <span class="n">dis</span><span class="p">[</span><span class="n">cap</span><span class="p">]</span> <span class="o">=</span> <span class="n">w</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="n">dfs</span> <span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">vis</span><span class="p">[</span><span class="n">x</span><span class="p">])</span> <span class="k">return</span><span class="p">;</span>
+    <span class="n">vis</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="o">++</span><span class="n">dfn</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">head</span><span class="p">[</span><span class="n">x</span><span class="p">];</span> <span class="n">i</span><span class="p">;</span> <span class="n">i</span> <span class="o">=</span> <span class="n">nxt</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">vis</span><span class="p">[</span><span class="n">to</span><span class="p">[</span><span class="n">i</span><span class="p">]])</span> <span class="p">{</span>
+            <span class="n">fa</span><span class="p">[</span><span class="n">to</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>
+            <span class="n">d</span><span class="p">[</span><span class="n">to</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">=</span> <span class="n">d</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">^</span> <span class="n">dis</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+            <span class="n">dfs</span><span class="p">(</span><span class="n">to</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">vis</span><span class="p">[</span><span class="n">to</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">&amp;&amp;</span> <span class="n">to</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="n">fa</span><span class="p">[</span><span class="n">x</span><span class="p">])</span> <span class="p">{</span>
+            <span class="n">a</span><span class="p">[</span><span class="o">++</span><span class="n">top</span><span class="p">]</span> <span class="o">=</span> <span class="n">d</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">^</span> <span class="n">d</span><span class="p">[</span><span class="n">to</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">^</span> <span class="n">dis</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+        <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kr">inline</span> <span class="kt">void</span> <span class="n">makeBase</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="n">top</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">63</span><span class="p">;</span> <span class="n">j</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span> <span class="o">--</span><span class="n">j</span><span class="p">)</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;&gt;</span> <span class="n">j</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="n">j</span><span class="p">])</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">^=</span> <span class="n">b</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
+                <span class="k">else</span> <span class="p">{</span>
+                    <span class="n">b</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+                    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="n">j</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">k</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span> <span class="o">--</span><span class="n">k</span><span class="p">)</span>
+                        <span class="k">if</span> <span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;&gt;</span> <span class="n">k</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">))</span> <span class="n">b</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">^=</span> <span class="n">b</span><span class="p">[</span><span class="n">k</span><span class="p">];</span>
+                    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> <span class="n">k</span> <span class="o">&lt;=</span> <span class="mi">63</span><span class="p">;</span> <span class="o">++</span><span class="n">k</span><span class="p">)</span>
+                        <span class="k">if</span> <span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">&gt;&gt;</span> <span class="n">j</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">)</span> <span class="n">b</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">^=</span> <span class="n">b</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
+                    <span class="k">break</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kr">inline</span> <span class="kt">void</span> <span class="n">solve</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">d</span><span class="p">[</span><span class="n">N</span><span class="p">];</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">64</span><span class="p">;</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span> <span class="o">--</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="k">continue</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">((</span><span class="n">res</span> <span class="o">^</span> <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">&gt;</span> <span class="n">res</span><span class="p">)</span> <span class="n">res</span> <span class="o">^=</span> <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="p">}</span>
     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%lld</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">res</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="n">main</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="n">read</span><span class="p">(</span><span class="n">N</span><span class="p">),</span> <span class="n">read</span><span class="p">(</span><span class="n">M</span><span class="p">);</span>
+    <span class="kt">int</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">;</span>
+    <span class="n">ll</span> <span class="n">w</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">M</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">read</span><span class="p">(</span><span class="n">u</span><span class="p">),</span> <span class="n">read</span><span class="p">(</span><span class="n">v</span><span class="p">),</span> <span class="n">read</span><span class="p">(</span><span class="n">w</span><span class="p">);</span>
+        <span class="n">addEdge</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">w</span><span class="p">);</span>
+        <span class="n">addEdge</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="n">w</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">dfs</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+    <span class="n">makeBase</span><span class="p">();</span>
+    <span class="n">solve</span><span class="p">();</span>
     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
@@ -1185,7 +1320,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../../articles/NetWork24/24/" title="24.骑士共存问题" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../bz1565/" title="1565 植物大战僵尸" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1194,19 +1329,19 @@
                 <span class="md-footer-nav__direction">
                   后退
                 </span>
-                24.骑士共存问题
+                1565 植物大战僵尸
               </span>
             </div>
           </a>
         
         
-          <a href="../bz1060/" title="1060 时态同步" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../bz3668/" title="3668 起床困难综合症" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   前进
                 </span>
-                1060 时态同步
+                3668 起床困难综合症
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
