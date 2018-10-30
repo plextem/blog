@@ -61,6 +61,8 @@ nav:
       - 3953 逛公园: prac/luogu/luogu3953.md
     - atcoder:
       - agc028 Removing Blocks: prac/atcoder/agc028_b.md
+    - hdu:
+      - 3949 XOR: prac/hdu/hdu3949.md
   - 友链: links.md
   
 theme:
