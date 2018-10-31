@@ -2,16 +2,14 @@
 
 [**OI-wiki**](https://oi-wiki.org)
 
-dalao太强强强强强强了
+都是很厉害的dalao
 
-<style>
-table th:first-of-type {  #first表示表格第一列
-    width: 100px; # 可使用%比例
-}
-</style>
+<style> table th:nth-of-type(1) { width: 450px; } </style>
+<style> table th:nth-of-type(2) { width: 450px; } </style>
 
-| name    	         | link                                     |
-| ------------------ | ---------------------------------------- |
-| hzwer              | [hzwer.com](http://hzwer.com)            |
-| k-xzy              | [k-xzy.xyz](https://k-xzy.xyz)           |
-| samcompu           | [samcompu.com](https://www.samcompu.com) |
+| name     | link                                     |
+| -------- | ---------------------------------------- |
+| hzwer    | [hzwer.com](http://hzwer.com)            |
+| Sengxian | [blog.sengxian.com](https://blog.sengxian.com/) |
+| k-xzy    | [k-xzy.xyz](https://k-xzy.xyz)           |
+| samcompu | [samcompu.com](https://www.samcompu.com) |
